@@ -59,7 +59,7 @@ class CaytrongController extends Controller
          $name = ModelsCaytrong::find($id);
              $name->Loaicay_ID = $request->input('Loaicay_ID');
              $name->TenCay = $request->input('TenCay');
-             $name->HinhAnh = $request->input('HinhAnh');
+            //  $name->HinhAnh = $request->input('HinhAnh');
              $name->SoLuong = $request->input('SoLuong');
              $name->GiaiDoanPhunThuoc = $request->input('GiaiDoanPhunThuoc');
              $name->update();

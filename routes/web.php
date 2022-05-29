@@ -6,7 +6,7 @@ use App\Http\Controllers\CaytrongController;
 use App\Http\Controllers\QuyenController;
 use App\Http\Controllers\KhuController;
 use App\Http\Controllers\OcaytrongController;
-use App\Http\Controllers\LichphunthuocController;
+use App\Http\Controllers\PhunThuocController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -76,17 +76,11 @@ Route::post('/khu/update/{khu}',[KhuController::class,'update'])->name('k.update
 Route::get('/khu/destroy/{id}',[KhuController::class,'destroy'])->name('k.destroy');
 
 
-// Ô cây trồng
-// Route::get('/ocaytrong',[OcaytrongController::class,'index'])->name('admin.ocaytrong');
-// Route::get('/ocaytrong/create',[OcaytrongController::class,'create'])->name('ocay.create');
-// Route::post('/ocaytrong/store',[OcaytrongController::class,'store'])->name('ocay.store');
-// Route::get('/ocaytrong/edit/{id}',[OcaytrongController::class,'edit'])->name('ocay.edit');
-// Route::post('/ocaytrong/update/{ocaytrong}',[OcaytrongController::class,'update'])->name('ocay.update');
-// Route::get('/ocaytrong/destroy/{id}',[OcaytrongController::class,'destroy'])->name('ocay.destroy');
 
 // lịch phun thuốc
-// Route::get('/lichphunthuoc',[LichphunthuocController::class,'index'])->name('admin.lichphunthuoc');
-// Route::get('/lichphunthuoc/create',[LichphunthuocController::class,'create'])->name('lich.create');
-// Route::post('/lichphunthuoc/store',[LichphunthuocController::class,'store'])->name('lich.store');
-// Route::get('/lichphunthuoc/edit/{id}',[LichphunthuocController::class,'edit'])->name('lich.edit');
-// Route::post('/lichphunthuoc/update/{lichphunthuoc}',[LichphunthuocController::class,'update'])->name('lich.update');
+Route::get('/phunthuoc',[PhunThuocController::class,'index'])->name('admin.phunthuoc');
+Route::get('/phunthuoc/create',[PhunThuocController::class,'create'])->name('pt.create');
+Route::post('/phunthuoc/store',[PhunThuocController::class,'store'])->name('pt.store');
+Route::get('/phunthuoc/edit/{id}',[PhunThuocController::class,'edit'])->name('pt.edit');
+Route::post('/phunthuoc/update/{phunthuoc}',[PhunThuocController::class,'update'])->name('pt.update');
+Route::get('/phunthuoc/destroy/{id}',[PhunThuocController::class,'destroy'])->name('pt.destroy');

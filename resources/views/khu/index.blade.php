@@ -2,7 +2,7 @@
 @extends('layouts.admin')
 
 @section('title')
-  <title>Danh Mục Khu Cây Trồng</title>
+  <title>Khu Cây Trồng</title>
 @endsection
 
 @section('content')
@@ -10,7 +10,7 @@
         <div class="row" style="margin-bottom: 20px;">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h3>Danh Mục Khu Cây Trồng</h3>
+                    <h3>Khu Cây Trồng</h3>
                 </div>
                 <div class="pull-right" style="margin-top: 20px;">
                     <a class="btn btn-success" href="{{route('k.create')}}">Thêm mới

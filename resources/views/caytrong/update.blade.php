@@ -7,7 +7,6 @@
 @section('content')
  
  <div class="container">
-
         <div class="card-body">
             <form action="{{route('ct.update',$name->id)}}" method="post">
                 @csrf
@@ -22,8 +21,8 @@
                         <div class="form-group">
                             <strong>Loại Cây</strong>
                             
-                            <select class="form-select" name="Loaicay_ID" aria-label="Default select example">
-                           {{-- <option   tion selected>Loại Cây</option> --}}
+                            <select class="select2_single form-control" name="Loaicay_ID" aria-label="Default select example">
+                        
                            @foreach($danhmucloaicay as $data)
                             <option value="{{$data->id}}">{{$data->Tenloaicay}}</option>
                             @endforeach
@@ -32,11 +31,6 @@
                         <div class="form-group">
                             <strong>Tên Cây</strong>
                             <input class="form-control" type="text" name="TenCay" value="{{$name->TenCay}}">
-                           
-                        </div>
-                        <div class="form-group">
-                            <strong>hình ảnh</strong>
-                            <input class="form-control" type="text" name="HinhAnh" value="{{$name->HinhAnh}}">
                            
                         </div>
                         <div class="form-group">
@@ -57,6 +51,6 @@
             </form>
         </div>
 
-        </div>
+    </div>
 @endsection
 

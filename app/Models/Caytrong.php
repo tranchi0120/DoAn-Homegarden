@@ -23,12 +23,21 @@ class Caytrong extends Model
 
     public function Khu() 
     {
-        return $this->hasMany(Khu::class,'khus_id');
+        // return $this->hasMany(Khu::class,'khus_id');
+        return $this->hasMany(Khu::class,'Caytrong_ID');
     }
 
     public function DanhMucLoaiCay()
     {
         return $this->belongsTo(Danhmucloaicay::class,'Loaicay_ID');
     }
+
+    public function PhunThuoc()
+    {
+        return $this -> hasMany(Phunthuoc::class,'Khu_ID');
+
+        }
+
+     
    
 }

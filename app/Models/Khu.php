@@ -12,6 +12,7 @@ class Khu extends Model
     protected $table = 'khus';
     protected $fillable = [
           'TenKhu',
+          'Loaicay_ID',
           'TrangThai',
           'SoLuong',
           'NgayTrongCay',
@@ -30,5 +31,12 @@ class Khu extends Model
     {
         return $this->belongsTo(Nhanvien::class,'Nhanvien_ID');
     }
+
+     public  function PhunThuoc()
+    {
+        return $this->hasMany(Phunthuoc::class,'Khu_ID');
+    }
+
+    
 
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Caytrong;
 use App\Models\Khu as ModelsKhu;
 use App\Models\Nhanvien;
+use App\Models\Danhmucloaicay;
 
 use Illuminate\Http\Request;
 
@@ -15,10 +16,12 @@ class KhuController extends Controller
     {
         $taikhoan = Nhanvien::all();
         $caytrong = Caytrong::all();
+        $danhmucloaicay = Danhmucloaicay::all();
         $khu = ModelsKhu::all();
         // view()->share('khu',$khu);
         view()->share('taikhoan',$taikhoan);
         view()->share('caytrong',$caytrong);
+        view()->share('danhmucloaicay',$danhmucloaicay);
     }
     /**
      * Display a listing of the resource.

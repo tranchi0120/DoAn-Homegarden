@@ -23,6 +23,7 @@
                             <strong>Tên Khu</strong>
                             <input class="form-control" type="text" name="TenKhu" placeholder="mời nhập">  
                         </div>
+                          
                          <div class="form-group">
                             <strong>Trạng Thái</strong>
                             <input class="form-control" type="text" name="TrangThai" placeholder="mời nhập">
@@ -52,21 +53,18 @@
 
                         <div class="form-group">
                             <strong>Người Chăm Cây</strong>
-                            <select class="form-select" name="Nhanvien_ID" aria-label="Default select example">
-                           <option>Tên</option>
+                            <select class="select2_single form-control" name="Nhanvien_ID" aria-label="Default select example">
+                           {{-- <option>Tên</option> --}}
                            @foreach($taikhoan as $data)
                             <option value="{{$data->id}}"> {{ $data->HoTen }} </option>
                           @endforeach
                             </select>
                         </div>
-                         {{-- <div class="form-group">
-                            <strong>Tên Cây</strong>
-                            <input class="form-control" type="text" name="Caytrong_ID" placeholder="mời nhập">
-                        </div> --}}
+                        
 
                         <div class="form-group">
                             <strong>Tên Cây Trồng</strong>
-                            <select class="form-select" name="Caytrong_ID" aria-label="Default select example">
+                            <select class="select2_single form-control" name="Caytrong_ID" aria-label="Default select example">
                            {{-- <option>Tên Cây Trồng</option> --}}
                            @foreach($caytrong as $data)
                             <option value="{{$data->id}}"> {{ $data->TenCay }} </option>

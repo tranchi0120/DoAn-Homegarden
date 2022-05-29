@@ -30,5 +30,9 @@ class Nhanvien extends Model
         return $this->belongsTo(Quyen::class,'Quyen_ID');
     }
 
+    public  function PhunThuoc()
+    {
+        return $this->hasMany(Phunthuoc::class,'NhanVien_ID');
+    }
   
 }

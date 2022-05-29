@@ -13,7 +13,7 @@
                     <h3>Danh Mục Cây Trồng</h3>
                 </div>
                 <div class="pull-right" style="margin-top: 20px;">
-                    <a class="btn btn-success" href="{{route('ct.create')}}">Thêm mới
+                    <a type="button" class="btn btn-primary"  href="{{route('ct.create')}}">Thêm mới
                     </a>
                 </div>
             </div>
@@ -35,13 +35,13 @@
                     <td>{{$data->id}}</td>
                     <td>{{$data->DanhMucLoaiCay->Tenloaicay}}</td>
                     <td>{{$data->TenCay }}</td> 
-                    <td>{{$data->HinhAnh }}</td>
+                    <td><img src="../boostrap/assets/img/{{$data->HinhAnh }}" class="images" alt="Girl in a jacket" width="50px" height="50px"></td>
                     <td>{{$data->SoLuong }}</td>
                     <td>{{$data->GiaiDoanPhunThuoc }}</td>
                     
                     <td>
-                        <a class="btn btn-primary" href="{{route('ct.edit',$data->id)}}">
-                            <i class="fas fa-edit"></i>
+                        <a class="btn btn-primary " href="{{route('ct.edit',$data->id)}}">
+                            <i class="fa-solid fa-pen"></i>
                         </a>
                         @csrf
                         <a href="{{route('ct.destroy',$data->id)}}" class="btn btn-danger action_delete">
@@ -53,10 +53,7 @@
                 </tr>
             @endforeach
      
-        </table>
-
-    
-        
+        </table>  
     </div>
 
 @endsection

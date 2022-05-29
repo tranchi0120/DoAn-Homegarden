@@ -60,7 +60,7 @@
                         </div>
                         <div class="form-group">
                             <strong>Quyền</strong>
-                            <select class="form-select" name="Quyen_ID" aria-label="Default select example">
+                            <select class="select2_single form-control" name="Quyen_ID" aria-label="Default select example">
                            {{-- <option >Quyền</option> --}}
                            @foreach($quyen as $data)
                             <option value="{{$data->id}}"> {{ $data->TenQuyen }} </option>

@@ -7,7 +7,7 @@
 @section('content')
  
  <div class="container">
-
+   
         <div class="card-body">
             <form action="{{route('ct.store')}}" method="post">
                 @csrf
@@ -23,7 +23,7 @@
 
                         <div class="form-group">
                             <strong>Loại Cây</strong>
-                            <select class="form-select" name="Loaicay_ID" aria-label="Default select example">
+                            <select class="select2_single form-control" name="Loaicay_ID" aria-label="Default select example">
                            <option>Loại Cây</option>
                            @foreach($danhmucloaicay as $data)
                             <option value="{{$data->id}}"> {{ $data->Tenloaicay }} </option>
@@ -35,10 +35,12 @@
                             <input class="form-control" type="text" name="TenCay" placeholder="mời nhập">
                            
                         </div>
-                         <div class="form-group">
-                            <strong>Hình Ảnh</strong>
-                            <input class="form-control" type="text" name="HinhAnh" placeholder="mời nhập">
-                           
+                         <div class="form-group  ">
+                            <Strong class="col-sm-3 text-end control-label col-form-label">Hình Ảnh </Strong>
+                            <div class="custom-file">
+                                <input name="HinhAnh"  type="file" name="myImage" accept="image/*" />
+ 
+                            </div>
                         </div>
                          <div class="form-group">
                             <strong>Số Lượng</strong>   
@@ -48,15 +50,21 @@
                          <div class="form-group">
                             <strong>Giai đoạn phun thuốc</strong>
                             <input class="form-control" type="editor" name="GiaiDoanPhunThuoc" placeholder="mời nhập">
-                        </div>
-                         
-                        
+                        <div class="col-md-12 col-sm-12 ">
+				
+						
+						</div>
+					
+					</div>
+                      
+
                     </div>
 
                 </div>
                 <div class="mt-2"><button type="submit" class="btn btn-primary">Lưu</button></div>
             </form>
-        </div>
+        
+    </div>
 
         </div>
 @endsection
