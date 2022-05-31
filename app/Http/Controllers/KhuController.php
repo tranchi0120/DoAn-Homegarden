@@ -18,7 +18,7 @@ class KhuController extends Controller
         $caytrong = Caytrong::all();
         $danhmucloaicay = Danhmucloaicay::all();
         $khu = ModelsKhu::all();
-        // view()->share('khu',$khu);
+        view()->share('khu',$khu);
         view()->share('taikhoan',$taikhoan);
         view()->share('caytrong',$caytrong);
         view()->share('danhmucloaicay',$danhmucloaicay);
@@ -60,7 +60,7 @@ class KhuController extends Controller
         $name->SoLuong = $request->SoLuong;
         $name->NgayTrongCay = $request->NgayTrongCay;
         $name->NgayThuHoach = $request->NgayThuHoach;
-        $name->GhiChu = $request->GhiChu;
+        // $name->GhiChu = $request->GhiChu;
         $name->Nhanvien_ID = $request->Nhanvien_ID;
         $name->Caytrong_ID = $request->Caytrong_ID;
         $name->save();
@@ -105,7 +105,7 @@ class KhuController extends Controller
              $name->SoLuong = $request->input('SoLuong');
              $name->NgayTrongCay = $request->input('NgayTrongCay');
              $name->NgayThuHoach = $request->input('NgayThuHoach');
-             $name->GhiChu = $request->input('GhiChu');
+            //  $name->GhiChu = $request->input('GhiChu');
              $name->Nhanvien_ID = $request->input('Nhanvien_ID');
              $name->Caytrong_ID = $request->input('Caytrong_ID');
              $name->update();

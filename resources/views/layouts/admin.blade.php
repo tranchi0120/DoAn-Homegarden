@@ -125,32 +125,18 @@
 
 
 
+  {{-- bang ghi chu --}}
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
+    <script>
+        tinymce.init({
+            selector: 'textarea#editor',
+            skin: 'bootstrap',
+            plugins: 'lists, link, image, media',
+            toolbar: 'h1 h2 bold italic strikethrough blockquote bullist numlist backcolor | link image media | removeformat help',
+            menubar: false,
+        });
+    </script>
 
-
-  {{--  --}}
-	
-
-	<!-- bootstrap-wysiwyg -->
-	{{-- <script src="{{asset('../themes/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js')}}"></script>
-	<script src="{{asset('../themes/vendors/jquery.hotkeys/jquery.hotkeys.js')}}../themes/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
-	<script src="{{asset('../themes/vendors/google-code-prettify/src/prettify.js')}}"></script>
-	<!-- jQuery Tags Input -->
-	<script src="{{asset('../themes/vendors/jquery.tagsinput/src/jquery.tagsinput.js')}}"></script>
-	<!-- Switchery -->
-	<script src="{{asset('../themes/vendors/switchery/dist/switchery.min.js')}}"></script>
-	<!-- Select2 -->
-	<script src="{{asset('../themes/vendors/select2/dist/js/select2.full.min.js')}}"></script>
-	<!-- Parsley -->
-	<script src="{{asset('../themes/vendors/parsleyjs/dist/parsley.min.js')}}"></script>
-	<!-- Autosize -->
-	<script src="{{asset('../themes/vendors/autosize/dist/autosize.min.js')}}"></script>
-	<!-- jQuery autocomplete -->
-	<script src="{{asset('../themes/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js')}}"></script>
-	<!-- starrr -->
-	<script src="{{asset('../themes/vendors/starrr/dist/starrr.js')}}"></script>
-	<!-- Custom Theme Scripts -->
-	<script src="{{asset('../themes/build/js/custom.min.js')}}"></script> --}}
-</body>
 
 </html>

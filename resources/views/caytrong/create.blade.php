@@ -50,12 +50,8 @@
                          <div class="form-group">
                             <strong>Giai đoạn phun thuốc</strong>
                             <input class="form-control" type="editor" name="GiaiDoanPhunThuoc" placeholder="mời nhập">
-                        <div class="col-md-12 col-sm-12 ">
-				
-						
-						</div>
-					
-					</div>
+                        </div>
+                        
                       
 
                     </div>

@@ -44,10 +44,10 @@
                             <input class="form-control" type="date" name="NgayThuHoach" value="{{$name->NgayThuHoach}}">
                            
                         </div>
-                         <div class="form-group">
+                         {{-- <div class="form-group">
                             <strong>Ghi Chú </strong>
                             <input class="form-control" type="text" name="GhiChu" value="{{$name->GhiChu}}">  
-                        </div>
+                        </div> --}}
                         <div class="form-group">
                             <strong>Người Chăm Cây</strong>
                             <select class="select2_single form-control" name="Nhanvien_ID" aria-label="Default select example">

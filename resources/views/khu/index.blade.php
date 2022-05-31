@@ -30,7 +30,7 @@
                 <th>Số Lượng</th>
                   <th>Ngày Trồng</th>
                 <th>Ngày Thu Hoạch</th>
-                <th>Ghi Chú</th>
+                {{-- <th>Ghi Chú</th> --}}
                 <th>Người Chăm sóc</th>
                 <th width="280px">Hành động</th>
             </tr>
@@ -44,7 +44,7 @@
                     <td>{{$data->SoLuong }}</td>
                     <td>{{$data->NgayTrongCay }}</td>
                     <td>{{$data->NgayThuHoach }}</td>
-                    <td>{{$data->GhiChu}}</td>
+                    {{-- <td>{{$data->GhiChu}}</td> --}}
                     <td>{{$data->NhanVien->HoTen }}</td>
                     
                     <td>

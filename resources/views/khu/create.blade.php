@@ -19,9 +19,19 @@
 
                 <div class="row">
                     <div class="col-md-6">
-                         <div class="form-group">
+                         {{-- <div class="form-group">
                             <strong>Tên Khu</strong>
                             <input class="form-control" type="text" name="TenKhu" placeholder="mời nhập">  
+                        </div> --}}
+
+                        <div class="form-group">
+                            <strong>Tên Khu</strong>
+                            <select class="select2_single form-control" name="TenKhu" aria-label="Default select example">
+                           {{-- <option>Tên</option> --}}
+                           @foreach($khu as $data)
+                            <option value="{{$data->TenKhu}}"> {{ $data->TenKhu }} </option>
+                          @endforeach
+                            </select>
                         </div>
                           
                          <div class="form-group">
@@ -42,10 +52,10 @@
                             <strong>Ngày Thu</strong>
                             <input class="form-control" type="date" name="NgayThuHoach" placeholder="mời nhập">
                         </div>
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <strong>Ghi Chú</strong>
                             <input class="form-control" type="text" name="GhiChu" placeholder="mời nhập">
-                        </div>
+                        </div> --}}
                         {{-- <div class="form-group">
                             <strong>Người Chăm Cây</strong>
                             <input class="form-control" type="text" name="Nhanvien_ID" placeholder="mời nhập">

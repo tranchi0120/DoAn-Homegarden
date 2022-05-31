@@ -14,7 +14,18 @@ class CreateNhapsTable extends Migration
     public function up()
     {
         Schema::create('nhaps', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('SoLuong');
+            $table->string('NgayNhap');
+            $table->string('GiaNhap');
+            $table->string('TongTien');
+            $table->string('GhiChu');
+            $table->integer('Caytrong_ID')->unsigned();
+            $table->integer('Khu_ID')->unsigned();
+            $table->unsignedBigInteger('User_ID');
+            $table->foreign('Caytrong_ID')->references('id')->on('caytrongs');
+            $table->foreign('Khu_ID')->references('id')->on('khus');
+            $table->foreign('User_ID')->references('id')->on('users');
             $table->timestamps();
         });
     }

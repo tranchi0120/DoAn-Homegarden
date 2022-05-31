@@ -21,9 +21,9 @@ class CreateKhusTable extends Migration
             $table->string('NgayTrongCay');
             $table->string('NgayThuHoach');
             $table->string('GhiChu');
-            $table->integer('Nhanvien_ID')->unsigned();
+            $table->unsignedBigInteger('User_ID');
             $table->integer('Caytrong_ID')->unsigned();
-            $table->foreign('Nhanvien_ID')->references('id')->on('nhanviens');
+            $table->foreign('User_ID')->references('id')->on('users');
             $table->foreign('Caytrong_ID')->references('id')->on('caytrongs');
             $table->timestamps();
         });
