@@ -8,7 +8,7 @@
     <p>chao tran chi</p>
 @endsection --}}
 
-
+{{-- ghi chu --}}
 @extends('layouts.admin')
 
 @section('title')
