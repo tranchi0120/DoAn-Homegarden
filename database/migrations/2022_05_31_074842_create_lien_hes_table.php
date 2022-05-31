@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNhanviensTable extends Migration
+class CreateLienHesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,20 +13,18 @@ class CreateNhanviensTable extends Migration
      */
     public function up()
     {
-        Schema::create('nhanviens', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('lien_hes', function (Blueprint $table) {
+             $table->increments('id');
             $table->string('HoTen');
-            $table->string('GioiTinh');
-            $table->integer('SDT');
+            $table->string('SDT');
             $table->string('Email');
-            $table->string('MatKhau');
-            $table->integer('Quyen_ID')->unsigned();
-            $table->foreign('Quyen_ID')->references('id')->on('quyens');
+            $table->string('DiaCHi');
+            $table->string('TieuDe');
+            $table->string('NoiDUng');
             $table->timestamps();
-            
         });
     }
-        
+
     /**
      * Reverse the migrations.
      *
@@ -34,6 +32,6 @@ class CreateNhanviensTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('nhanviens');
+        Schema::dropIfExists('lien_hes');
     }
 }

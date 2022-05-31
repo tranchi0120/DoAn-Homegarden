@@ -25,47 +25,39 @@
             <div class="menu_section">
               {{-- <h3>General</h3> --}}
               <ul class="nav side-menu">
-                <li><a><i class="fa fa-home"></i> Trang Chủ </a>
+                <li><a href="http://127.0.0.1:8000/admin/dashboard"><i class="fa fa-home"></i> Trang Chủ </a>
                   
                 </li>
                 <li><a href="http://127.0.0.1:8000/taikhoan" ><i class="fa fa-edit"></i>Tài Khoản </a>
                   <ul class="nav child_menu">
-                    {{-- <li><a href="http://127.0.0.1:8000/taikhoan">Admin</a></li> --}}
-                    {{-- <li><a href="form_advanced.html">Nhân Viên</a></li> --}}
+                    
+                  </ul>
+                </li>
+                 <li><a href="http://127.0.0.1:8000/danhmucloaicay"><i class="fa fa-bar-chart-o"></i> Loại Cây Trồng </a>
+                </li>
+                <li><a href="http://127.0.0.1:8000/caytrong"><i class="fa fa-tree"></i>Cây Trồng</a>
+                  <ul class="nav child_menu">
                     
                   </ul>
                 </li>
                 <li><a href="http://127.0.0.1:8000/khu"><i class="fa fa-desktop"></i>Khu Cây Trồng</a>
                   <ul class="nav child_menu">
-                    {{-- <li><a href="general_elements.html">General Elements</a></li>
-                    <li><a href="media_gallery.html">Media Gallery</a></li>
-                    <li><a href="typography.html">Typography</a></li>
-                    --}}
+                   
                   </ul>
                 </li>
-                 <li><a href="http://127.0.0.1:8000/caytrong"><i class="fa fa-desktop"></i>Cây Trồng</a>
+                 <li><a href="http://127.0.0.1:8000/tinhtrangcaytrong"><i class="fa fa-desktop"></i>Tình Trạng Cây Trồng</a>
                   <ul class="nav child_menu">
-                    {{-- <li><a href="general_elements.html">General Elements</a></li>
-                    <li><a href="media_gallery.html">Media Gallery</a></li>
-                    <li><a href="typography.html">Typography</a></li>
-                    --}}
+                   
                   </ul>
                 </li>
+                 
                 <li><a><i class="fa fa-table"></i> Phun Thuốc <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
                     <li><a href="http://127.0.0.1:8000/phunthuoc/create">Đăng Ký lịch Phun Thuốc</a></li>
                     <li><a href="http://127.0.0.1:8000/phunthuoc">Lịch Sử Phun Thuốc</a></li>
                   </ul>
                 </li>
-                <li><a href="http://127.0.0.1:8000/danhmucloaicay"><i class="fa fa-bar-chart-o"></i> Loại Cây Trồng </a>
-                  {{-- <ul class="nav child_menu">
-                    <li><a href="chartjs.html">Chart JS</a></li>
-                    <li><a href="chartjs2.html">Chart JS2</a></li>
-                    <li><a href="morisjs.html">Moris JS</a></li>
-                    <li><a href="echarts.html">ECharts</a></li>
-                    <li><a href="other_charts.html">Other Charts</a></li>
-                  </ul> --}}
-                </li>
+               
                 <li><a><i class="fa fa-clone"></i>Giao Dịch <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
                     <li><a href="fixed_sidebar.html">Nhập Cây</a></li>
@@ -75,16 +67,16 @@
 
               
 
-                 <li><a><i class="fa fa-bug"></i>Thông tin liên hệ khách hàng </span></a>
-                 </li>
+                 
                  <li><a><i class="fa fa-clone"></i>Lịch Sử Giao Dịch<span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
                     <li><a href="fixed_sidebar.html">Lịch Sử Nhập</a></li>
                     <li><a href="fixed_footer.html">Lịch Sử Xuất</a></li>
                   </ul>
                 </li>
-
-                  <li><a><i class="fa fa-bug"></i>Đăng Xuất </span></a>
+                <li><a><i class="fa fa-bug"></i>Thông tin liên hệ khách hàng </span></a>
+                 </li>
+                  <li><a href="http://127.0.0.1:8000/admin/login"><i class="fa fa-bug"></i>Đăng Xuất </span></a>
                   {{-- <ul class="nav child_menu">
                     <li><a href="e_commerce.html">E-commerce</a></li>
                     <li><a href="projects.html">Projects</a></li>

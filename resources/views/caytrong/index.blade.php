@@ -26,7 +26,7 @@
                 <th>Loại Cây</th>
                 <th>Tên Cây</th>
                 <th>Hình Ảnh</th>
-                  <th>Số Lượng</th>
+                  <th>Giá Tiền</th>
                 <th>Giai Đoạn Phun Thuốc</th>
                 <th width="280px">Hành động</th>
             </tr>
@@ -36,7 +36,7 @@
                     <td>{{$data->DanhMucLoaiCay->Tenloaicay}}</td>
                     <td>{{$data->TenCay }}</td> 
                     <td><img src="../boostrap/assets/img/{{$data->HinhAnh }}" class="images" alt="Girl in a jacket" width="50px" height="50px"></td>
-                    <td>{{$data->SoLuong }}</td>
+                    <td>{{$data->GianTien }} VNĐ</td>
                     <td>{{$data->GiaiDoanPhunThuoc }}</td>
                     
                     <td>

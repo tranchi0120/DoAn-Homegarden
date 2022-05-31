@@ -39,7 +39,7 @@ class TaikhoanController extends Controller
         $name->Email = $request->Email;
         $name->MatKhau = $request->MatKhau;
         $name->GioiTinh = $request->GioiTinh;
-        $name->NgaySinh = $request->NgaySinh;
+        // $name->NgaySinh = $request->NgaySinh;
         $name->SDT = $request->SDT;
         $name->Quyen_ID = $request->Quyen_ID;
         $name->save();
@@ -61,7 +61,7 @@ class TaikhoanController extends Controller
              $name->Email = $request->input('Email');
              $name->MatKhau = $request->input('MatKhau');
              $name->GioiTinh = $request->input('GioiTinh');
-             $name->NgaySinh = $request->input('NgaySinh');
+            //  $name->NgaySinh = $request->input('NgaySinh');
              $name->SDT = $request->input('SDT');
              $name->Quyen_ID = $request->input('Quyen_ID');
              $name->update();

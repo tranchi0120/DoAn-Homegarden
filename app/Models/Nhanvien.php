@@ -14,7 +14,6 @@ class Nhanvien extends Model
         'Email',
         'MatKhau',
         'GioiTinh',
-        'NgaySinh',
         'SDT',
         'Quyen_ID'
     ];

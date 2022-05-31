@@ -38,7 +38,7 @@ class CaytrongController extends Controller
         $name->Loaicay_ID = $request->Loaicay_ID;
         $name->TenCay = $request->TenCay;
         $name->HinhAnh = $request->HinhAnh;
-        $name->SoLuong = $request->SoLuong;
+        $name->GianTien = $request->GianTien;
         $name->GiaiDoanPhunThuoc = $request->GiaiDoanPhunThuoc;
         $name->save();
         return redirect()->route('admin.caytrong')->with('thongbao','thêm thành công');
@@ -60,7 +60,7 @@ class CaytrongController extends Controller
              $name->Loaicay_ID = $request->input('Loaicay_ID');
              $name->TenCay = $request->input('TenCay');
             //  $name->HinhAnh = $request->input('HinhAnh');
-             $name->SoLuong = $request->input('SoLuong');
+             $name->GianTien = $request->input('GianTien');
              $name->GiaiDoanPhunThuoc = $request->input('GiaiDoanPhunThuoc');
              $name->update();
              return redirect()->route('admin.caytrong')->with('thongbao','Chỉnh sửa thành công');

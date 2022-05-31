@@ -34,8 +34,8 @@
                            
                         </div>
                         <div class="form-group">
-                            <strong>Số lượng</strong>
-                            <input class="form-control" type="text" name="SoLuong" value="{{$name->SoLuong}}">
+                            <strong>Giá Tiền</strong>
+                            <input class="form-control" type="text" name="GianTien" value="{{$name->GianTien}}">
                            
                         </div>
                         <div class="form-group">

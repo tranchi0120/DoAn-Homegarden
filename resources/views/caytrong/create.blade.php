@@ -43,8 +43,8 @@
                             </div>
                         </div>
                          <div class="form-group">
-                            <strong>Số Lượng</strong>   
-                            <input class="form-control" type="number" name="SoLuong" placeholder="mời nhập">
+                            <strong>Giá Tiền</strong>   
+                            <input class="form-control" type="number" name="GianTien" placeholder="mời nhập">
                             
                         </div>
                          <div class="form-group">

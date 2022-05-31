@@ -19,9 +19,9 @@ class CreatePhunthuocsTable extends Migration
             $table->string('TenThuoc');
             $table->string('LieuLuong');
             $table->string('GhiChu');
-            $table->unsignedBigInteger('User_ID');
+            $table->integer('Nhanvien_ID')->unsigned();
             $table->integer('Khu_ID')->unsigned();
-            $table->foreign('User_ID')->references('id')->on('users');
+            $table->foreign('Nhanvien_ID')->references('id')->on('nhanviens');
             $table->foreign('Khu_ID')->references('id')->on('khus');
             $table->timestamps();
         });

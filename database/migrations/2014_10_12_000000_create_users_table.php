@@ -19,13 +19,13 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('GioiTinh');
-             $table->integer('SDT');
+            // $table->string('GioiTinh');
+            // $table->integer('SDT');
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
-            $table->integer('Quyen_ID')->unsigned();
-            $table->foreign('Quyen_ID')->references('id')->on('quyens');
+            // $table->integer('Quyen_ID')->unsigned();
+            // $table->foreign('Quyen_ID')->references('id')->on('quyens');
             $table->timestamps();
         });
     }

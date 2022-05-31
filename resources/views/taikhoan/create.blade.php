@@ -50,11 +50,6 @@
                             </div>
                         </div>
                          <div class="form-group">
-                            <strong>Ngày Sinh</strong>
-                            <input class="form-control" type="date" name="NgaySinh" placeholder="mời nhập">
-                            
-                        </div>
-                         <div class="form-group">
                             <strong>Số điện thoại</strong>
                             <input class="form-control" type="text" name="SDT" placeholder="mời nhập">
                         </div>

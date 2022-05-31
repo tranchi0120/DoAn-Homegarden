@@ -16,7 +16,7 @@ class Caytrong extends Model
          'Loaicay_ID',
           'TenCay',
           'HinhAnh',
-          'SoLuong',
+          'GianTien',
           'GiaiDoanPhunThuoc',
           
     ];

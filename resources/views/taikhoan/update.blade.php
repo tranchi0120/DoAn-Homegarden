@@ -55,13 +55,13 @@
                             </label>
                             </div>
                         </div>
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <strong>ngaysinh</strong>
                             <input class="form-control" type="date" name="NgaySinh" value="{{$name->NgaySinh}}">
                             @error('Ngaysinh')
                             Vui lòng nhập 
                             @enderror
-                        </div>
+                        </div> --}}
                          <div class="form-group">
                             <strong>sdt</strong>
                             <input class="form-control" type="text" name="SDT" value="{{$name->SDT}}">

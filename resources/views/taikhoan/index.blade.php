@@ -27,7 +27,7 @@
                 <th>Email</th>
                 <th>Mật Khẩu</th>
                   <th>Gioi Tinh</th>
-                <th>Ngày Sinh</th>
+                {{-- <th>Ngày Sinh</th> --}}
                 <th>SDT</th>
                 <th>Quyền</th>
                
@@ -40,7 +40,7 @@
                     <td>{{ $data->Email }}</td> 
                     <td>{{ $data->MatKhau }}</td>
                     <td>{{ $data->GioiTinh }}</td>
-                    <td>{{ $data->NgaySinh }}</td>
+                    {{-- <td>{{ $data->NgaySinh }}</td> --}}
                     <td>{{ $data->SDT}}</td>
                     <td>{{ $data->LoaiQuyen->TenQuyen}}</td>
                    
