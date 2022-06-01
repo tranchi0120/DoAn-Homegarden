@@ -13,7 +13,7 @@
                     <h3>Danh mục Tài Khoản</h3>
                 </div>
                 <div class="pull-right" style="margin-top: 20px;">
-                    <a class="btn btn-success" href="{{route('tk.create')}}">Thêm mới
+                    <a class="btn btn-success" href="{{route('u.create')}}">Thêm mới
                     </a>
                 </div>
             </div>
@@ -26,30 +26,30 @@
                 <th>Họ Và Tên</th>
                 <th>Email</th>
                 <th>Mật Khẩu</th>
-                  <th>Gioi Tinh</th>
+                {{-- <th>Gioi Tinh</th> --}}
                 {{-- <th>Ngày Sinh</th> --}}
-                <th>SDT</th>
+                <th>SĐT</th>
                 <th>Quyền</th>
                
-                <th width="280px">Hành động</th>
+                <th width="280px">Thao Tác</th>
             </tr>
-             @foreach ($taikhoan as $data)
+             @foreach ($user as $data)
                 <tr>
                     <td>{{ $data->id }}</td>
-                    <td>{{ $data->HoTen }}</td>
-                    <td>{{ $data->Email }}</td> 
-                    <td>{{ $data->MatKhau }}</td>
-                    <td>{{ $data->GioiTinh }}</td>
+                    <td>{{ $data->name }}</td>
+                    <td>{{ $data->email }}</td> 
+                    <td>{{ $data->password }}</td>
+                    {{-- <td>{{ $data->GioiTinh }}</td> --}}
                     {{-- <td>{{ $data->NgaySinh }}</td> --}}
-                    <td>{{ $data->SDT}}</td>
+                    <td>{{ $data->sdt}}</td>
                     <td>{{ $data->LoaiQuyen->TenQuyen}}</td>
                    
                     <td>
-                        <a class="btn btn-primary" href="{{route('tk.edit',$data->id)}}">
+                        <a class="btn btn-primary" href="{{route('u.edit',$data->id)}}">
                             <i class="fas fa-edit"></i>
                         </a>
                         @csrf
-                        <a href="{{route('tk.destroy',$data->id)}}" class="btn btn-danger action_delete">
+                        <a href="{{route('u.destroy',$data->id)}}" class="btn btn-danger action_delete">
                             <i class="fas fa-trash"></i>
                         </a>
                         </form>

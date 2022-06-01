@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Model;
 
 class User extends Authenticatable
 {
@@ -23,14 +24,31 @@ class User extends Authenticatable
      *
      * @var string[]
      */
+    protected $table = 'users';
     protected $fillable = [
         'name',
         'email',
         'password',
-        'SDT',
-        'GioiTinh',
+        'sdt',
         'Quyen_ID',
     ];
+
+
+    public function Khu()
+    {
+      return $this->hasMany(Khu::class,'User_ID');
+    }
+
+
+    public function LoaiQuyen()
+    {
+        return $this->belongsTo(Quyen::class,'Quyen_ID');
+    }
+
+    public  function PhunThuoc()
+    {
+        return $this->hasMany(Phunthuoc::class,'User_ID');
+    }
 
     /**
      * The attributes that should be hidden for serialization.

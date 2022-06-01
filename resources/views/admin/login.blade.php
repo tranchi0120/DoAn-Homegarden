@@ -32,6 +32,7 @@
         <div class="animate form login_form">
           <section class="login_content">
             <form id="admin-login" method="POST" action="/admin/login">
+           
                 @csrf
               <h1>Login</h1>
               <div>
@@ -44,9 +45,7 @@
                   <input type="submit" value="Login">
                 <a class="reset_pass" href="#">Lost your password?</a>
               </div>
-
               <div class="clearfix"></div>
-
               <div class="separator">
                 <p class="change_link">New to site?
                   <a href="#signup" class="to_register"> Create Account </a>
@@ -56,7 +55,7 @@
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i>    Home Graden</h1>
+                  <h1><i class="fa fa-paw"></i>Home Graden</h1>
                  
                 </div>
               </div>

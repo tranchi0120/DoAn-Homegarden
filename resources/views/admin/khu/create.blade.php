@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('title')
-  <title>Danh Mục Khu</title>
+  <title>Thêm Khu</title>
 @endsection
 
 @section('content')
@@ -9,7 +9,7 @@
  <div class="container">
 
         <div class="card-body">
-            <form action="{{route('k.update',$name->id)}}" method="post">
+            <form action="{{route('k.store')}}" method="post">
                 @csrf
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -19,41 +19,44 @@
 
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="form-group">
+                         {{-- <div class="form-group">
                             <strong>Tên Khu</strong>
-                            <input class="form-control" type="text" name="TenKhu" value="{{$name->TenKhu}}">
+                            <input class="form-control" type="text" name="TenKhu" placeholder="mời nhập">  
+                        </div> --}}
+
+                        <div class="form-group">
+                           <div class="form-group">
+                            <strong>Tên Khu</strong>
+                            <input class="form-control" type="text" name="TenKhu" placeholder="mời nhập">
                            
                         </div>
-                        <div class="form-group">
+                        </div>
+                          
+                         <div class="form-group">
                             <strong>Trạng Thái</strong>
-                            <input class="form-control" type="text" name="TrangThai" value="{{$name->TrangThai}}">
-                           
-                        </div>
-                        <div class="form-group">
-                            <strong>Số Lượng </strong>
-                            <input class="form-control" type="number" name="SoLuong" value="{{$name->SoLuong}}">
-                           
-                        </div>
-                        <div class="form-group">
-                            <strong>Ngày Trồng </strong>
-                            <input class="form-control" type="date" name="NgayTrongCay" value="{{$name->NgayTrongCay}}">
+                            <input class="form-control" type="text" name="TrangThai" placeholder="mời nhập">
                            
                         </div>
                          <div class="form-group">
-                            <strong>Ngày Thu </strong>
-                            <input class="form-control" type="date" name="NgayThuHoach" value="{{$name->NgayThuHoach}}">
-                           
+                            <strong>Số Lượng</strong>   
+                            <input class="form-control" type="number" name="SoLuong" placeholder="mời nhập">
+                            
                         </div>
                          <div class="form-group">
-                            <strong>Ghi Chú </strong>
-                            <input class="form-control" type="text" name="GhiChu" value="{{$name->GhiChu}}">  
+                            <strong>Ngày Trồng</strong>
+                            <input class="form-control" type="date" name="NgayTrongCay" placeholder="mời nhập">
                         </div>
+                         <div class="form-group">
+                            <strong>Ngày Thu</strong>
+                            <input class="form-control" type="date" name="NgayThuHoach" placeholder="mời nhập">
+                        </div>
+                
                         <div class="form-group">
                             <strong>Người Chăm Cây</strong>
-                            <select class="select2_single form-control" name="Nhanvien_ID" aria-label="Default select example">
+                            <select class="select2_single form-control" name="User_ID" aria-label="Default select example">
                            {{-- <option>Tên</option> --}}
-                           @foreach($taikhoan as $data)
-                            <option value="{{$data->id}}"> {{ $data->HoTen }} </option>
+                           @foreach($user as $data)
+                            <option value="{{$data->id}}"> {{ $data->name }} </option>
                           @endforeach
                             </select>
                         </div>
@@ -68,11 +71,12 @@
                           @endforeach
                             </select>
                         </div>
+                          
                         
                     </div>
 
                 </div>
-                <div class="mt-2"><button type="submit" class="btn btn-primary">Cập Nhật</button></div>
+                <div class="mt-2"><button type="submit" class="btn btn-primary">Lưu</button></div>
             </form>
         </div>
 

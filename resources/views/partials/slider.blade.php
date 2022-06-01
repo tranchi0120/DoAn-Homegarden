@@ -25,27 +25,33 @@
             <div class="menu_section">
               {{-- <h3>General</h3> --}}
               <ul class="nav side-menu">
-                <li><a href="http://127.0.0.1:8000/admin/dashboard"><i class="fa fa-home"></i> Trang Chủ </a>
+                <li><a href="http://127.0.0.1:8000/dashboard"><i class="fa fa-home"></i> Trang Chủ </a>
                   
                 </li>
-                <li><a href="http://127.0.0.1:8000/taikhoan" ><i class="fa fa-edit"></i>Tài Khoản </a>
+
+                 <li><a href="http://127.0.0.1:8000/admin/quyen" ><i class="fa fa-edit"></i>Quản Lý Quyền </a>
                   <ul class="nav child_menu">
                     
                   </ul>
                 </li>
-                 <li><a href="http://127.0.0.1:8000/danhmucloaicay"><i class="fa fa-bar-chart-o"></i> Loại Cây Trồng </a>
-                </li>
-                <li><a href="http://127.0.0.1:8000/caytrong"><i class="fa fa-tree"></i>Cây Trồng</a>
+                <li><a href="http://127.0.0.1:8000/admin/user" ><i class="fa fa-edit"></i>Tài Khoản </a>
                   <ul class="nav child_menu">
                     
                   </ul>
                 </li>
-                <li><a href="http://127.0.0.1:8000/khu"><i class="fa fa-desktop"></i>Khu Cây Trồng</a>
+                 <li><a href="http://127.0.0.1:8000/admin/danhmucloaicay"><i class="fa fa-bar-chart-o"></i> Loại Cây Trồng </a>
+                </li>
+                <li><a href="http://127.0.0.1:8000/admin/caytrong"><i class="fa fa-tree"></i>Cây Trồng</a>
+                  <ul class="nav child_menu">
+                    
+                  </ul>
+                </li>
+                <li><a href="http://127.0.0.1:8000/admin/khu"><i class="fa fa-desktop"></i>Khu Cây Trồng</a>
                   <ul class="nav child_menu">
                    
                   </ul>
                 </li>
-                 <li><a href="http://127.0.0.1:8000/tinhtrangcaytrong"><i class="fa fa-desktop"></i>Tình Trạng Cây Trồng</a>
+                 <li><a href="http://127.0.0.1:8000/admin/tinhtrangkhu"><i class="fa fa-desktop"></i>Tình Trạng Cây Trồng</a>
                   <ul class="nav child_menu">
                    
                   </ul>
@@ -53,8 +59,8 @@
                  
                 <li><a><i class="fa fa-table"></i> Phun Thuốc <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li><a href="http://127.0.0.1:8000/phunthuoc/create">Đăng Ký lịch Phun Thuốc</a></li>
-                    <li><a href="http://127.0.0.1:8000/phunthuoc">Lịch Sử Phun Thuốc</a></li>
+                    <li><a href="http://127.0.0.1:8000/admin/phunthuoc/create">Đăng Ký lịch Phun Thuốc</a></li>
+                    <li><a href="http://127.0.0.1:8000/admin/phunthuoc">Lịch Sử Phun Thuốc</a></li>
                   </ul>
                 </li>
                
@@ -76,7 +82,7 @@
                 </li>
                 <li><a><i class="fa fa-bug"></i>Thông tin liên hệ khách hàng </span></a>
                  </li>
-                  <li><a href="http://127.0.0.1:8000/admin/login"><i class="fa fa-bug"></i>Đăng Xuất </span></a>
+                  <li><a href="http://127.0.0.1:8000/logout"><i class="fa fa-bug"></i>Đăng Xuất </span></a>
                   {{-- <ul class="nav child_menu">
                     <li><a href="e_commerce.html">E-commerce</a></li>
                     <li><a href="projects.html">Projects</a></li>

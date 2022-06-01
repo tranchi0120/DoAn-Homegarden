@@ -10,23 +10,27 @@
         <table class="table table-striped">
             <tr class="table-dark">
                 {{-- <th>ID</th> --}}
+                <th>Khu Vực Phun Thuốc</th>
+                <th>Tên Cây</th>
                 <th>Ngày Phun Thuốc</th>
                 <th>Tên Thuốc</th>
-                <th>Liều Lượng</th>
-                  <th>Ghi Chú</th>
+                <th>Liều Lượng</th>  
+                <th>Ghi Chú</th>
                 <th>Người Phun Thuốc</th>
-                <th>Khu Vực Phun Thuốc</th>
+               
                 <th width="280px">Hành động</th>
             </tr>
              @foreach ($phunthuoc as $data)
                 <tr>
                     {{-- <td>{{ $data->id }}</td> --}}
+                    <td>{{ $data->Khu->TenKhu}}</td>
+                    <td>{{ $data->Khu->CayTrong->TenCay}}</td>
                     <td>{{ $data->NgayPhunThuoc }}</td>
                     <td>{{ $data->TenThuoc }}</td> 
                     <td>{{ $data->LieuLuong }}</td>
                     <td>{{ $data->GhiChu }}</td>
-                    <td>{{ $data->NhanVien->HoTen }}</td>
-                    <td>{{ $data->Khu->TenKhu}}</td>
+                    <td>{{ $data->USER->name }}</td>
+                   
                    
                     <td>
                         <a class="btn btn-primary" href="{{route('pt.edit',$data->id)}}">

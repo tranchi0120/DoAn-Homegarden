@@ -1,18 +1,22 @@
 <?php
 
 namespace App\Models;
-
+use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContracts;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 
-class Nhanvien extends Model
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Auth\Authenticatable;
+
+
+class Nhanvien extends Model implements AuthenticatableContracts
 {
     use HasFactory;
+    use Authenticatable;
 
       protected $fillable = [
         'HoTen',
-        'Email',
-        'MatKhau',
+        'email',
+        'password',
         'GioiTinh',
         'SDT',
         'Quyen_ID'
@@ -20,7 +24,7 @@ class Nhanvien extends Model
 
     public function Khu()
     {
-      return $this->hasMany(Khu::class,'Nhanvien_ID');
+      return $this->hasMany(Khu::class,'User_ID');
     }
 
 
@@ -31,7 +35,7 @@ class Nhanvien extends Model
 
     public  function PhunThuoc()
     {
-        return $this->hasMany(Phunthuoc::class,'NhanVien_ID');
+        return $this->hasMany(Phunthuoc::class,'User_ID');
     }
   
 }

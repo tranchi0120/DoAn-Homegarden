@@ -17,7 +17,7 @@ class CreateCaytrongsTable extends Migration
             $table->increments('id');
             $table->string('TenCay');
             $table->string('HinhAnh');
-            $table->integer('GianTien');
+            $table->decimal('GianTien');
             $table->string('GiaiDoanPhunThuoc');
             $table->integer('Loaicay_ID')->unsigned();
             $table->foreign('Loaicay_ID')->references('id')->on('danhmucloaicays');

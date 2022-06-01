@@ -11,7 +11,9 @@ class AdminController extends Controller
        if(Auth::guard('admin')->attempt($credentials)){
          return redirect()->route('admin.dashboard');
        }else{
-           echo "dang nhap that bai";exit;
+         return  redirect('admin/login');
+         
+
        }
     }
 
@@ -23,6 +25,9 @@ class AdminController extends Controller
             return  redirect('admin/login');
         }
     }
+
+     
+
 
 
 

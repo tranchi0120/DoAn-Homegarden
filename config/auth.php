@@ -44,10 +44,15 @@ return [
             'driver' => 'session',
             'provider' => 'admins',
         ],
-        'taikhoan' => [
+        // 'taikhoan' => [
+        //     'driver' => 'session',
+        //     'provider' => 'nhanviens',
+        // ],
+        'auth' => [
             'driver' => 'session',
-            'provider' => 'admins',
+            'provider' => 'nhanviens',
         ],
+       
     ],
 
     /*
@@ -76,10 +81,11 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\Admin::class,
         ],
-        'nhanviens' => [
+         'nhanviens' => [
             'driver' => 'eloquent',
-            'model' => App\Models\Admin::class,
+            'model' => App\Models\Nhanvien::class,
         ],
+       
 
         // 'users' => [
         //     'driver' => 'database',

@@ -9,7 +9,7 @@
  <div class="container">
 
         <div class="card-body">
-            <form action="{{route('tk.update',$name->id)}}" method="post">
+            <form action="{{route('u.update',$name->id)}}" method="post">
                 @csrf
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -21,26 +21,26 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <strong>Họ Và tên</strong>
-                            <input class="form-control" type="text" name="HoTen" value="{{$name->HoTen}}">
+                            <input class="form-control" type="text" name="name" value="{{$name->name}}">
                             @error('Name')
                             Vui lòng nhập 
                             @enderror
                         </div>
                         <div class="form-group">
                             <strong>email</strong>
-                            <input class="form-control" type="text" name="Email" value="{{$name->Email}}">
+                            <input class="form-control" type="text" name="email" value="{{$name->email}}">
                             @error('Email')
                             Vui lòng nhập 
                             @enderror
                         </div>
                         <div class="form-group">
                             <strong>password</strong>
-                            <input class="form-control" type="text" name="MatKhau" value="{{$name->MatKhau}}">
+                            <input class="form-control" type="text" name="password" value="{{$name->password}}">
                             @error('Password')
                             Vui lòng nhập 
                             @enderror
                         </div>
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                              <strong>Giới tính</strong>
                            <div class="form-check">
                             <input class="form-check-input" type="radio" name="GioiTinh" id="nam" checked="checked" value="nam">
@@ -54,7 +54,7 @@
                                Nữ
                             </label>
                             </div>
-                        </div>
+                        </div> --}}
                         {{-- <div class="form-group">
                             <strong>ngaysinh</strong>
                             <input class="form-control" type="date" name="NgaySinh" value="{{$name->NgaySinh}}">
@@ -64,7 +64,7 @@
                         </div> --}}
                          <div class="form-group">
                             <strong>sdt</strong>
-                            <input class="form-control" type="text" name="SDT" value="{{$name->SDT}}">
+                            <input class="form-control" type="text" name="sdt" value="{{$name->sdt}}">
                             @error('Sdt')
                             Vui lòng nhập 
                             @enderror

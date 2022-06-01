@@ -9,7 +9,7 @@
  <div class="container">
 
         <div class="card-body">
-            <form action="{{route('tk.store')}}" method="post">
+            <form action="{{route('u.store')}}" method="post">
                 @csrf
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -21,37 +21,23 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <strong>Họ Và tên</strong>
-                            <input class="form-control" type="text" name="HoTen" placeholder="mời nhập">
+                            <input class="form-control" type="text" name="name" placeholder="mời nhập">
                          
                         </div>
                          <div class="form-group">
                             <strong>Email</strong>
-                            <input class="form-control" type="email" name="Email" placeholder="mời nhập">
+                            <input class="form-control" type="email" name="email" placeholder="mời nhập">
                            
                         </div>
                          <div class="form-group">
                             <strong>mật khẩu</strong>
-                            <input class="form-control" type="password" name="MatKhau" placeholder="mời nhập">
+                            <input class="form-control" type="password" name="password" placeholder="mời nhập">
                            
                         </div>
-                         <div class="form-group">
-                            <strong>Giới tính</strong>
-                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="GioiTinh" id="nam" checked="checked" value="nam">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                               Nam
-                            </label>
-                            </div>
-                            <div class="form-check">
-                            <input class="form-check-input" type="radio" name="GioiTinh" id="nữ" checked="checked" value="nữ">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                               Nữ
-                            </label>
-                            </div>
-                        </div>
+                        
                          <div class="form-group">
                             <strong>Số điện thoại</strong>
-                            <input class="form-control" type="text" name="SDT" placeholder="mời nhập">
+                            <input class="form-control" type="text" name="sdt" placeholder="mời nhập">
                         </div>
                         <div class="form-group">
                             <strong>Quyền</strong>

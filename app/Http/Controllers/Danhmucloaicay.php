@@ -16,11 +16,13 @@ class Danhmucloaicay extends Controller
          public function index()
          {
          
-             return view('danhmucloaicay.index');
+             return view('admin/danhmucloaicay.index');
          }
          public function create(){
-             return view('danhmucloaicay.create');
+             return view('admin/danhmucloaicay.create');
          }
+
+         
          public function store(Request $request){
              $tenloaicay = new ModelsDanhmucloaicay();
              $tenloaicay->Tenloaicay = $request->Tenloaicay;
@@ -30,7 +32,7 @@ class Danhmucloaicay extends Controller
         public function edit($id)
         {
           $name = ModelsDanhmucloaicay::find($id);
-        return view('danhmucloaicay.update',compact('name'));
+        return view('admin/danhmucloaicay.update',compact('name'));
 
         }
         public function update(Request $request,$id)

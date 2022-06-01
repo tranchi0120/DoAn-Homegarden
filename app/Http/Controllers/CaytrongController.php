@@ -12,23 +12,27 @@ class CaytrongController extends Controller
      public function __construct()
     {
         $danhmucloaicay = Danhmucloaicay::all();
-        // $caytrong = ModelsCaytrong::all();
-        // view()->share('caytrong',$caytrong);
+        $caytrong = ModelsCaytrong::all();
+        view()->share('caytrong',$caytrong);
         view()->share('danhmucloaicay',$danhmucloaicay);
     }
    
     public function index()
     {
+
+        // $records = $caytrong::where('id',1)->paginate(1);
+
+
          $caytrong = ModelsCaytrong::all();
         // dd($caytrong['0']->DanhMucLoaiCay->Tenloaicay);
        
-        return view('caytrong.index')->with('caytrong',$caytrong);
+        return view('admin/caytrong.index')->with('caytrong',$caytrong);
     }
 
   
     public function create()
     {
-        return view('caytrong.create');
+        return view('admin/caytrong.create');
     }
 
    
@@ -50,7 +54,7 @@ class CaytrongController extends Controller
     public function edit($id)
     {
         $name = ModelsCaytrong::find($id);
-        return view('caytrong.update',compact('name'));
+        return view('admin/caytrong.update',compact('name'));
     }
 
 

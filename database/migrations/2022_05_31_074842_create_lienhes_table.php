@@ -13,7 +13,7 @@ class CreateLienHesTable extends Migration
      */
     public function up()
     {
-        Schema::create('lien_hes', function (Blueprint $table) {
+        Schema::create('lienhes', function (Blueprint $table) {
              $table->increments('id');
             $table->string('HoTen');
             $table->string('SDT');
@@ -32,6 +32,6 @@ class CreateLienHesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lien_hes');
+        Schema::dropIfExists('lienhes');
     }
 }

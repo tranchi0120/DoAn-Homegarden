@@ -47,10 +47,10 @@
                         </div>
                          <div class="form-group">
                             <strong>Người Phun Thuốc</strong>
-                            <select class="select2_single form-control" name="Nhanvien_ID" aria-label="Default select example">
+                            <select class="select2_single form-control" name="User_ID" aria-label="Default select example">
                            {{-- <option>Quyền</option> --}}
-                           @foreach($nhanvien as $data)
-                            <option value="{{$data->id}}"> {{ $data->HoTen }} </option>
+                           @foreach($user as $data)
+                            <option value="{{$data->id}}"> {{ $data->name }} </option>
                           @endforeach
                             </select>
                         </div>

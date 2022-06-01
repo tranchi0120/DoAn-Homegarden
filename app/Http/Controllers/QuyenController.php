@@ -22,7 +22,7 @@ class QuyenController extends Controller
      */
     public function index()
     {
-         return view('quyen.index');
+         return view('admin/quyen.index');
     }
 
     /**
@@ -32,7 +32,7 @@ class QuyenController extends Controller
      */
     public function create()
     {
-          return view('quyen.create');
+          return view('admin/quyen.create');
     }
 
     /**
@@ -69,7 +69,7 @@ class QuyenController extends Controller
     public function edit($id)
     {
         $name = ModelsQuyen::find($id);
-        return view('quyen.update',compact('name'));
+        return view('admin/quyen.update',compact('name'));
     }
 
     /**

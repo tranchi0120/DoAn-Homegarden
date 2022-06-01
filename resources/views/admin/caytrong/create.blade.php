@@ -39,7 +39,6 @@
                             <Strong class="col-sm-3 text-end control-label col-form-label">Hình Ảnh </Strong>
                             <div class="custom-file">
                                 <input name="HinhAnh"  type="file" name="myImage" accept="image/*" />
- 
                             </div>
                         </div>
                          <div class="form-group">

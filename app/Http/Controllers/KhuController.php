@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Caytrong;
 use App\Models\Khu as ModelsKhu;
-use App\Models\Nhanvien;
+use App\Models\User;
 use App\Models\Danhmucloaicay;
 
 use Illuminate\Http\Request;
@@ -14,12 +14,12 @@ class KhuController extends Controller
 
     public function __construct()
     {
-        $taikhoan = Nhanvien::all();
+        $user = User::all();
         $caytrong = Caytrong::all();
         $danhmucloaicay = Danhmucloaicay::all();
         $khu = ModelsKhu::all();
         view()->share('khu',$khu);
-        view()->share('taikhoan',$taikhoan);
+        view()->share('user',$user);
         view()->share('caytrong',$caytrong);
         view()->share('danhmucloaicay',$danhmucloaicay);
     }
@@ -32,7 +32,7 @@ class KhuController extends Controller
     {
         $khu = ModelsKhu::all();
         // dd($khu['0']->CayTrong->DanhMucLoaiCay->Tenloaicay);
-        return view('khu.index')->with('khu',$khu);
+        return view('admin/khu.index')->with('khu',$khu);
     }
 
     /**
@@ -42,7 +42,7 @@ class KhuController extends Controller
      */
     public function create()
     {
-        return view('khu.create');
+        return view('admin/khu.create');
     }
 
     /**
@@ -60,8 +60,7 @@ class KhuController extends Controller
         $name->SoLuong = $request->SoLuong;
         $name->NgayTrongCay = $request->NgayTrongCay;
         $name->NgayThuHoach = $request->NgayThuHoach;
-        $name->GhiChu = $request->GhiChu;
-        $name->Nhanvien_ID = $request->Nhanvien_ID;
+        $name->User_ID = $request->User_ID;
         $name->Caytrong_ID = $request->Caytrong_ID;
         $name->save();
         return redirect()->route('admin.khu')->with('khu', $khu);
@@ -87,7 +86,7 @@ class KhuController extends Controller
     public function edit($id)
     {
         $name = ModelsKhu::find($id);
-        return view('khu.update',compact('name'));
+        return view('admin/khu.update',compact('name'));
     }
 
     /**
@@ -106,7 +105,7 @@ class KhuController extends Controller
              $name->NgayTrongCay = $request->input('NgayTrongCay');
              $name->NgayThuHoach = $request->input('NgayThuHoach');
              $name->GhiChu = $request->input('GhiChu');
-             $name->Nhanvien_ID = $request->input('Nhanvien_ID');
+             $name->User_ID = $request->input('User_ID');
              $name->Caytrong_ID = $request->input('Caytrong_ID');
              $name->update();
              return redirect()->route('admin.khu')->with('thongbao','Chỉnh sửa thành công');

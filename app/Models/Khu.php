@@ -17,8 +17,7 @@ class Khu extends Model
           'SoLuong',
           'NgayTrongCay',
           'NgayThuHoach',
-          'GhiChu',
-          'Nhanvien_ID',
+          'User_ID',
           'Caytrong_ID',
     ];
 
@@ -27,9 +26,9 @@ class Khu extends Model
         return $this->belongsTo(Caytrong::class,'Caytrong_ID');
     }
 
-    public function NhanVien()
+    public function USER()
     {
-        return $this->belongsTo(Nhanvien::class,'Nhanvien_ID');
+        return $this->belongsTo(User::class,'User_ID');
     }
 
      public  function PhunThuoc()
@@ -37,6 +36,11 @@ class Khu extends Model
         return $this->hasMany(Phunthuoc::class,'Khu_ID');
     }
 
+
+     public function TinhTrangKhu() 
+    {
+        return $this->hasOne(Khu::class,'Khu_ID');
+    }
     
 
 }

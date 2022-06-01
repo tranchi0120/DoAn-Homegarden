@@ -14,10 +14,10 @@ class CreateTinhTrangKhusTable extends Migration
     public function up()
     {
         Schema::create('tinh_trang_khus', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('SoLuong');
+           	$table->increments('id');
+            // $table->string('SoLuong');
             $table->string('HinhAnh');
-            $table->string('GhiCHu');
+            $table->string('GhiChu');
             $table->integer('Khu_ID')->unsigned();
             $table->foreign('Khu_ID')->references('id')->on('khus');
             $table->timestamps();
