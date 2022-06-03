@@ -17,10 +17,10 @@ class AuthController extends Controller
         }
         return redirect()->route('show-form-login')->with('success','dang nhap that bai');
     }
-    // public function dashboard(){
+    // public function Showdashboard(){
     //     if(Auth::guard('auth')->check ()){
     //         $adminUser = Auth::guard('auth')->user();
-    //         return view('auth.dashboard',['user'=>$adminUser]);
+    //         return view('dashboard',['user'=>$adminUser]);
     //     }else{
     //         return  redirect('login');
     //     }

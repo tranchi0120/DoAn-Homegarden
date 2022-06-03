@@ -11,6 +11,7 @@ class Caytrong extends Model
 {
     use HasFactory;
 
+    // protected $validator;
     protected $table = 'caytrongs';
      protected $fillable = [
          'Loaicay_ID',
@@ -36,7 +37,22 @@ class Caytrong extends Model
     {
         return $this -> hasMany(Phunthuoc::class,'Khu_ID');
 
-        }
+    }
+
+
+
+    //     $validator = Validator::make(
+    // array(
+    //     'Loaicay_ID' => 'Dayle',
+    //     'password' => 'lamepassword',
+    //     'email' => 'email@example.com'
+    // ),
+    // array(
+    //     'name' => 'required',
+    //     'password' => 'required|min:8',
+    //     'email' => 'required|email|unique:users'
+    // )
+
 
      
    

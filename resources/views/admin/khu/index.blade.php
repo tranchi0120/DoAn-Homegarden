@@ -30,7 +30,6 @@
                 <th>Số Lượng</th>
                   <th>Ngày Trồng</th>
                 <th>Ngày Thu Hoạch</th>
-               
                 <th>Người Chăm sóc</th>
                 <th width="280px">Hành động</th>
             </tr>
@@ -40,7 +39,18 @@
                     <td>{{$data->TenKhu}}</td>
                     <td>{{$data->CayTrong->DanhMucLoaiCay->Tenloaicay}}</td>
                     <td>{{$data->CayTrong->TenCay}}</td>
-                    <td>{{$data->TrangThai }}</td> 
+
+                    <td>
+
+
+                        {{$data->SoLuong > 0 ? 'da trong cay' : 'trong'}}
+                        {{-- @if($data->TrangThai == 1)
+                        <p>Đã Trồng Cây</p>
+                        @elseif($data->TrangThai == 0)
+                        <p>Trống</p>
+                        @endif --}}
+                    </td>
+                    {{-- <td>{{$data->TrangThai }}</td>  --}}
                     <td>{{$data->SoLuong }}</td>
                     <td>{{$data->NgayTrongCay }}</td>
                     <td>{{$data->NgayThuHoach }}</td>

@@ -13,14 +13,15 @@
                 @csrf
                 @if ($errors->any())
                     <div class="alert alert-danger">
-                        Kiểm tra lại dữ liệu
+                      
+                       vui long kieam tra du lieu
+                       
                     </div>
+                   
                 @endif
 
                 <div class="row">
                     <div class="col-md-6">
-                       
-
                         <div class="form-group">
                             <strong>Loại Cây</strong>
                             <select class="select2_single form-control" name="Loaicay_ID" aria-label="Default select example">
@@ -46,14 +47,29 @@
                             <input class="form-control" type="number" name="GianTien" placeholder="mời nhập">
                             
                         </div>
-                         <div class="form-group">
-                            <strong>Giai đoạn phun thuốc</strong>
-                            <input class="form-control" type="editor" name="GiaiDoanPhunThuoc" placeholder="mời nhập">
-                        </div>
-                        
-                      
+                         <div class="form-group now    ">
+                             <strong>Giai Đoạn Phun Thuốc</strong>
+                            {{-- <strong>Giai đoạn phun thuốc</strong>
+                            <input class="form-control" type="editor" name="GiaiDoanPhunThuoc" placeholder="mời nhập"> --}}
+                            <div class="col-ml-9 col-sm-9">
+                                <textarea name="GiaiDoanPhunThuoc" cols="30" rows="3" class="form-control" placeholder="mieu ta"></textarea>
 
-                    </div>
+                            </div>
+                        </div>
+
+                         <div class="form-group now    ">
+                             <strong>Ghi Chu</strong>
+                            {{-- <strong>Giai đoạn phun thuốc</strong>
+                            <input class="form-control" type="editor" name="GiaiDoanPhunThuoc" placeholder="mời nhập"> --}}
+                            <div class="col-ml-9 col-sm-9">
+                                <textarea name="GhiChu" cols="30" rows="3" class="form-control" placeholder="mieu ta"></textarea>
+
+                            </div>
+                        </div>
+                            
+					</div>
+					
+              
 
                 </div>
                 <div class="mt-2"><button type="submit" class="btn btn-primary">Lưu</button></div>

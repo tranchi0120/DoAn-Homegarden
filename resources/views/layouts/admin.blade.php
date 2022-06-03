@@ -41,7 +41,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
   
 
-
+ <link href="/css/admin.css" rel="stylesheet">
 {{-- gg font --}}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -138,5 +138,7 @@
         });
     </script>
 
+     <script src="./js/admin.js"></script>
 
+</body>
 </html>

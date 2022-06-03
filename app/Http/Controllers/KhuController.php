@@ -33,6 +33,8 @@ class KhuController extends Controller
         $khu = ModelsKhu::all();
         // dd($khu['0']->CayTrong->DanhMucLoaiCay->Tenloaicay);
         return view('admin/khu.index')->with('khu',$khu);
+
+        
     }
 
     /**
@@ -43,6 +45,7 @@ class KhuController extends Controller
     public function create()
     {
         return view('admin/khu.create');
+        
     }
 
     /**
@@ -56,7 +59,7 @@ class KhuController extends Controller
         $khu = ModelsKhu::all();
         $name = new ModelsKhu();
         $name->TenKhu = $request->TenKhu;
-        $name->TrangThai = $request->TrangThai;
+        // $name->TrangThai = $request->TrangThai;
         $name->SoLuong = $request->SoLuong;
         $name->NgayTrongCay = $request->NgayTrongCay;
         $name->NgayThuHoach = $request->NgayThuHoach;
@@ -100,11 +103,9 @@ class KhuController extends Controller
     {
              $name = ModelsKhu::find($id);
              $name->TenKhu = $request->input('TenKhu');
-             $name->TrangThai = $request->input('TrangThai');
              $name->SoLuong = $request->input('SoLuong');
              $name->NgayTrongCay = $request->input('NgayTrongCay');
              $name->NgayThuHoach = $request->input('NgayThuHoach');
-             $name->GhiChu = $request->input('GhiChu');
              $name->User_ID = $request->input('User_ID');
              $name->Caytrong_ID = $request->input('Caytrong_ID');
              $name->update();

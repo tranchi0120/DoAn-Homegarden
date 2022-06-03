@@ -26,8 +26,8 @@
                         </div>
                         <div class="form-group">
                             <strong>Trạng Thái</strong>
+                            
                             <input class="form-control" type="text" name="TrangThai" value="{{$name->TrangThai}}">
-                           
                         </div>
                         <div class="form-group">
                             <strong>Số Lượng </strong>
@@ -44,16 +44,13 @@
                             <input class="form-control" type="date" name="NgayThuHoach" value="{{$name->NgayThuHoach}}">
                            
                         </div>
-                         {{-- <div class="form-group">
-                            <strong>Ghi Chú </strong>
-                            <input class="form-control" type="text" name="GhiChu" value="{{$name->GhiChu}}">  
-                        </div> --}}
+                        
                         <div class="form-group">
                             <strong>Người Chăm Cây</strong>
-                            <select class="select2_single form-control" name="Nhanvien_ID" aria-label="Default select example">
+                            <select class="select2_single form-control" name="User_ID" aria-label="Default select example">
                            {{-- <option>Tên</option> --}}
-                           @foreach($taikhoan as $data)
-                            <option value="{{$data->id}}"> {{ $data->HoTen }} </option>
+                           @foreach($user as $data)
+                            <option value="{{$data->id}}"> {{ $data->name }} </option>
                           @endforeach
                             </select>
                         </div>

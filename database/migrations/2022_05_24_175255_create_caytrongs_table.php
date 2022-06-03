@@ -19,6 +19,7 @@ class CreateCaytrongsTable extends Migration
             $table->string('HinhAnh');
             $table->decimal('GianTien');
             $table->string('GiaiDoanPhunThuoc');
+            $table->string('GhiChu');
             $table->integer('Loaicay_ID')->unsigned();
             $table->foreign('Loaicay_ID')->references('id')->on('danhmucloaicays');
             $table->timestamps();

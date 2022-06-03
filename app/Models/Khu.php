@@ -13,7 +13,6 @@ class Khu extends Model
     protected $fillable = [
           'TenKhu',
           'Loaicay_ID',
-          'TrangThai',
           'SoLuong',
           'NgayTrongCay',
           'NgayThuHoach',

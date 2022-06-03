@@ -24,6 +24,7 @@
             <tr class="table-dark">
                 <th>ID</th>
                 <th>Tên Khu</th>
+                <th>Số Lượng</th>
                 <th>Tên Cây</th>
                 <th>Hình Cây Trồng</th>
                 <th>Ghi Chú</th>
@@ -40,6 +41,7 @@
                      
                     <td>{{$data->id}}</td>
                     <td>{{$data->Khu->TenKhu}}</td>
+                    <td>{{$data->Khu->SoLuong}}</td>
                     <td>{{$data->Khu->CayTrong->TenCay}}</td>
                       <td><img src="../boostrap/assets/img/{{$data->HinhAnh }}" class="images" alt="Girl in a jacket" width="50px" height="50px"></td>
                     <td>{{$data->GhiChu }}</td>

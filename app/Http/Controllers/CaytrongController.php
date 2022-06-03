@@ -43,9 +43,20 @@ class CaytrongController extends Controller
         $name->TenCay = $request->TenCay;
         $name->HinhAnh = $request->HinhAnh;
         $name->GianTien = $request->GianTien;
+        $name->GhiChu = $request->GhiChu;
         $name->GiaiDoanPhunThuoc = $request->GiaiDoanPhunThuoc;
         $name->save();
         return redirect()->route('admin.caytrong')->with('thongbao','thêm thành công');
+
+        $validate = $request->validate( [
+            'Loaicay_ID' => 'required',
+             'TenCay' => 'required',
+             'HinhAnh' => 'required',
+             'GianTien' => 'required',
+             'GiaiDoanPhunThuoc' => 'required'
+        ] );
+           
+        
     }
 
  
@@ -66,6 +77,7 @@ class CaytrongController extends Controller
             //  $name->HinhAnh = $request->input('HinhAnh');
              $name->GianTien = $request->input('GianTien');
              $name->GiaiDoanPhunThuoc = $request->input('GiaiDoanPhunThuoc');
+             $name->GhiChu = $request->input('GhiChu');
              $name->update();
              return redirect()->route('admin.caytrong')->with('thongbao','Chỉnh sửa thành công');
     }

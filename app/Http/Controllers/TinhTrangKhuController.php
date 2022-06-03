@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\TinhTrangKhu as ModelsTinhTrangKhu;
+
 use App\Models\Khu;
 use App\Models\User;
 use App\Models\Caytrong;
@@ -66,15 +67,10 @@ class TinhTrangKhuController extends Controller
 
     public function update(Request $request, $id)
     {
-        $name = ModelsTinhTrangKhu::find($id);
-             $name->HinhAnh = $request->input('HinhAnh');
-             $name->GhiChu = $request->input('GhiChu');
-            //  $name->Khu_ID = $request->input('Khu_ID');
-            //  $name->GioiTinh = $request->input('GioiTinh');
-            // //  $name->NgaySinh = $request->input('NgaySinh');
-            //  $name->SDT = $request->input('SDT');
-            //  $name->Quyen_ID = $request->input('Quyen_ID');
-             $name->update();
+             $data = khu::find($id);
+            //  dd( $request->input('SoLuong'));
+             $data->SoLuong = $request->input('SoLuong');
+             $data->save();
              return redirect()->route('admin.tinhtrangkhu')->with('thongbao','Chỉnh sửa thành công');
     }
 
@@ -82,7 +78,7 @@ class TinhTrangKhuController extends Controller
     
     public function destroy($id)
     {
-        $tinhtrangkhu = ModelsTinhTrangKhu::find($id);
+            $tinhtrangkhu = ModelsTinhTrangKhu::find($id);
            $tinhtrangkhu->delete();
       return redirect()->route('admin.tinhtrangkhu');
     }

@@ -16,7 +16,7 @@ class CreateKhusTable extends Migration
         Schema::create('khus', function (Blueprint $table) {
             $table->increments('id');
             $table->string('TenKhu');
-            $table->string('TrangThai');
+            // $table->boolean('TrangThai');
             $table->string('SoLuong');
             $table->string('NgayTrongCay');
             $table->string('NgayThuHoach');

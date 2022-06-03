@@ -36,6 +36,12 @@
                             <input class="form-control" type="text" name="GhiChu" value="{{$name->GhiChu}}">
                            
                         </div>
+
+                        <div class="form-group">
+                            <strong>Số Lượng</strong>
+                            <input class="form-control" type="text" name="SoLuong" value="{{$name->Khu->SoLuong}}">
+                           
+                        </div>
                        
                        
                     </div>

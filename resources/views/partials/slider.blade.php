@@ -74,11 +74,11 @@
               
 
                  
-                 <li><a><i class="fa fa-clone"></i>Lịch Sử Giao Dịch<span class="fa fa-chevron-down"></span></a>
-                  <ul class="nav child_menu">
+                 <li><a><i class="fa fa-clone"></i>Lịch Sử Xuất</a>
+                  {{-- <ul class="nav child_menu">
                     <li><a href="fixed_sidebar.html">Lịch Sử Nhập</a></li>
                     <li><a href="fixed_footer.html">Lịch Sử Xuất</a></li>
-                  </ul>
+                  </ul> --}}
                 </li>
                 <li><a><i class="fa fa-bug"></i>Thông tin liên hệ khách hàng </span></a>
                  </li>

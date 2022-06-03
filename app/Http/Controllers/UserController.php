@@ -45,7 +45,7 @@ class UserController extends Controller
         $name = new ModelsUser();
         $name->name = $request->name;
         $name->email = $request->email;
-        $name->password = $request->password;
+        $name->password = bcrypt($request->password);
         $name->sdt = $request->sdt;
         $name->Quyen_ID = $request->Quyen_ID;
         $name->save();
@@ -84,10 +84,10 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-            $name = ModelsUser::find($id);
+                $name = ModelsUser::find($id);
              $name->name = $request->input('name');
              $name->email = $request->input('email');
-             $name->password = $request->input('password');
+             $name->password =bcrypt($request->input('password')) ;
              $name->sdt = $request->input('sdt');
              $name->Quyen_ID = $request->input('Quyen_ID');
              $name->update();

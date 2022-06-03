@@ -38,10 +38,20 @@
                             <input class="form-control" type="text" name="GianTien" value="{{$name->GianTien}}">
                            
                         </div>
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <strong>giai đoạn phun thuốc</strong>
-                            <input class="form-control" type="text" name="GiaiDoanPhunThuoc" value="{{$name->GiaiDoanPhunThuoc}}">
+                            <input class="form-control" type="editor" name="GiaiDoanPhunThuoc" value="{{$name->GiaiDoanPhunThuoc}}">
                           
+                        </div> --}}
+
+                        <div class="form-group now    ">
+                             <strong>Giai Đoạn Phun Thuốc</strong>
+                            {{-- <strong>Giai đoạn phun thuốc</strong>
+                            <input class="form-control" type="editor" name="GiaiDoanPhunThuoc" placeholder="mời nhập"> --}}
+                            <div class="col-ml-9 col-sm-9">
+                                <textarea  id="noidung" name="GiaiDoanPhunThuoc" cols="30" rows="3" class="form-control "  placeholder="mieu ta">{{$name->GiaiDoanPhunThuoc}}</textarea>
+
+                            </div>
                         </div>
                        
                     </div>

@@ -32,11 +32,22 @@
                         </div>
                         </div>
                           
-                         <div class="form-group">
+                         {{-- <div class="form-group">
                             <strong>Trạng Thái</strong>
-                            <input class="form-control" type="text" name="TrangThai" placeholder="mời nhập">
-                           
-                        </div>
+                            <input class="form-control" type="text" name="TrangThai" placeholder="mời nhập"> --}}
+                            {{-- <div class="form-check">
+                            <input class="form-check-input" type="radio" name="TrangThai" id="nam" checked="checked" >
+                            <label class="form-check-label" for="flexRadioDefault1">
+                             Đã Trồng Cây
+                            </label>
+                            </div>
+                             <div class="form-check">
+                            <input class="form-check-input" type="radio" name="TrangThai" id="nam" checked="checked" >
+                            <label class="form-check-label" for="flexRadioDefault1">
+                               Trống
+                            </label>
+                            </div> --}}
+                        {{-- </div> --}}
                          <div class="form-group">
                             <strong>Số Lượng</strong>   
                             <input class="form-control" type="number" name="SoLuong" placeholder="mời nhập">
