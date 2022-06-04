@@ -89,4 +89,9 @@ class CaytrongController extends Controller
         $caytrong->delete();
       return redirect()->route('admin.caytrong');
     }
+
+    public function chitietcaytrong($id){
+        $data = ModelsCaytrong::find($id);
+        return view('admin.caytrong.chitiet-caytrong', compact('data'));
+    }
 }

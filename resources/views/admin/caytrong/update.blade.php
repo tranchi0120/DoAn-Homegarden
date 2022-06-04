@@ -53,7 +53,26 @@
 
                             </div>
                         </div>
-                       
+                        <script>
+    CKEDITOR.replace( 'GiaiDoanPhunThuoc' ,{
+        language: 'en'
+    });
+</script>
+
+                    <div class="form-group now    ">
+                             <strong>Ghi Chus</strong>
+                            {{-- <strong>Giai đoạn phun thuốc</strong>
+                            <input class="form-control" type="editor" name="GiaiDoanPhunThuoc" placeholder="mời nhập"> --}}
+                            <div class="col-ml-9 col-sm-9">
+                                <textarea  id="noidung" name="GhiChu" cols="30" rows="3" class="form-control "  placeholder="mieu ta">{{$name->GhiChu}}</textarea>
+
+                            </div>
+                        </div>
+                        <script>
+    CKEDITOR.replace( 'GhiChu' ,{
+        language: 'en'
+    });
+</script>
                     </div>
 
                 </div>
@@ -63,4 +82,6 @@
 
     </div>
 @endsection
+
+   
 

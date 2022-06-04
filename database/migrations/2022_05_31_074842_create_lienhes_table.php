@@ -18,9 +18,9 @@ class CreateLienHesTable extends Migration
             $table->string('HoTen');
             $table->string('SDT');
             $table->string('Email');
-            $table->string('DiaCHi');
+            $table->string('DiaChi');
             $table->string('TieuDe');
-            $table->string('NoiDUng');
+            $table->string('NoiDung');
             $table->timestamps();
         });
     }

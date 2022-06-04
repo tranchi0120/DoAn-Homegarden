@@ -85,6 +85,8 @@ Route::post('admin/caytrong/store',[CaytrongController::class,'store'])->name('c
 Route::get('admin/caytrong/edit/{id}',[CaytrongController::class,'edit'])->name('ct.edit');
 Route::post('admin/caytrong/update/{caytrong}',[CaytrongController::class,'update'])->name('ct.update');
 Route::get('admin/caytrong/destroy/{id}',[CaytrongController::class,'destroy'])->name('ct.destroy');
+Route::get('admin/caytrong/chitiet/{id}',[CaytrongController::class,'chitietcaytrong'])->name('admin.caytrong.chitiet');
+
 
 
 
@@ -138,6 +140,8 @@ Route::post('admin/tinhtrangkhu/store',[TinhTrangKhuController::class,'store'])-
 Route::get('admin/tinhtrangkhu/edit/{id}',[TinhTrangKhuController::class,'edit'])->name('tinhtrang.edit');
 Route::post('admin/tinhtrangkhu/update/{phunthuoc}',[TinhTrangKhuController::class,'update'])->name('tinhtrang.update');
 Route::get('admin/tinhtrangkhu/destroy/{id}',[TinhTrangKhuController::class,'destroy'])->name('tinhtrang.destroy');
+Route::get('admin/tinhtrangkhu/chitiet/{id}',[TinhTrangKhuController::class,'chitietkhu'])->name('admin.tinhtrangkhu.chitiet');
+
 
 
 // User

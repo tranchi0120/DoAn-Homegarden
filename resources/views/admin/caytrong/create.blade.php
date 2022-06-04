@@ -47,25 +47,37 @@
                             <input class="form-control" type="number" name="GianTien" placeholder="mời nhập">
                             
                         </div>
-                         <div class="form-group now    ">
-                             <strong>Giai Đoạn Phun Thuốc</strong>
+                        <div class="form-group now    ">
+                             <strong>Giai Doan Phun Thuoc</strong>
                             {{-- <strong>Giai đoạn phun thuốc</strong>
                             <input class="form-control" type="editor" name="GiaiDoanPhunThuoc" placeholder="mời nhập"> --}}
                             <div class="col-ml-9 col-sm-9">
-                                <textarea name="GiaiDoanPhunThuoc" cols="30" rows="3" class="form-control" placeholder="mieu ta"></textarea>
+                                <textarea  id="phunthuoc" name="GiaiDoanPhunThuoc" cols="30" rows="3" class="form-control "  ></textarea>
 
                             </div>
                         </div>
+                        <script>
+    CKEDITOR.replace( 'phunthuoc' ,{
+        language: 'en'
+    });
+</script>
+                            
+                        </div>
 
-                         <div class="form-group now    ">
-                             <strong>Ghi Chu</strong>
+                          <div class="form-group now    ">
+                             <strong>Ghi Chus</strong>
                             {{-- <strong>Giai đoạn phun thuốc</strong>
                             <input class="form-control" type="editor" name="GiaiDoanPhunThuoc" placeholder="mời nhập"> --}}
                             <div class="col-ml-9 col-sm-9">
-                                <textarea name="GhiChu" cols="30" rows="3" class="form-control" placeholder="mieu ta"></textarea>
+                                <textarea  id="ghichu" name="GhiChu" cols="30" rows="3" class="form-control "  ></textarea>
 
                             </div>
                         </div>
+                        <script>
+    CKEDITOR.replace( 'ghichu' ,{
+        language: 'en'
+    });
+</script>
                             
 					</div>
 					

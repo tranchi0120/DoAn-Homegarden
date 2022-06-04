@@ -25,13 +25,14 @@
                            
                         </div>
                         <div class="form-group">
-                            <strong>Trạng Thái</strong>
-                            
-                            <input class="form-control" type="text" name="TrangThai" value="{{$name->TrangThai}}">
-                        </div>
-                        <div class="form-group">
                             <strong>Số Lượng </strong>
                             <input class="form-control" type="number" name="SoLuong" value="{{$name->SoLuong}}">
+                           
+                        </div>
+
+                             <div class="form-group">
+                            <strong>Số Lượng chet </strong>
+                            <input class="form-control" type="number" name="SoLuongChet" value="{{$name->SoLuongChet}}">
                            
                         </div>
                         <div class="form-group">
@@ -65,6 +66,20 @@
                           @endforeach
                             </select>
                         </div>
+
+
+                         <div class="form-group now    ">
+                             <strong>Ghi Chus</strong>
+                            <div class="col-ml-9 col-sm-9">
+                                <textarea  id="noidung" name="GhiChu" cols="30" rows="3" class="form-control "  >{{$name->GhiChu}}</textarea>
+
+                            </div>
+                        </div>
+                        <script>
+    CKEDITOR.replace( 'GhiChu' ,{
+        language: 'en'
+    });
+</script>
                         
                     </div>
 

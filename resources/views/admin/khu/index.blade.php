@@ -26,11 +26,14 @@
                 <th>Tên Khu</th>
                 <th>Loại Cây</th>
                 <th>Tên Cây </th>
+                <th>Hinh Anh </th>
                 <th>Trạng Thái</th>
                 <th>Số Lượng</th>
+                <th>Số Lượng Chet</th>
                   <th>Ngày Trồng</th>
                 <th>Ngày Thu Hoạch</th>
                 <th>Người Chăm sóc</th>
+                <th>Ghi Chus</th>
                 <th width="280px">Hành động</th>
             </tr>
              @foreach ($khu as $data)
@@ -38,23 +41,24 @@
                     <td>{{$data->id}}</td>
                     <td>{{$data->TenKhu}}</td>
                     <td>{{$data->CayTrong->DanhMucLoaiCay->Tenloaicay}}</td>
+
                     <td>{{$data->CayTrong->TenCay}}</td>
+                    <td>{{$data->HinhAnh}}</td>
+
+                    
 
                     <td>
 
 
-                        {{$data->SoLuong > 0 ? 'da trong cay' : 'trong'}}
-                        {{-- @if($data->TrangThai == 1)
-                        <p>Đã Trồng Cây</p>
-                        @elseif($data->TrangThai == 0)
-                        <p>Trống</p>
-                        @endif --}}
+                        {{$data->SoLuong > 0 ? 'Đã trồng cây' : 'trống'}}
                     </td>
-                    {{-- <td>{{$data->TrangThai }}</td>  --}}
+                    
                     <td>{{$data->SoLuong }}</td>
+                    <td>{{$data->SoLuongChet }}</td>
                     <td>{{$data->NgayTrongCay }}</td>
                     <td>{{$data->NgayThuHoach }}</td>
                     <td>{{ $data->USER->name }}</td>
+                    <td>{!! $data->GhiChu !!}</td>
                     
                     
                     <td>
@@ -62,9 +66,9 @@
                             <i class="fas fa-edit"></i>
                         </a>
                         @csrf
-                        <a href="{{route('k.destroy',$data->id)}}" class="btn btn-danger action_delete">
+                         <button data-url="{{route('k.destroy',$data->id)}}" class="btn btn-danger action_delete delete-button">
                             <i class="fas fa-trash"></i>
-                        </a>
+                        </button>
                         </form>
                     </td>
 
@@ -77,4 +81,47 @@
         
     </div>
 
+@endsection
+
+@section('scripts')
+    <script>
+        function deleteRecord(event){
+        event.preventDefault();
+        let _this = $(this);
+        let url = $(this).data('url');
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    type: 'GET',
+                    url: url,
+
+                    success: function (data){
+                        if(data.code === 200){
+                            console.log(_this.parent().parent());
+                            _this.parent().parent().remove();
+                        }
+                        Swal.fire(
+                            'Deleted!',
+                            'Your file has been deleted.',
+                            'success'
+                        )
+                    },
+
+                    error: function (data){
+
+                    }
+                })
+            }
+        })
+    }
+    $(document).on("click",".delete-button", deleteRecord);
+    </script>
 @endsection

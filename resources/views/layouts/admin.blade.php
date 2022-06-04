@@ -48,6 +48,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
 
 
+    <script src="{{ asset('admin/plugins/ckeditor/ckeditor.js') }}"></script>
+    <script src="{{ asset('admin/plugins/select2/dist/js/select2.js') }}"></script>
+  <script src="{{ asset('admin/plugins/iCheck/icheck.js') }}"></script>
+
+  
+
 
 
 
@@ -121,9 +127,11 @@
   <!-- Custom Theme Scripts -->
   <script src="{{asset('../themes/build/js/custom.min.js')}}"></script>
 
+  
 
 
 
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   {{-- bang ghi chu --}}
 <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
@@ -137,6 +145,9 @@
             menubar: false,
         });
     </script>
+
+
+ @yield('scripts')
 
      <script src="./js/admin.js"></script>
 

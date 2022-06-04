@@ -27,8 +27,9 @@
                 <th>Tên Cây</th>
                 <th>Hình Ảnh</th>
                   <th>Giá Tiền</th>
-                <th>Giai Đoạn Phun Thuốc</th>
-                <th>Ghi Chus</th>
+                  <th>Chi Tiet</th>
+                {{-- <th>Giai Đoạn Phun Thuốc</th>
+                <th>Ghi Chus</th> --}}
                 <th width="280px">Hành động</th>
             </tr>
              @foreach ($caytrong as $data)
@@ -37,9 +38,11 @@
                     <td>{{$data->DanhMucLoaiCay->Tenloaicay}}</td>
                     <td>{{$data->TenCay }}</td> 
                     <td><img src="../boostrap/assets/img/{{$data->HinhAnh }}" class="images" alt="Girl in a jacket" width="50px" height="50px"></td>
-                    <td>{{$data->GianTien }} VNĐ</td>
-                    <td><textarea  cols="30" rows="10">{{$data->GiaiDoanPhunThuoc }}</textarea> </td>
-                    <td>{{$data->GhiChu }} </td>
+                    <td>{{ number_format($data->GianTien) }} VNĐ</td>
+                    <td><a href="{{route('admin.caytrong.chitiet' , ['id' => $data->id])}}">Chi Tiet</a></td>   
+                    {{-- <td>{!!$data->GiaiDoanPhunThuoc !!} </td>
+                    <td>{!!$data->GhiChu !!} </td> --}}
+
                     
                     <td>
                         <a class="btn btn-primary " href="{{route('ct.edit',$data->id)}}">

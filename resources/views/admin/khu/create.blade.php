@@ -19,10 +19,6 @@
 
                 <div class="row">
                     <div class="col-md-6">
-                         {{-- <div class="form-group">
-                            <strong>Tên Khu</strong>
-                            <input class="form-control" type="text" name="TenKhu" placeholder="mời nhập">  
-                        </div> --}}
 
                         <div class="form-group">
                            <div class="form-group">
@@ -32,30 +28,26 @@
                         </div>
                         </div>
                           
-                         {{-- <div class="form-group">
-                            <strong>Trạng Thái</strong>
-                            <input class="form-control" type="text" name="TrangThai" placeholder="mời nhập"> --}}
-                            {{-- <div class="form-check">
-                            <input class="form-check-input" type="radio" name="TrangThai" id="nam" checked="checked" >
-                            <label class="form-check-label" for="flexRadioDefault1">
-                             Đã Trồng Cây
-                            </label>
-                            </div>
-                             <div class="form-check">
-                            <input class="form-check-input" type="radio" name="TrangThai" id="nam" checked="checked" >
-                            <label class="form-check-label" for="flexRadioDefault1">
-                               Trống
-                            </label>
-                            </div> --}}
-                        {{-- </div> --}}
                          <div class="form-group">
                             <strong>Số Lượng</strong>   
                             <input class="form-control" type="number" name="SoLuong" placeholder="mời nhập">
                             
                         </div>
+                        <div class="form-group">
+                            <strong>Số Lượng chet</strong>   
+                            <input class="form-control" type="number" name="SoLuongChet" placeholder="mời nhập">
+                            
+                        </div>
                          <div class="form-group">
                             <strong>Ngày Trồng</strong>
                             <input class="form-control" type="date" name="NgayTrongCay" placeholder="mời nhập">
+                        </div>
+
+                             <div class="form-group  ">
+                            <Strong class="col-sm-3 text-end control-label col-form-label">Hình Ảnh </Strong>
+                            <div class="custom-file">
+                                <input name="HinhAnh"  type="file" name="myImage" accept="image/*" />
+                            </div>
                         </div>
                          <div class="form-group">
                             <strong>Ngày Thu</strong>
@@ -65,7 +57,7 @@
                         <div class="form-group">
                             <strong>Người Chăm Cây</strong>
                             <select class="select2_single form-control" name="User_ID" aria-label="Default select example">
-                           {{-- <option>Tên</option> --}}
+                         
                            @foreach($user as $data)
                             <option value="{{$data->id}}"> {{ $data->name }} </option>
                           @endforeach
@@ -82,6 +74,21 @@
                           @endforeach
                             </select>
                         </div>
+
+                        <div class="form-group now    ">
+                             <strong>Ghi Chus</strong>
+                            {{-- <strong>Giai đoạn phun thuốc</strong>
+                            <input class="form-control" type="editor" name="GiaiDoanPhunThuoc" placeholder="mời nhập"> --}}
+                            <div class="col-ml-9 col-sm-9">
+                                <textarea  id="GhiChu" name="GhiChu" cols="30" rows="3" class="form-control "  ></textarea>
+
+                            </div>
+                        </div>
+                        <script>
+    CKEDITOR.replace( 'GhiChu' ,{
+        language: 'en'
+    });
+</script>
                           
                         
                     </div>

@@ -10,8 +10,8 @@ class TinhTrangKhu extends Model
     use HasFactory;
      protected $fillable = [
         //   'SoLuong',
-          'HinhAnh',
-          'GhiChu',
+        //   'HinhAnh',
+        //   'GhiChu',
           'Khu_ID'
     ];
 

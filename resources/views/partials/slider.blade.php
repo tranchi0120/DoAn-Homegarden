@@ -28,12 +28,6 @@
                 <li><a href="http://127.0.0.1:8000/dashboard"><i class="fa fa-home"></i> Trang Chủ </a>
                   
                 </li>
-
-                 <li><a href="http://127.0.0.1:8000/admin/quyen" ><i class="fa fa-edit"></i>Quản Lý Quyền </a>
-                  <ul class="nav child_menu">
-                    
-                  </ul>
-                </li>
                 <li><a href="http://127.0.0.1:8000/admin/user" ><i class="fa fa-edit"></i>Tài Khoản </a>
                   <ul class="nav child_menu">
                     

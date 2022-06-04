@@ -25,27 +25,35 @@
                 <th>ID</th>
                 <th>Tên Khu</th>
                 <th>Số Lượng</th>
-                <th>Tên Cây</th>
+                <th>Số Lượng Chết</th>
+                <th>Người Chăm Sóc</th> 
+                  <th>Chi Tiet</th>
+                <th width="280px">Hành động</th>
+
+                {{-- <th>Tên Cây</th>
                 <th>Hình Cây Trồng</th>
-                <th>Ghi Chú</th>
-                <th>Người Chăm Sóc</th>
+                <th>Ghi Chú</th>--}}
                 
                 {{-- <th>Tên Cây </th> --}}
                 {{-- <th>Số Lượng</th> --}}
               
-                {{-- <th>Người Chăm sóc</th> --}}
-                <th width="280px">Hành động</th>
             </tr>
-             @foreach ($tinhtrangkhu as $data)
+             @foreach ($khu as $data)
                 <tr>
                      
                     <td>{{$data->id}}</td>
-                    <td>{{$data->Khu->TenKhu}}</td>
-                    <td>{{$data->Khu->SoLuong}}</td>
-                    <td>{{$data->Khu->CayTrong->TenCay}}</td>
+                    <td>{{$data->TenKhu}}</td>
+                    <td>{{$data->SoLuong}}</td>
+                    <td>{{$data->SoLuongChet}}</td>
+                    <td>{{$data->USER->name}}</td>
+                    <td><a href="{{route('admin.tinhtrangkhu.chitiet' , ['id' => $data->id])}}">Chi Tiet</a></td>  
+
+
+                    {{-- <td>{{$data->Khu->CayTrong->TenCay}}</td>
                       <td><img src="../boostrap/assets/img/{{$data->HinhAnh }}" class="images" alt="Girl in a jacket" width="50px" height="50px"></td>
-                    <td>{{$data->GhiChu }}</td>
-                    <td>{{$data->Khu->USER->name}}</td>
+                    <td>{!!$data->GhiChu !!}</td> --}}
+
+
 
                    
                     <td>

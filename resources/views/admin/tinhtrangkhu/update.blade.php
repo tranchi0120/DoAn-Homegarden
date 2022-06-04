@@ -19,29 +19,37 @@
                 <div class="row">
                     <div class="col-md-6">
                       
-                        {{-- <div class="form-group">
-                            <strong>Hình Ảnh</strong>
-                            <input class="form-control" type="text" name="HinhAnh" value="{{$name->HinhAnh}}">
-                           
-                        </div> --}}
-
-                         <div class="form-group  ">
+                       
+                         {{-- <div class="form-group  ">
                             <Strong class="col-sm-3 text-end control-label col-form-label">Hình Ảnh </Strong>
                             <div class="custom-file">
                                 <input name="HinhAnh"  type="file" name="myImage" accept="image/*" />
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <strong>Ghi Chú</strong>
-                            <input class="form-control" type="text" name="GhiChu" value="{{$name->GhiChu}}">
-                           
-                        </div>
+                        </div> --}}
+                       
 
                         <div class="form-group">
                             <strong>Số Lượng</strong>
-                            <input class="form-control" type="text" name="SoLuong" value="{{$name->Khu->SoLuong}}">
+                            <input class="form-control" type="text" name="SoLuong" disabled value="{{$name->SoLuong}}">
                            
                         </div>
+                         <div class="form-group">
+                            <strong>Số Lượng Chết</strong>
+                            <input class="form-control" type="text" name="SoLuongChet"  value="{{$name->SoLuongChet}}">
+                           
+                        </div>
+
+                         <div class="form-group now    ">
+                             <strong>Ghi Chus</strong>
+                            <div class="col-ml-9 col-sm-9">
+                                <textarea  id="noidung" name="GhiChu" cols="30" rows="3" class="form-control " >{{$name->GhiChu}}</textarea>
+                            </div>
+                        </div>
+                        <script>
+                CKEDITOR.replace( 'noidung' ,{
+        language: 'en'
+    });
+</script>
                        
                        
                     </div>

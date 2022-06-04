@@ -6,6 +6,7 @@ use App\Models\Caytrong;
 use App\Models\Khu as ModelsKhu;
 use App\Models\User;
 use App\Models\Danhmucloaicay;
+use App\Models\Phunthuoc;
 
 use Illuminate\Http\Request;
 
@@ -59,12 +60,14 @@ class KhuController extends Controller
         $khu = ModelsKhu::all();
         $name = new ModelsKhu();
         $name->TenKhu = $request->TenKhu;
-        // $name->TrangThai = $request->TrangThai;
         $name->SoLuong = $request->SoLuong;
+        $name->HinhAnh = $request->HinhAnh;
+        $name->SoLuongChet = $request->SoLuongChet;
         $name->NgayTrongCay = $request->NgayTrongCay;
         $name->NgayThuHoach = $request->NgayThuHoach;
         $name->User_ID = $request->User_ID;
         $name->Caytrong_ID = $request->Caytrong_ID;
+        $name->GhiChu = $request->GhiChu;
         $name->save();
         return redirect()->route('admin.khu')->with('khu', $khu);
     }
@@ -104,10 +107,12 @@ class KhuController extends Controller
              $name = ModelsKhu::find($id);
              $name->TenKhu = $request->input('TenKhu');
              $name->SoLuong = $request->input('SoLuong');
+             $name->SoLuongChet = $request->input('SoLuongChet');
              $name->NgayTrongCay = $request->input('NgayTrongCay');
              $name->NgayThuHoach = $request->input('NgayThuHoach');
              $name->User_ID = $request->input('User_ID');
              $name->Caytrong_ID = $request->input('Caytrong_ID');
+             $name->GhiChu = $request->input('GhiChu');
              $name->update();
              return redirect()->route('admin.khu')->with('thongbao','Chỉnh sửa thành công');
     }
@@ -122,7 +127,22 @@ class KhuController extends Controller
     {
         
            $khu = ModelsKhu::find($id);
+
+           $checkExistsPhunThuoc = Phunthuoc::where('Khu_ID', $id);
+           if($checkExistsPhunThuoc->exists())
+                $checkExistsPhunThuoc->delete();
            $khu->delete();
-         return redirect()->route('admin.khu');
-    }
+           if($khu){
+            return response() -> json([
+                "code" => 200,
+                "message" => "Delete success"
+            ],200);
+            }
+            else{
+                return response() -> json([
+                    "code" => 500,
+                    "message" => "Cant delete this record"
+                ], 500);
+            }
+        }
 }

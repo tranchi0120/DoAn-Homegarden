@@ -28,17 +28,26 @@
                              @endforeach
                             </select>
                         </div>
-                         <div class="form-group  ">
+                         {{-- <div class="form-group  ">
                             <Strong class="col-sm-3 text-end control-label col-form-label">Hình Ảnh </Strong>
                             <div class="custom-file">
                                 <input name="HinhAnh"  type="file" name="myImage" accept="image/*" />
                             </div>
+                        </div> --}}
+
+                        
+                          {{-- <div class="form-group now    ">
+                             <strong>Ghi Chus</strong>
+                            <div class="col-ml-9 col-sm-9">
+                                <textarea  id="ghichu" name="GhiChu" cols="30" rows="3" class="form-control "  ></textarea>
+
+                            </div>
                         </div>
-                         <div class="form-group">
-                            <strong>Ghi Chú</strong>
-                            <input class="form-control" type="text" name="GhiChu" placeholder="mời nhập">
-                           
-                        </div>
+                        <script>
+    CKEDITOR.replace( 'ghichu' ,{
+        language: 'en'
+    });
+</script> --}}
                         
                          
                         

@@ -18,6 +18,8 @@ class CreateKhusTable extends Migration
             $table->string('TenKhu');
             // $table->boolean('TrangThai');
             $table->string('SoLuong');
+        
+            
             $table->string('NgayTrongCay');
             $table->string('NgayThuHoach');
             $table->unsignedbiginteger('User_ID');
