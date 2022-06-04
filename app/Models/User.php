@@ -15,10 +15,7 @@ class User extends Authenticatable
 {
     use HasApiTokens;
     use HasFactory;
-    use HasProfilePhoto;
     use Notifiable;
-    use TwoFactorAuthenticatable;
-
     /**
      * The attributes that are mass assignable.
      *
@@ -31,6 +28,7 @@ class User extends Authenticatable
         'password',
         'sdt',
         'Quyen_ID',
+        'avatar',
     ];
 
 
@@ -58,8 +56,6 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
-        'two_factor_recovery_codes',
-        'two_factor_secret',
     ];
 
     /**
@@ -77,6 +73,12 @@ class User extends Authenticatable
      * @var array
      */
     protected $appends = [
-        'profile_photo_url',
+        'profile_photo_url'
     ];
+    public static $path = '/upload/user/';
+
+    public function getAvatarAttribute($value)
+    {
+        return isset($value) ? config('app.url').self::$path.$value : config('app.url').self::$path.'avatar_default.jpg';
+    }
 }

@@ -5,10 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Quyen;
 use App\Models\User as ModelsUser;
+use Carbon\Carbon;
+use Mail;
+use Illuminate\Support\Str;
+use DB;
+use Hash;
 
 class UserController extends Controller
 {
-   
+
  public function __construct()
     {
         $quyen = Quyen::all();
@@ -84,7 +89,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-                $name = ModelsUser::find($id);
+            $name = ModelsUser::find($id);
              $name->name = $request->input('name');
              $name->email = $request->input('email');
              $name->password =bcrypt($request->input('password')) ;
@@ -106,4 +111,70 @@ class UserController extends Controller
            $user->delete();
       return redirect()->route('admin.user');
     }
+
+
+
+    public function showForgotPasswordForm()
+    {
+        return view('auth.forgotPassword');
+    }
+
+    /**
+     * Quên mật khẩu
+     * @param $request
+     * @return $message
+     */
+    public function submitForgotPasswordForm(Request $request)
+      {
+          $request->validate([
+              'email' => 'required|email|exists:users',
+          ]);
+
+          $token = Str::random(64);
+
+          DB::table('password_resets')->insert([
+              'email' => $request->email,
+              'token' => $token,
+              'created_at' => Carbon::now()
+            ]);
+        $to_email =  $request->email;
+          Mail::send('mails.forgotPassword', ['token' => $token], function($message) use($to_email){
+              $message->to($to_email)->subject('Mail từ hệ thống !');
+              $message->from($to_email,"Veryfying Resset Mail");
+          });
+
+          return back()->with('message', 'Vui lòng kiểm tra mail của bạn');
+      }
+
+      public function showResetPasswordForm($token) {
+        return view('auth.ResetPassword', ['token' => $token]);
+     }
+
+
+     public function submitResetPasswordForm(Request $request)
+      {
+        //   dd($request->all());
+          $request->validate([
+              'password' => 'required|string|min:6|confirmed',
+              'password_confirmation' => 'required'
+          ]);
+
+          $updatePassword = DB::table('password_resets')
+                              ->where(
+                                'token' , $request->token_reset
+                              )
+                              ->first();
+
+        // dd($updatePassword);
+          if(!$updatePassword){
+              return back()->withInput()->with('error', 'Invalid token!');
+          }
+
+          $user = ModelsUser::where('email', $updatePassword->email)
+                      ->update(['password' => Hash::make($request->password)]);
+
+          DB::table('password_resets')->where(['email'=> $request->email])->delete();
+
+          return redirect('/login')->with('message', 'Mật khẩu của bạn đã được thay đổi');
+      }
 }

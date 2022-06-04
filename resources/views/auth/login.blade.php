@@ -27,9 +27,12 @@
     <div>
       <a class="hiddenanchor" id="signup"></a>
       <a class="hiddenanchor" id="signin"></a>
-      
+
       <div class="login_wrapper">
         <div class="animate form login_form">
+            @if (session('message'))
+            <div class="alert alert-danger">{{ session('message') }}</div>
+            @endif
           <section class="login_content">
             <form id="admin-login" method="post" action="{{route ('login')}} ">
                 @csrf
@@ -42,7 +45,7 @@
               </div>
               <div>
                   <input type="submit" value="Login">
-                <a class="reset_pass" href="#">Lost your password?</a>
+                <a class="reset_pass" href="{{ route('forgotpass.get') }}">Lost your password?</a>
               </div>
               <div class="clearfix"></div>
               <div class="separator">
@@ -55,7 +58,7 @@
 
                 <div>
                   <h1><i class="fa fa-paw"></i>Home Graden</h1>
-                 
+
                 </div>
               </div>
             </form>
@@ -67,10 +70,10 @@
           </section>
         </div>
 
-       
+
       </div>
     </div>
     <script src="/js/admin.js"></script>
-   
+
   </body>
 </html>
