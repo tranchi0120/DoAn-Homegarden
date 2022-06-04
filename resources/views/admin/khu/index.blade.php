@@ -22,43 +22,43 @@
        
         <table class="table table-striped">
             <tr class="table-dark">
-                <th>ID</th>
+                {{-- <th>ID</th> --}}
                 <th>Tên Khu</th>
                 <th>Loại Cây</th>
                 <th>Tên Cây </th>
                 <th>Hinh Anh </th>
                 <th>Trạng Thái</th>
                 <th>Số Lượng</th>
-                <th>Số Lượng Chet</th>
-                  <th>Ngày Trồng</th>
-                <th>Ngày Thu Hoạch</th>
-                <th>Người Chăm sóc</th>
-                <th>Ghi Chus</th>
+                {{-- <th>Số Lượng Chet</th> --}}
+                  {{-- <th>Ngày Trồng</th> --}}
+                {{-- <th>Ngày Thu Hoạch</th> --}}
+                {{-- <th>Người Chăm sóc</th> --}}
+                {{-- <th>Ghi Chus</th> --}}
+                <th>Chi Tiết</th>
+
                 <th width="280px">Hành động</th>
             </tr>
-             @foreach ($khu as $data)
+             @foreach ($khu as $data)   
                 <tr>
-                    <td>{{$data->id}}</td>
+                    {{-- <td>{{$data->id}}</td> --}}
                     <td>{{$data->TenKhu}}</td>
                     <td>{{$data->CayTrong->DanhMucLoaiCay->Tenloaicay}}</td>
-
+                    {{-- <td>{{$data->CayTrong->HinhAnh}}</td> --}}
                     <td>{{$data->CayTrong->TenCay}}</td>
-                    <td>{{$data->HinhAnh}}</td>
 
-                    
-
+                    <td><img src="{{asset('/images')}}/{{$data->CayTrong->HinhAnh}}" class="images" alt="Girl in a jacket" width="50px" height="50px"></td>
                     <td>
-
 
                         {{$data->SoLuong > 0 ? 'Đã trồng cây' : 'trống'}}
                     </td>
                     
                     <td>{{$data->SoLuong }}</td>
-                    <td>{{$data->SoLuongChet }}</td>
-                    <td>{{$data->NgayTrongCay }}</td>
-                    <td>{{$data->NgayThuHoach }}</td>
-                    <td>{{ $data->USER->name }}</td>
-                    <td>{!! $data->GhiChu !!}</td>
+                      <td><a href="{{route('admin.khu.chitiet' , ['id' => $data->id])}}">Chi Tiet</a></td>   
+                    {{-- <td>{{$data->SoLuongChet }}</td> --}}
+                    {{-- <td>{{$data->NgayTrongCay }}</td> --}}
+                    {{-- <td>{{$data->NgayThuHoach }}</td> --}}
+                    {{-- <td>{{ $data->USER->name }}</td> --}}
+                    {{-- <td>{!! $data->GhiChu !!}</td> --}}
                     
                     
                     <td>

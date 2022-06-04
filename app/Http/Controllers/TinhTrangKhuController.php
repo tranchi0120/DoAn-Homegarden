@@ -64,7 +64,10 @@ class TinhTrangKhuController extends Controller
     public function update(Request $request, $id)
     {
              $data = khu::find($id);
-             $data->SoLuongChet = $request->input('SoLuongChet');
+            $soluongchet = $request->input('SoLuongChet');
+            $tongsoluong = $data->SoLuong - $soluongchet;
+            $data->SoLuong = $tongsoluong;
+             $data->SoLuongChet = $soluongchet;
              $data->GhiChu = $request->input('GhiChu');
              $data->save();
              return redirect()->route('admin.tinhtrangkhu')->with('thongbao','Chỉnh sửa thành công');

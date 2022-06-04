@@ -106,6 +106,8 @@ Route::post('admin/khu/store',[KhuController::class,'store'])->name('k.store');
 Route::get('admin/khu/edit/{id}',[KhuController::class,'edit'])->name('k.edit');
 Route::post('admin/khu/update/{khu}',[KhuController::class,'update'])->name('k.update');
 Route::get('admin//khu/destroy/{id}',[KhuController::class,'destroy'])->name('k.destroy');
+Route::get('admin/khu/chitiet/{id}',[KhuController::class,'ctkhu'])->name('admin.khu.chitiet');
+
 
 
 

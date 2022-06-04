@@ -61,7 +61,7 @@ class KhuController extends Controller
         $name = new ModelsKhu();
         $name->TenKhu = $request->TenKhu;
         $name->SoLuong = $request->SoLuong;
-        $name->HinhAnh = $request->HinhAnh;
+        // $name->HinhAnh = $request->HinhAnh;
         $name->SoLuongChet = $request->SoLuongChet;
         $name->NgayTrongCay = $request->NgayTrongCay;
         $name->NgayThuHoach = $request->NgayThuHoach;
@@ -145,4 +145,10 @@ class KhuController extends Controller
                 ], 500);
             }
         }
+
+        public function ctkhu($id)
+        {
+        $data = ModelsKhu::find($id);
+        return view('admin.khu.ct-khu', compact('data'));
+    } 
 }

@@ -41,10 +41,16 @@ class CaytrongController extends Controller
         $name = new ModelsCaytrong();
         $name->Loaicay_ID = $request->Loaicay_ID;
         $name->TenCay = $request->TenCay;
-        $name->HinhAnh = $request->HinhAnh;
         $name->GianTien = $request->GianTien;
         $name->GhiChu = $request->GhiChu;
         $name->GiaiDoanPhunThuoc = $request->GiaiDoanPhunThuoc;
+        if($request->hasFile('image'));
+        {
+                $image = $request->file('image');
+                $imageName = time().'.'. $image->getClientOriginalExtension();
+                        $image->move(public_path('images'), $imageName);
+                $name->HinhAnh = $imageName;
+        }
         $name->save();
         return redirect()->route('admin.caytrong')->with('thongbao','thêm thành công');
 

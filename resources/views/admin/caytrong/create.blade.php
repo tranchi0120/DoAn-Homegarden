@@ -9,7 +9,7 @@
  <div class="container">
    
         <div class="card-body">
-            <form action="{{route('ct.store')}}" method="post">
+            <form action="{{route('ct.store')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -39,7 +39,7 @@
                          <div class="form-group  ">
                             <Strong class="col-sm-3 text-end control-label col-form-label">Hình Ảnh </Strong>
                             <div class="custom-file">
-                                <input name="HinhAnh"  type="file" name="myImage" accept="image/*" />
+                                <input  type="file" name="image"/>
                             </div>
                         </div>
                          <div class="form-group">

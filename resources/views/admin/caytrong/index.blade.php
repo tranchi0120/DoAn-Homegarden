@@ -37,7 +37,7 @@
                     <td>{{$data->id}}</td>
                     <td>{{$data->DanhMucLoaiCay->Tenloaicay}}</td>
                     <td>{{$data->TenCay }}</td> 
-                    <td><img src="../boostrap/assets/img/{{$data->HinhAnh }}" class="images" alt="Girl in a jacket" width="50px" height="50px"></td>
+                    <td><img src="{{asset('/images')}}/{{$data->HinhAnh}}" class="images" alt="Girl in a jacket" width="50px" height="50px"></td>
                     <td>{{ number_format($data->GianTien) }} VNĐ</td>
                     <td><a href="{{route('admin.caytrong.chitiet' , ['id' => $data->id])}}">Chi Tiet</a></td>   
                     {{-- <td>{!!$data->GiaiDoanPhunThuoc !!} </td>
