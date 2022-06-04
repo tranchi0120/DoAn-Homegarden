@@ -42,6 +42,7 @@
   
 
  <link href="/css/admin.css" rel="stylesheet">
+ <link href="/css/custom-ct.css" rel="stylesheet">
 {{-- gg font --}}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,6 +73,8 @@
       <div class="right_col" role="main">
         <!-- top tiles -->
         @yield('content')
+        
+      @yield('css')
       </div>
       <!-- /page content -->
 

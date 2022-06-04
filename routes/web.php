@@ -100,13 +100,15 @@ Route::middleware('auth')->group(function (){
     Route::get('admin/quyen/destroy/{id}',[QuyenController::class,'destroy'])->name('q.destroy');
 
 
-    // khucaytrong
-    Route::get('admin/khu',[KhuController::class,'index'])->name('admin.khu');
-    Route::get('admin/khu/create',[KhuController::class,'create'])->name('k.create');
-    Route::post('admin/khu/store',[KhuController::class,'store'])->name('k.store');
-    Route::get('admin/khu/edit/{id}',[KhuController::class,'edit'])->name('k.edit');
-    Route::post('admin/khu/update/{khu}',[KhuController::class,'update'])->name('k.update');
-    Route::get('admin//khu/destroy/{id}',[KhuController::class,'destroy'])->name('k.destroy');
+// khucaytrong
+Route::get('admin/khu',[KhuController::class,'index'])->name('admin.khu');
+Route::get('admin/khu/create',[KhuController::class,'create'])->name('k.create');
+Route::post('admin/khu/store',[KhuController::class,'store'])->name('k.store');
+Route::get('admin/khu/edit/{id}',[KhuController::class,'edit'])->name('k.edit');
+Route::post('admin/khu/update/{khu}',[KhuController::class,'update'])->name('k.update');
+Route::get('admin//khu/destroy/{id}',[KhuController::class,'destroy'])->name('k.destroy');
+Route::get('admin/khu/chitiet/{id}',[KhuController::class,'ctkhu'])->name('admin.khu.chitiet');
+
 
 
 

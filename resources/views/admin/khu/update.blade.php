@@ -51,7 +51,7 @@
                             <select class="select2_single form-control" name="User_ID" aria-label="Default select example">
                            {{-- <option>Tên</option> --}}
                            @foreach($user as $data)
-                            <option value="{{$data->id}}"> {{ $data->name }} </option>
+                            <option value="{{$data->id}}" selected={{ $data->id === $name->User_ID}}> {{ $data->name }} </option>
                           @endforeach
                             </select>
                         </div>
@@ -62,7 +62,7 @@
                             <select class="select2_single form-control" name="Caytrong_ID" aria-label="Default select example">
                            {{-- <option>Tên Cây Trồng</option> --}}
                            @foreach($caytrong as $data)
-                            <option value="{{$data->id}}"> {{ $data->TenCay }} </option>
+                            <option value="{{$data->id}}" selected={{ $data->id === $name->Caytrong_ID}}> {{ $data->TenCay }} </option>
                           @endforeach
                             </select>
                         </div>

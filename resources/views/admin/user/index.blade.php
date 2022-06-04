@@ -25,7 +25,7 @@
                 <th>ID</th>
                 <th>Họ Và Tên</th>
                 <th>Email</th>
-                <th>Mật Khẩu</th>
+                {{-- <th>Mật Khẩu</th> --}}
                 {{-- <th>Gioi Tinh</th> --}}
                 {{-- <th>Ngày Sinh</th> --}}
                 <th>SĐT</th>
@@ -38,7 +38,7 @@
                     <td>{{ $data->id }}</td>
                     <td>{{ $data->name }}</td>
                     <td>{{ $data->email }}</td> 
-                    <td>{{ $data->password }}</td>
+                    {{-- <td>{{ $data->password }}</td> --}}
                     {{-- <td>{{ $data->GioiTinh }}</td> --}}
                     {{-- <td>{{ $data->NgaySinh }}</td> --}}
                     <td>{{ $data->sdt}}</td>

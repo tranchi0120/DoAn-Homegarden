@@ -28,3 +28,7 @@ if (mix.inProduction()) {
 mix.js("resources/js/admin.js", "public/js")
     .vue()
     .postCss("resources/css/admin.css", "public/css");
+
+mix.js("resources/js/custom-ct.js", "public/js")
+    .vue()
+    .postCss("resources/css/custom-ct.css", "public/css");

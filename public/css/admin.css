@@ -4903,6 +4903,7 @@ ul.notifications {
 .calendar-exibit .calendar-table {
   padding: 0 0 4px 0; }
 
-.now{
-  display: flex;
+
+#noidung{
+  height: 300px;
 }
