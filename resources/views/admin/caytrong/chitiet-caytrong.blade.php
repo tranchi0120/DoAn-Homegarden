@@ -8,29 +8,38 @@
 @endsection
 
 @section('content')
+
+<a class="back" href="http://127.0.0.1:8000/admin/caytrong">QUAY LẠI</a>
     <div class="form">
-      
-                       <h3>loại cây trồng : </h3> <p>{{$data->DanhMucLoaiCay->Tenloaicay}}</p>
      
-                     
-                      <h3>Tên Cây Trồng:</h3>
-                      <h3>Giá Tiền :</h3>
-                      <h3>Giai Đoạn Phun Thuốc:</h3>
-                      <h3>Ghi Chú:</h3>
+                      <h2 class="title">CHI TIẾT CÂY TRỒNG</h2>
+                      <div class="row">
+                            <h3 class="name" >loại cây trồng : </h3>  
+                            <span class="content">{{$data->DanhMucLoaiCay->Tenloaicay}}</s>
+                      </div>
 
 
+                       <div class="row">
+                            <h3 class="name">Tên Cây : </h3>  
+                            <span class="content">{{$data->TenCay}}</s>
+                      </div>
 
-                   
-                    <span class="name"> Tên Cây Trồng: {{$data->TenCay }}</span> 
-                    {{-- <span class="name"> Hình Ảnh:<img src="{{asset('/images')}}/{{$data->HinhAnh}}" class="images" alt="Girl in a jacket" width="50px" height="50px"></span> --}}
-                    <span class="name"> Giá Tiền:{{ number_format($data->GianTien) }} VNĐ</span>
-                    <span class="name-note">
-                      Giai Đoạn Phun Thuốc:<div class="note"> {!!$data->GiaiDoanPhunThuoc !!}
-                      </div>  </span>
-                     <span class="name-note"> Ghi Chú: {!!$data->GhiChu !!} </span> 
 
-    
-         
+                        <div class="row">
+                            <h3 class="name">Giá Tiền : </h3>  
+                            <span class="content">{{number_format($data->GianTien)}}Vnđ</s>
+                      </div>
+
+                       <div class="row">
+                            <h3 class="name">Giai Đoạn Phun Thuốc </h3>  
+                            <span class="content">{!!$data->GiaiDoanPhunThuoc!!}</s>
+                      </div>
+
+                      <div class="row">
+                            <h3 class="name">Ghi Chú </h3>  
+                            <span class="content">{!!$data->GhiChu!!}</s>
+                      </div>
+                            
     </div>
     
 @endsection
@@ -41,19 +50,31 @@
 
 
 .form{
-  max-width: 1200px;
+    border: 1px solid;
+    padding: 80px;
+    background: #e7eee7;
+    max-width: 1000px;
+    margin: 60px auto;
 }
-  .name{
-        padding: 10px;
-        display: block;
-  }
-
-  .name-note{
+  .content{
+    color: black;
     padding: 10px;
-    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
   }
-  
-
+  .title{
+    TEXT-ALIGN: CENTER;
+    COLOR: BLACK;
+    FONT-SIZE: 2.5REM;
+    margin-bottom: 20px;
+  }
+  .back{
+     COLOR: BLACK;
+    FONT-SIZE: 1.5REM;
+    BORDER-BOTTOM: 1PX SOLID;
+  }
+  .name{color: black}
+ 
   </style>
  
   

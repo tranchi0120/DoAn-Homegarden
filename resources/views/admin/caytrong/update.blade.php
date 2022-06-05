@@ -35,44 +35,44 @@
                         </div>
                         <div class="form-group">
                             <strong>Giá Tiền</strong>
-                            <input class="form-control" type="text" name="GianTien" value="{{$name->GianTien}}">
-                           
+                            <input class="form-control" type="text" name="GianTien" value="{{number_format($name->GianTien)}}">     
                         </div>
-                        {{-- <div class="form-group">
-                            <strong>giai đoạn phun thuốc</strong>
-                            <input class="form-control" type="editor" name="GiaiDoanPhunThuoc" value="{{$name->GiaiDoanPhunThuoc}}">
-                          
-                        </div> --}}
+                      
 
-                        <div class="form-group now    ">
-                             <strong>Giai Đoạn Phun Thuốc</strong>
-                            {{-- <strong>Giai đoạn phun thuốc</strong>
-                            <input class="form-control" type="editor" name="GiaiDoanPhunThuoc" placeholder="mời nhập"> --}}
+                        <div class="form-group " style="height: 500px" >
+                            <div class="title">
+                                    <strong>Giai Đoạn Phun Thuốc</strong>
+                            </div>
+                             
                             <div class="col-ml-9 col-sm-9">
                                 <textarea  id="noidung" name="GiaiDoanPhunThuoc" cols="30" rows="3" class="form-control "  placeholder="mieu ta">{{$name->GiaiDoanPhunThuoc}}</textarea>
-
                             </div>
-                        </div>
-                        <script>
-    CKEDITOR.replace( 'GiaiDoanPhunThuoc' ,{
-        language: 'en'
-    });
-</script>
 
-                    <div class="form-group now    ">
-                             <strong>Ghi Chus</strong>
-                            {{-- <strong>Giai đoạn phun thuốc</strong>
-                            <input class="form-control" type="editor" name="GiaiDoanPhunThuoc" placeholder="mời nhập"> --}}
+                             <script>
+                                CKEDITOR.replace( 'GiaiDoanPhunThuoc' ,{
+                                 language: 'en'
+                                                 });
+                        </script>
+                        </div>
+                       
+
+
+
+                        <div class="form-group ">
+                        <div>
+                                <strong>Ghi Chú</strong>
+                        </div>
+                             
                             <div class="col-ml-9 col-sm-9">
                                 <textarea  id="noidung" name="GhiChu" cols="30" rows="3" class="form-control "  placeholder="mieu ta">{{$name->GhiChu}}</textarea>
 
                             </div>
                         </div>
                         <script>
-    CKEDITOR.replace( 'GhiChu' ,{
-        language: 'en'
-    });
-</script>
+                     CKEDITOR.replace( 'GhiChu' ,{
+                             language: 'en'
+                     });
+                        </script>
                     </div>
 
                 </div>
@@ -82,6 +82,8 @@
 
     </div>
 @endsection
+
+
 
    
 

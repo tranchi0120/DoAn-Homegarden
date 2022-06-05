@@ -12,10 +12,10 @@
                 <div class="pull-left">
                     <h3>Khu Cây Trồng</h3>
                 </div>
-                <div class="pull-right" style="margin-top: 20px;">
+                {{-- <div class="pull-right" style="margin-top: 20px;">
                     <a class="btn btn-success" href="{{route('tinhtrang.create')}}">Thêm mới
                     </a>
-                </div>
+                </div> --}}
             </div>
         </div>
 
@@ -61,10 +61,10 @@
                             <i class="fas fa-edit"></i>
                         </a>
                         @csrf
-                        <a href="{{route('tinhtrang.destroy',$data->id)}}" class="btn btn-danger action_delete">
+                        {{-- <a href="{{route('tinhtrang.destroy',$data->id)}}" class="btn btn-danger action_delete">
                             <i class="fas fa-trash"></i>
                         </a>
-                        </form>
+                        </form> --}}
                     </td>
 
                 </tr>

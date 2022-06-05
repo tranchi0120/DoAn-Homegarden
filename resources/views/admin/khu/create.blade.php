@@ -42,13 +42,8 @@
                             <strong>Ngày Trồng</strong>
                             <input class="form-control" type="date" name="NgayTrongCay" placeholder="mời nhập">
                         </div>
-{{-- 
-                             <div class="form-group  ">
-                            <Strong class="col-sm-3 text-end control-label col-form-label">Hình Ảnh </Strong>
-                            <div class="custom-file">
-                                <input name="HinhAnh"  type="file" name="myImage" accept="image/*" />
-                            </div>
-                        </div> --}}
+
+                            
                          <div class="form-group">
                             <strong>Ngày Thu</strong>
                             <input class="form-control" type="date" name="NgayThuHoach" placeholder="mời nhập">
@@ -76,9 +71,8 @@
                         </div>
 
                         <div class="form-group now    ">
-                             <strong>Ghi Chus</strong>
-                            {{-- <strong>Giai đoạn phun thuốc</strong>
-                            <input class="form-control" type="editor" name="GiaiDoanPhunThuoc" placeholder="mời nhập"> --}}
+                             <strong>Ghi Chú</strong>
+                            
                             <div class="col-ml-9 col-sm-9">
                                 <textarea  id="GhiChu" name="GhiChu" cols="30" rows="3" class="form-control "  ></textarea>
 
