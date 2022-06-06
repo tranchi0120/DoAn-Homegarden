@@ -12,6 +12,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\TinhTrangKhuController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\NhapController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
 
@@ -68,14 +69,6 @@ Route::middleware('auth')->group(function (){
     Route::post('admin/danhmucloaicay/update/{danhmucloaicay}',[Danhmucloaicay::class,'update'])->name('danhmuc.update');
     Route::get('admin/danhmucloaicay/destroy/{id}',[Danhmucloaicay::class,'destroy'])->name('danhmuc.destroy');
 
-    // taikhoan
-    // Route::get('admin/taikhoan',[TaikhoanController::class,'index'])->name('admin.taikhoan');
-    // Route::get('admin/taikhoan/create',[TaikhoanController::class,'create'])->name('tk.create');
-    // Route::post('admin/taikhoan/store',[TaikhoanController::class,'store'])->name('tk.store');
-    // Route::get('admin/taikhoan/edit/{id}',[TaikhoanController::class,'edit'])->name('tk.edit');
-    // Route::post('admin/taikhoan/update/{taikhoan}',[TaikhoanController::class,'update'])->name('tk.update');
-    // Route::get('admin/taikhoan/destroy/{id}',[TaikhoanController::class,'destroy'])->name('tk.destroy');
-
 
 
 
@@ -122,13 +115,29 @@ Route::middleware('auth')->group(function (){
 
 
     // Xuất
-
     Route::get('admin/xuat',[XuatController::class,'index'])->name('admin.xuat');
-    Route::get('admin/xuat/create',[XuatController::class,'create'])->name('x.create');
-    Route::post('admin/xuat/store',[XuatController::class,'store'])->name('x.store');
-    // Route::get('/xuat/edit/{id}',[XuatController::class,'edit'])->name('x.edit');
-    // Route::post('/xuat/update/{xuat}',[XuatController::class,'update'])->name('x.update');
-    Route::get('admin/xuat/destroy/{id}',[XuatController::class,'destroy'])->name('x.destroy');
+    Route::get('admin/xuat/create',[XuatController::class,'create'])->name('xuatcay.create');
+    Route::post('admin/xuat/store',[XuatController::class,'store'])->name('xuatcay.store');
+    // Route::get('/xuat/edit/{id}',[XuatController::class,'edit'])->name('xuatcay.edit');
+    // Route::post('/xuat/update/{xuat}',[XuatController::class,'update'])->name('xuatcay.update');
+    Route::get('admin/xuat/destroy/{id}',[XuatController::class,'destroy'])->name('xuatcay.destroy');
+
+
+
+
+    // nhập
+    Route::get('admin/nhap',[NhapController::class,'index'])->name('admin.nhap');
+    Route::get('admin/nhap/create',[NhapController::class,'create'])->name('nhapcay.create');
+    Route::post('admin/nhap/store',[NhapController::class,'store'])->name('nhapcay.store');
+    // Route::get('/xuat/edit/{id}',[XuatController::class,'edit'])->name('xuatcay.edit');
+    // Route::post('/xuat/update/{xuat}',[XuatController::class,'update'])->name('xuatcay.update');
+    Route::get('admin/nhap/destroy/{id}',[NhapController::class,'destroy'])->name('nhapcay.destroy');
+
+
+
+
+
+
 
 
     Route::get('admin/login',function(){

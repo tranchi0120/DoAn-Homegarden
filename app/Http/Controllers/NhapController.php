@@ -1,16 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Xuat as ModelsXuat;
+use App\Models\Nhap as ModelsNhap;
 use Illuminate\Http\Request;
 use App\Models\Khu;
 use App\Models\User;
 
-
-class XuatController extends Controller
+class NhapController extends Controller
 {
-
-
 
     public function __construct()
     {
@@ -23,6 +20,7 @@ class XuatController extends Controller
         
     }
 
+
     /**
      * Display a listing of the resource.
      *
@@ -30,8 +28,8 @@ class XuatController extends Controller
      */
     public function index()
     {
-        $xuat = ModelsXuat::all();
-        return view('admin/xuat.index')->with('xuat',$xuat);
+         $nhap = ModelsNhap::all();
+        return view('admin/nhap.index')->with('nhap',$nhap);
     }
 
     /**
@@ -41,7 +39,7 @@ class XuatController extends Controller
      */
     public function create()
     {
-        return view('admin/xuat.create');
+        return view('admin/nhap.create');
     }
 
     /**
@@ -52,21 +50,53 @@ class XuatController extends Controller
      */
     public function store(Request $request)
     {
-        $xuat = ModelsXuat::all();
-        $name = new ModelsXuat();
+        $nhap = ModelsNhap::all();
+        $name = new ModelsNhap();
         $name->Khu_ID = $request->Khu_ID;
         $name->User_ID = $request->User_ID;
-        $name->NgayXuat = $request->NgayXuat;
+        $name->NgayNhap = $request->NgayNhap;
         $name->SoLuong = $request->SoLuong;
-        $name->GiaXuat = $request->GiaXuat;
+        $name->GiaNhap = $request->GiaNhap;
         $name->TongTien = $request->TongTien;
         $name->GhiChu = $request->GhiChu;
         $name->save();
-        return redirect()->route('admin.xuat')->with('xuat', $xuat);
+        return redirect()->route('admin.nhap')->with('nhap', $nhap);
     }
 
-    
-   
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -75,8 +105,6 @@ class XuatController extends Controller
      */
     public function destroy($id)
     {
-        $quyen = ModelsXuat::find($id);
-           $quyen->delete();
-        return redirect()->route('admin.xuat');
+        //
     }
 }

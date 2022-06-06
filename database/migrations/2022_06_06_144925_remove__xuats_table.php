@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAddColumnAvatar extends Migration
+class RemoveXuatsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateAddColumnAvatar extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('avatar')->nullable();
+        Schema::table('xuats', function (Blueprint $table) {
+             $table->dropForeign(['Caytrong_ID']);
+              $table->dropColumn(['Caytrong_ID']);
         });
     }
 
@@ -25,8 +26,8 @@ class CreateAddColumnAvatar extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('avatar');
+        Schema::table('xuats', function (Blueprint $table) {
+            //
         });
     }
 }

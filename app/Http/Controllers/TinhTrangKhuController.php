@@ -42,7 +42,6 @@ class TinhTrangKhuController extends Controller
     public function store(Request $request)
     {   
         $data = khu::find($id);
-        // $name = new ModelsTinhTrangKhu();
         $name->Khu_ID = $request->Khu_ID;
         $name->save();
         return redirect()->route('admin.tinhtrangkhu')->with('thongbao', 'them thanh cong');
@@ -64,9 +63,9 @@ class TinhTrangKhuController extends Controller
     public function update(Request $request, $id)
     {
              $data = khu::find($id);
-            $soluongchet = $request->input('SoLuongChet');
-            $tongsoluong = $data->SoLuong - $soluongchet;
-            $data->SoLuong = $tongsoluong;
+             $soluongchet = $request->input('SoLuongChet');
+             $tongsoluong = $data->SoLuong - $soluongchet;
+             $data->SoLuong = $tongsoluong;
              $data->SoLuongChet = $soluongchet;
              $data->GhiChu = $request->input('GhiChu');
              $data->save();

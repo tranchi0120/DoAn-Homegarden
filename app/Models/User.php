@@ -34,7 +34,7 @@ class User extends Authenticatable
 
     public function Khu()
     {
-      return $this->hasMany(Khu::class,'User_ID');
+      return $this->hasMany(Khu::class,'Khu_ID');
     }
 
 
@@ -45,7 +45,7 @@ class User extends Authenticatable
 
     public  function PhunThuoc()
     {
-        return $this->hasMany(Phunthuoc::class,'User_ID');
+        return $this->hasMany(Phunthuoc::class,'Phunthuoc_ID');
     }
 
     /**

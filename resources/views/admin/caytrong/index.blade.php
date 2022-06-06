@@ -28,8 +28,6 @@
                 <th>Hình Ảnh</th>
                   <th>Giá Tiền</th>
                   <th>Chi Tiet</th>
-                {{-- <th>Giai Đoạn Phun Thuốc</th>
-                <th>Ghi Chus</th> --}}
                 <th width="280px">Hành động</th>
             </tr>
              @foreach ($caytrong as $data)

@@ -32,14 +32,26 @@ class Khu extends Model
 
      public  function PhunThuoc()
     {
-        return $this->hasMany(Phunthuoc::class,'Khu_ID');
+        return $this->hasMany(Phunthuoc::class,'Phunthuoc_ID');
     }
 
 
      public function TinhTrangKhu() 
     {
-        return $this->hasOne(Khu::class,'Khu_ID');
+        return $this->hasOne(Khu::class,'Tinhtrangkhu_ID');
     }
+
+
+     public function Xuat()
+    {
+      return $this->hasMany(Xuat::class,'Xuat_ID');
+    }
+
+     public function Nhap()
+    {
+      return $this->hasMany(Nhap::class,'Nhap_ID');
+    }
+    
     
 
 }

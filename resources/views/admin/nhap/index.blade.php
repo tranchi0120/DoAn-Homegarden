@@ -2,7 +2,7 @@
 @extends('layouts.admin')
 
 @section('title')
-  <title>Xuất Cây trồng</title>
+  <title>Nhập Cây trồng</title>
 @endsection
 
 @section('content')
@@ -12,37 +12,35 @@
        
         <table class="table table-striped">
             <tr class="table-dark">
-                {{-- <th>ID</th> --}}
+        
                 <th>Khu</th>
                 <th>Tên Cây</th>
-                <th>Người Xuất</th>
-                <th>Ngày Xuất</th>
+                <th>Người Nhập</th>
+                <th>Ngày Nhập</th>
                 <th>Số Lượng</th>
-                <th>Giá Xuất</th>
+                <th>Giá Nhập</th>
                 <th>Tổng Tiền</th>
                 <th>Ghi Chú</th>
                 
                
                 <th width="280px">Thao Tác</th>
             </tr>
-             @foreach ($xuat as $data)
+             @foreach ($nhap as $data)
                 <tr>    
-                    {{-- <td>{{ $data->id }}</td> --}}
+                   
                     <td>{{ $data->Khu->TenKhu }}</td>
                     <td>{{ $data->Khu->CayTrong->TenCay}}</td>
                     <td>{{ $data->User->name }}</td>
-                    <td>{{ $data->NgayXuat }}</td>
+                    <td>{{ $data->NgayNhap }}</td>
                     <td>{{ $data->SoLuong }}</td>
-                    <td>{{ number_format($data->GiaXuat) }} Vnđ</td>
+                    <td>{{ number_format($data->GiaNhap) }} Vnđ</td>
                     <td>{{ number_format($data->TongTien) }} Vnđ</td>
                     <td>{!! $data->GhiChu!!}</td>
                    
                     <td>
-                        {{-- <a class="btn btn-primary" href="{{route('x.edit',$data->id)}}">
-                            <i class="fas fa-edit"></i>
-                        </a> --}}
+                      
                         @csrf
-                        <a href="{{route('xuatcay.destroy',$data->id)}}" class="btn btn-danger action_delete">
+                        <a href="{{route('nhapcay.destroy',$data->id)}}" class="btn btn-danger action_delete">
                             <i class="fas fa-trash"></i>
                         </a>
                         </form>

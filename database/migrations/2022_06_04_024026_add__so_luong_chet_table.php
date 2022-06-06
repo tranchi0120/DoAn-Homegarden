@@ -14,7 +14,7 @@ class AddSoLuongChetTable extends Migration
     public function up()
     {
         Schema::table('khus', function (Blueprint $table) {
-            $table -> integer('SoLuongChet');
+            $table -> integer('SoLuongChet')->null();
             $table -> string('GhiChu');
             $table -> string('HinhAnh');
 
@@ -30,8 +30,8 @@ class AddSoLuongChetTable extends Migration
     public function down()
     {
         Schema::table('khus', function (Blueprint $table) {
-            $table -> dropColumn ('SoLuongChet');
-            $table -> dropColumn ('GhiChu');
+            // $table -> dropColumn ('SoLuongChet');
+            // $table -> dropColumn ('GhiChu');
             $table -> dropColumn ('HinhAnh');
         });
     }

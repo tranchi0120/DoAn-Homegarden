@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('title')
-  <title>Xuất Cây Trồng Trong Khu</title>
+  <title>Nhập Cây Trồng Trong Khu</title>
 @endsection
 
 @section('content')
@@ -9,7 +9,7 @@
  <div class="container">
 
         <div class="card-body">
-            <form action="{{route('xuatcay.store')}}" method="post">
+            <form action="{{route('nhapcay.store')}}" method="post">
                 @csrf
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -29,8 +29,8 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <strong>Ngày Xuất</strong>
-                            <input class="form-control" type="date" name="NgayXuat" placeholder="mời nhập">
+                            <strong>Ngày Nhập</strong>
+                            <input class="form-control" type="date" name="NgayNhap" placeholder="mời nhập">
                          
                         </div>
 
@@ -40,8 +40,8 @@
                            
                         </div>
                          <div class="form-group">
-                            <strong>Giá Xuất</strong>
-                            <input class="form-control" type="number" name="GiaXuat" placeholder="mời nhập">
+                            <strong>Giá Nhập</strong>
+                            <input class="form-control" type="number" name="GiaNhap" placeholder="mời nhập">
                            
                         </div>
                          <div class="form-group">
@@ -51,7 +51,7 @@
                         </div>
                         
                          <div class="form-group">
-                            <strong>Người Xuất</strong>
+                            <strong>Người Nhập</strong>
                             <select class="select2_single form-control" name="User_ID" aria-label="Default select example">
                            @foreach($user as $data)
                             <option value="{{$data->id}}"> {{ $data->name }} </option>

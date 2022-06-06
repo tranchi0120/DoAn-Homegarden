@@ -6,17 +6,6 @@
 
           <div class="clearfix"></div>
 
-          <!-- menu profile quick info -->
-          {{-- <div class="profile clearfix">
-            <div class="profile_pic">
-              <img src="images/img.jpg" alt="..." class="img-circle profile_img">
-            </div>
-            <div class="profile_info">
-              <span>Welcome,</span>
-              <h2>John Doe</h2>
-            </div>
-          </div> --}}
-          <!-- /menu profile quick info -->
 
           <br />
 
@@ -60,53 +49,30 @@
                
                 <li><a><i class="fa fa-clone"></i>Giao Dịch <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li><a href="fixed_sidebar.html">Nhập Cây</a></li>
-                    <li><a href="fixed_footer.html">Xuất Cây</a></li>
+                    <li><a href="http://127.0.0.1:8000/admin/nhap/create">Nhập Cây</a></li>
+                    <li><a href="http://127.0.0.1:8000/admin/xuat/create">Xuất Cây</a></li>
                   </ul>
                 </li>
 
               
 
                  
-                 <li><a><i class="fa fa-clone"></i>Lịch Sử Xuất</a>
-                  {{-- <ul class="nav child_menu">
-                    <li><a href="fixed_sidebar.html">Lịch Sử Nhập</a></li>
-                    <li><a href="fixed_footer.html">Lịch Sử Xuất</a></li>
-                  </ul> --}}
+                 <li><a><i class="fa fa-clone"></i>Nhật Ký Giao Dịch<span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="http://127.0.0.1:8000/admin/nhap">Nhật Ký Nhập</a></li>
+                    <li><a href="http://127.0.0.1:8000/admin/xuat">Nhật Ký Xuất</a></li>
+                  </ul>
                 </li>
                 <li><a><i class="fa fa-bug"></i>Thông tin liên hệ khách hàng </span></a>
                  </li>
                   <li><a href="http://127.0.0.1:8000/logout"><i class="fa fa-bug"></i>Đăng Xuất </span></a>
-                  {{-- <ul class="nav child_menu">
-                    <li><a href="e_commerce.html">E-commerce</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="project_detail.html">Project Detail</a></li>
-                    <li><a href="contacts.html">Contacts</a></li>
-                    <li><a href="profile.html">Profile</a></li>
-                  </ul> --}}
+                 
                 </li>
               </ul>
             </div>
            
 
           </div>
-          <!-- /sidebar menu -->
-
-          <!-- /menu footer buttons -->
-          {{-- <div class="sidebar-footer hidden-small">
-            <a data-toggle="tooltip" data-placement="top" title="Settings">
-              <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-              <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="Lock">
-              <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-            </a>
-            <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
-              <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-            </a>
-          </div> --}}
-          <!-- /menu footer buttons -->
+         
         </div>
       </div>

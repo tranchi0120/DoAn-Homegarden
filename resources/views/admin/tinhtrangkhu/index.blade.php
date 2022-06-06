@@ -30,12 +30,7 @@
                   <th>Chi Tiet</th>
                 <th width="280px">Hành động</th>
 
-                {{-- <th>Tên Cây</th>
-                <th>Hình Cây Trồng</th>
-                <th>Ghi Chú</th>--}}
-                
-                {{-- <th>Tên Cây </th> --}}
-                {{-- <th>Số Lượng</th> --}}
+               
               
             </tr>
              @foreach ($khu as $data)
