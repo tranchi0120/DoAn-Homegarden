@@ -44,10 +44,10 @@
                         </div>
                          <div class="form-group">
                             <strong>Giá Tiền</strong>   
-                            <input class="form-control" type="number" name="GianTien" placeholder="mời nhập">
+                            <input class="form-control" type="number" name="GianTien" placeholder="mời nhập" >
                             
                         </div>
-                        <div class="form-group now    ">
+                        <div class="form-group" style="display: flex">
                              <strong>Giai Doan Phun Thuoc</strong>
                             {{-- <strong>Giai đoạn phun thuốc</strong>
                             <input class="form-control" type="editor" name="GiaiDoanPhunThuoc" placeholder="mời nhập"> --}}
@@ -64,8 +64,8 @@
                             
                         </div>
 
-                          <div class="form-group now    ">
-                             <strong>Ghi Chus</strong>
+                          <div class="form-group" style="display:flex">
+                             <strong>Ghi Chú</strong>
                             {{-- <strong>Giai đoạn phun thuốc</strong>
                             <input class="form-control" type="editor" name="GiaiDoanPhunThuoc" placeholder="mời nhập"> --}}
                             <div class="col-ml-9 col-sm-9">

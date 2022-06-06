@@ -34,11 +34,26 @@
                             <input class="form-control" type="text" name="LieuLuong" placeholder="mời nhập">
                            
                         </div>
-                         <div class="form-group">
+                         {{-- <div class="form-group">
                             <strong>Ghi Chú </strong>
                             <input class="form-control" type="text" name="GhiChu" placeholder="mời nhập">
                            
+                        </div> --}}
+
+
+
+                         <div class="form-group" style="display:flex">
+                             <strong>Ghi Chú</strong>
+                            <div class="col-ml-9 col-sm-9">
+                                <textarea  id="ghichu" name="GhiChu" cols="30" rows="3" class="form-control "  ></textarea>
+
+                            </div>
                         </div>
+                        <script>
+    CKEDITOR.replace( 'ghichu' ,{
+        language: 'en'
+    });
+</script>
                       
                          <div class="form-group">
                             <strong>Người Phun Thuốc</strong>

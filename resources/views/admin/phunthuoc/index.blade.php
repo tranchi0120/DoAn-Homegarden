@@ -28,7 +28,7 @@
                     <td>{{ $data->NgayPhunThuoc }}</td>
                     <td>{{ $data->TenThuoc }}</td> 
                     <td>{{ $data->LieuLuong }}</td>
-                    <td>{{ $data->GhiChu }}</td>
+                    <td>{!! $data->GhiChu !!}</td>
                     <td>{{ $data->USER->name }}</td>
                    
                    
@@ -37,9 +37,9 @@
                             <i class="fas fa-edit"></i>
                         </a>
                         @csrf
-                        <a href="{{route('pt.destroy',$data->id)}}" class="btn btn-danger action_delete">
+                        {{-- <a href="{{route('pt.destroy',$data->id)}}" class="btn btn-danger action_delete">
                             <i class="fas fa-trash"></i>
-                        </a>
+                        </a> --}}
                         </form>
                     </td>
 

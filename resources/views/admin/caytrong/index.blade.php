@@ -49,9 +49,9 @@
                             <i class="fa-solid fa-pen"></i>
                         </a>
                         @csrf
-                        <a href="{{route('ct.destroy',$data->id)}}" class="btn btn-danger action_delete">
+                        <button data-url="{{route('ct.destroy',$data->id)}}" class="btn btn-danger action_delete delete-button">
                             <i class="fas fa-trash"></i>
-                        </a>
+                        </button>
                         </form>
                     </td>
 
@@ -61,4 +61,48 @@
         </table>  
     </div>
 
+@endsection
+
+
+@section('scripts')
+    <script>
+        function deleteRecord(event){
+        event.preventDefault();
+        let _this = $(this);
+        let url = $(this).data('url');
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    type: 'GET',
+                    url: url,
+
+                    success: function (data){
+                        if(data.code === 200){
+                            console.log(_this.parent().parent());
+                            _this.parent().parent().remove();
+                        }
+                        Swal.fire(
+                            'Deleted!',
+                            'Your file has been deleted.',
+                            'success'
+                        )
+                    },
+
+                    error: function (data){
+
+                    }
+                })
+            }
+        })
+    }
+    $(document).on("click",".delete-button", deleteRecord);
+    </script>
 @endsection

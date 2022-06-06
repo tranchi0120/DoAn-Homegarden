@@ -10,7 +10,7 @@
         <div class="row" style="margin-bottom: 20px;">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h3>Danh Mục Quyền</h3>
+                    <h3>THÔNG TIN TÀI KHOẢN</h3>
                 </div>
                 <div class="pull-right" style="margin-top: 20px;">
                     <a class="btn btn-success" href="{{route('q.create')}}">Thêm mới

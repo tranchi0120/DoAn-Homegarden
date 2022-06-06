@@ -109,7 +109,20 @@ class UserController extends Controller
     {
         $user = ModelsUser::find($id);
            $user->delete();
-      return redirect()->route('admin.user');
+      if($user){
+            return response() -> json([
+                "code" => 200,
+                "message" => "Delete success"
+            ],200);
+            }
+            else{
+                return response() -> json([
+                    "code" => 500,
+                    "message" => "Cant delete this record"
+                ], 500);
+            }
+
+
     }
 
 

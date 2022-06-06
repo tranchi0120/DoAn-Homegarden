@@ -100,14 +100,14 @@ Route::middleware('auth')->group(function (){
     Route::get('admin/quyen/destroy/{id}',[QuyenController::class,'destroy'])->name('q.destroy');
 
 
-// khucaytrong
-Route::get('admin/khu',[KhuController::class,'index'])->name('admin.khu');
-Route::get('admin/khu/create',[KhuController::class,'create'])->name('k.create');
-Route::post('admin/khu/store',[KhuController::class,'store'])->name('k.store');
-Route::get('admin/khu/edit/{id}',[KhuController::class,'edit'])->name('k.edit');
-Route::post('admin/khu/update/{khu}',[KhuController::class,'update'])->name('k.update');
-Route::get('admin//khu/destroy/{id}',[KhuController::class,'destroy'])->name('k.destroy');
-Route::get('admin/khu/chitiet/{id}',[KhuController::class,'ctkhu'])->name('admin.khu.chitiet');
+    // khucaytrong
+    Route::get('admin/khu',[KhuController::class,'index'])->name('admin.khu');
+    Route::get('admin/khu/create',[KhuController::class,'create'])->name('k.create');
+    Route::post('admin/khu/store',[KhuController::class,'store'])->name('k.store');
+    Route::get('admin/khu/edit/{id}',[KhuController::class,'edit'])->name('k.edit');
+    Route::post('admin/khu/update/{khu}',[KhuController::class,'update'])->name('k.update');
+    Route::get('admin//khu/destroy/{id}',[KhuController::class,'destroy'])->name('k.destroy');
+    Route::get('admin/khu/chitiet/{id}',[KhuController::class,'ctkhu'])->name('admin.khu.chitiet');
 
 
 
@@ -158,19 +158,18 @@ Route::get('admin/khu/chitiet/{id}',[KhuController::class,'ctkhu'])->name('admin
     Route::post('profile',[AuthController::class,'profile'])->name('profile');
     Route::get('dashboard',[AuthController::class,'Showdashboard'])->name('show-dashboard');
     Route::post('dashboard',[AuthController::class,'dashboard'])->name('dashboard');
+ });
 
-});
-
-// Route::post('admin/login',[AdminController::class,'loginPost'])->name('admin.loginPost');
-// Route::get('admin/logout',[AdminController::class,'logout'])->name('admin.logout');
-// Route::get('admin/dashboard',[AdminController::class,'dashboard'])->name('admin.dashboard');
+    // Route::post('admin/login',[AdminController::class,'loginPost'])->name('admin.loginPost');
+    // Route::get('admin/logout',[AdminController::class,'logout'])->name('admin.logout');
+    // Route::get('admin/dashboard',[AdminController::class,'dashboard'])->name('admin.dashboard');
 
 
-Route::get('login',[AuthController::class,'showFormLogin'])->name('show-form-login');
-Route::post('login',[AuthController::class,'login'])->name('login');
-Route::get('logout',[AuthController::class,'logout'])->name('logout');
+    Route::get('login',[AuthController::class,'showFormLogin'])->name('show-form-login');
+    Route::post('login',[AuthController::class,'login'])->name('login');
+    Route::get('logout',[AuthController::class,'logout'])->name('logout');
 
-Route::get("forgot-password", [UserController::class,'showForgotPasswordForm'])->name("forgotpass.get");
-Route::post("forgot-password", [UserController::class,'submitForgotPasswordForm'])->name("forgotpass.post");
-Route::get("reset-password/{token}",[UserController::class,'showResetPasswordForm'])->name("resetpass.get");
-Route::post("reset-password", [UserController::class,'submitResetPasswordForm'])->name("resetpass.post");
+    Route::get("forgot-password", [UserController::class,'showForgotPasswordForm'])->name("forgotpass.get");
+    Route::post("forgot-password", [UserController::class,'submitForgotPasswordForm'])->name("forgotpass.post");
+    Route::get("reset-password/{token}",[UserController::class,'showResetPasswordForm'])->name("resetpass.get");
+    Route::post("reset-password", [UserController::class,'submitResetPasswordForm'])->name("resetpass.post");

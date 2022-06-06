@@ -93,9 +93,26 @@ class CaytrongController extends Controller
     {
         $caytrong = ModelsCaytrong::find($id);
         $caytrong->delete();
-      return redirect()->route('admin.caytrong');
+
+        if($caytrong){
+            return response() -> json([
+                "code" => 200,
+                "message" => "Delete success"
+            ],200);
+            }
+            else{
+                return response() -> json([
+                    "code" => 500,
+                    "message" => "Cant delete this record"
+                ], 500);
+            }
+    //   return redirect()->route('admin.caytrong');
     }
 
+
+
+
+    
     public function chitietcaytrong($id){
         $data = ModelsCaytrong::find($id);
         return view('admin.caytrong.chitiet-caytrong', compact('data'));

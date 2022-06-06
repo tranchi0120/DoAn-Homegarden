@@ -40,28 +40,6 @@
                             Vui lòng nhập 
                             @enderror
                         </div>
-                        {{-- <div class="form-group">
-                             <strong>Giới tính</strong>
-                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="GioiTinh" id="nam" checked="checked" value="nam">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                               Nam
-                            </label>
-                            </div>
-                            <div class="form-check">
-                            <input class="form-check-input" type="radio" name="GioiTinh" id="nữ" checked="checked" value="nữ">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                               Nữ
-                            </label>
-                            </div>
-                        </div> --}}
-                        {{-- <div class="form-group">
-                            <strong>ngaysinh</strong>
-                            <input class="form-control" type="date" name="NgaySinh" value="{{$name->NgaySinh}}">
-                            @error('Ngaysinh')
-                            Vui lòng nhập 
-                            @enderror
-                        </div> --}}
                          <div class="form-group">
                             <strong>sdt</strong>
                             <input class="form-control" type="text" name="sdt" value="{{$name->sdt}}">
@@ -72,9 +50,8 @@
                          <div class="form-group">
                             <strong>Quyền</strong>
                             <select class="select2_single form-control" name="Quyen_ID" aria-label="Default select example">
-                           {{-- <option>{{ $data->TenQuyen }}</option> --}}
                            @foreach($quyen as $data)
-                            <option value="{{$data->id}}"> {{ $data->TenQuyen }} </option>
+                            <option value="{{$data->id}}"  selected={{ $data->id === $name->Quyen_ID}}> {{ $data->TenQuyen }} </option>
                           @endforeach
                             </select>
                         </div>

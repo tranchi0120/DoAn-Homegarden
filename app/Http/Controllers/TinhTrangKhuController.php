@@ -83,7 +83,7 @@ class TinhTrangKhuController extends Controller
     }
 
      public function chitietkhu($id){
-        $data = ModelsTinhTrangKhu::find($id);
+        $data = khu::find($id);
         return view('admin.tinhtrangkhu.chitiet-khu', compact('data'));
     }
 }

@@ -38,28 +38,33 @@
                             Vui lòng nhập 
                             @enderror
                         </div>
-                        <div class="form-group">
-                            <strong>Ghi Chú</strong>
-                            <input class="form-control" type="text" name="GhiChu" value="{{$name->GhiChu}}">
-                            @error('Password')
-                            Vui lòng nhập 
-                            @enderror
+                       <div class="form-group ghichu "  >
+                             <strong>Ghi Chú</strong>
+                            <div class="col-ml-9 col-sm-9">
+                                <textarea  id="noidung" name="GhiChu" cols="30" rows="3" class="form-control "  >{{$name->GhiChu}}</textarea>
+
+                            </div>
                         </div>
+                        <script>
+                 CKEDITOR.replace( 'GhiChu' ,{
+        language: 'en'
+                 });
+                    </script>
                          <div class="form-group">
                             <strong>Người Phun Thuốc</strong>
                             <select class="select2_single form-control" name="User_ID" aria-label="Default select example">
-                           {{-- <option>Quyền</option> --}}
+                          
                            @foreach($user as $data)
-                            <option value="{{$data->id}}"> {{ $data->name }} </option>
+                            <option value="{{$data->id}}" selected={{ $data->id === $name->User_ID}} > {{ $data->name }} </option>
                           @endforeach
                             </select>
                         </div>
                           <div class="form-group">
                             <strong>Khu Vực</strong>
                             <select class="select2_single form-control" name="Khu_ID" aria-label="Default select example">
-                           {{-- <option>Quyền</option> --}}
+                          
                            @foreach($khu as $data)
-                            <option value="{{$data->id}}"> {{ $data->TenKhu }} </option>
+                            <option value="{{$data->id}}"  selected={{ $data->id === $name->Khu_ID}}> {{ $data->TenKhu }} </option>
                           @endforeach
                             </select>
                         </div>
@@ -73,3 +78,11 @@
         </div>
 @endsection
 
+@section('css')
+
+<style>
+    .ghichu{
+        display: flex;
+    }
+</style>
+@endsection

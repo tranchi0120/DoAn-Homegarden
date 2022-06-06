@@ -12,7 +12,7 @@
 <a class="back" href="http://127.0.0.1:8000/admin/khu">QUAY LẠI</a>
     <div class="form">
      
-                      <h2 class="title">CHI TIẾT CÂY TRỒNG</h2>
+                      <h2 class="title">CHI TIẾT KHU CÂY TRỒNG</h2>
                       <div class="row">
                             <h3 class="name" >Tên Khu: </h3 class="name">  
                             <span class="content">{{$data->TenKhu}}</s>
