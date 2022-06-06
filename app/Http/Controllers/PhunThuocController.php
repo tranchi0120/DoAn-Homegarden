@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Phunthuoc as ModelPhunThuoc;
 use Illuminate\Http\Request;
 use App\Models\Khu;
-use App\Models\Nhanvien;
+use App\Models\User;
 
 
 
@@ -18,8 +18,8 @@ class PhunThuocController extends Controller
         $khu = Khu::all();
         view()->share('khu',$khu);
 
-          $nhanvien = nhanvien::all();
-        view()->share('nhanvien',$nhanvien);
+          $user = User::all();
+        view()->share('user',$user);
         
     }
     /**
@@ -31,7 +31,7 @@ class PhunThuocController extends Controller
     {
         $phunthuoc = ModelPhunThuoc::all();
         // dd($phunthuoc['0']->Khu->TenKhu);
-        return view('phunthuoc.index')->with('phunthuoc',$phunthuoc);
+        return view('admin/phunthuoc.index')->with('phunthuoc',$phunthuoc);
     }
 
     /**
@@ -41,7 +41,7 @@ class PhunThuocController extends Controller
      */
     public function create()
     {
-        return view('phunthuoc.create');
+        return view('admin/phunthuoc.create');
     }
 
     /**
@@ -61,7 +61,7 @@ class PhunThuocController extends Controller
         $name->TenThuoc = $request->TenThuoc;
         $name->LieuLuong = $request->LieuLuong;
         $name->GhiChu = $request->GhiChu;
-        $name->Nhanvien_ID = $request->Nhanvien_ID;
+        $name->User_ID = $request->User_ID;
         $name->Khu_ID = $request->Khu_ID;
         $name->save();
         return redirect()->route('admin.phunthuoc')->with('phunthuoc', $phunthuoc);
@@ -87,7 +87,7 @@ class PhunThuocController extends Controller
     public function edit($id)
     {
         $name = ModelPhunThuoc::find($id);
-        return view('phunthuoc.update',compact('name'));
+        return view('admin/phunthuoc.update',compact('name'));
     }
 
     /**
@@ -104,7 +104,7 @@ class PhunThuocController extends Controller
              $name->TenThuoc = $request->input('TenThuoc');
              $name->LieuLuong = $request->input('LieuLuong');
              $name->GhiChu = $request->input('GhiChu');
-             $name->Nhanvien_ID = $request->input('Nhanvien_ID');
+             $name->User_ID = $request->input('User_ID');
              $name->Khu_ID = $request->input('Khu_ID');
              $name->update();
              return redirect()->route('admin.phunthuoc')->with('thongbao','Chỉnh sửa thành công');

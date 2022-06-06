@@ -15,19 +15,18 @@ class CreateNhanviensTable extends Migration
     {
         Schema::create('nhanviens', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('HoTen');
-            $table->string('NgaySinh');
-            $table->string('GioiTinh');
-            $table->integer('SDT');
-            $table->string('Email');
-            $table->string('MatKhau');
-            $table->integer('Quyen_ID')->unsigned();
-            $table->foreign('Quyen_ID')->references('id')->on('quyens');
+            $table->string('name');
+            // $table->string('GioiTinh');
+            $table->integer('sdt');
+            $table->string('email');
+            $table->string('password');
+            // $table->integer('Quyen_ID')->unsigned();
+            // $table->foreign('Quyen_ID')->references('id')->on('quyens');
             $table->timestamps();
             
         });
     }
-
+        
     /**
      * Reverse the migrations.
      *

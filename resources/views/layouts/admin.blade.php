@@ -41,12 +41,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
   
 
-
+ <link href="/css/admin.css" rel="stylesheet">
+ <link href="/css/custom-ct.css" rel="stylesheet">
 {{-- gg font --}}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
 
+
+    <script src="{{ asset('admin/plugins/ckeditor/ckeditor.js') }}"></script>
+    <script src="{{ asset('admin/plugins/select2/dist/js/select2.js') }}"></script>
+  <script src="{{ asset('admin/plugins/iCheck/icheck.js') }}"></script>
+
+  
 
 
 
@@ -66,6 +73,8 @@
       <div class="right_col" role="main">
         <!-- top tiles -->
         @yield('content')
+        
+      @yield('css')
       </div>
       <!-- /page content -->
 
@@ -121,36 +130,29 @@
   <!-- Custom Theme Scripts -->
   <script src="{{asset('../themes/build/js/custom.min.js')}}"></script>
 
+  
 
 
 
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  {{-- bang ghi chu --}}
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+    <script>
+        tinymce.init({
+            selector: 'textarea#editor',
+            skin: 'bootstrap',
+            plugins: 'lists, link, image, media',
+            toolbar: 'h1 h2 bold italic strikethrough blockquote bullist numlist backcolor | link image media | removeformat help',
+            menubar: false,
+        });
+    </script>
 
 
+ @yield('scripts')
 
+     <script src="./js/admin.js"></script>
 
-  {{--  --}}
-	
-
-	<!-- bootstrap-wysiwyg -->
-	{{-- <script src="{{asset('../themes/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js')}}"></script>
-	<script src="{{asset('../themes/vendors/jquery.hotkeys/jquery.hotkeys.js')}}../themes/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
-	<script src="{{asset('../themes/vendors/google-code-prettify/src/prettify.js')}}"></script>
-	<!-- jQuery Tags Input -->
-	<script src="{{asset('../themes/vendors/jquery.tagsinput/src/jquery.tagsinput.js')}}"></script>
-	<!-- Switchery -->
-	<script src="{{asset('../themes/vendors/switchery/dist/switchery.min.js')}}"></script>
-	<!-- Select2 -->
-	<script src="{{asset('../themes/vendors/select2/dist/js/select2.full.min.js')}}"></script>
-	<!-- Parsley -->
-	<script src="{{asset('../themes/vendors/parsleyjs/dist/parsley.min.js')}}"></script>
-	<!-- Autosize -->
-	<script src="{{asset('../themes/vendors/autosize/dist/autosize.min.js')}}"></script>
-	<!-- jQuery autocomplete -->
-	<script src="{{asset('../themes/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js')}}"></script>
-	<!-- starrr -->
-	<script src="{{asset('../themes/vendors/starrr/dist/starrr.js')}}"></script>
-	<!-- Custom Theme Scripts -->
-	<script src="{{asset('../themes/build/js/custom.min.js')}}"></script> --}}
 </body>
-
 </html>

@@ -14,8 +14,8 @@ class Quyen extends Model
           'TenQuyen'
     ];
 
-     public function NhanVien()
+     public function USER()
     {
-      return $this->hasOne(NhanVien::class,'Quyen_ID');
+      return $this->hasOne(User::class,'Quyen_ID');
     }
 }

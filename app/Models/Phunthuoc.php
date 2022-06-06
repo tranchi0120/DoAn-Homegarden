@@ -16,13 +16,13 @@ class Phunthuoc extends Model
           'TenThuoc',
           'LieuLuong',
           'GhiChu',
-          'Nhanvien_ID',
+          'User_ID',
           'Khu_ID'
     ];
 
-     public function NhanVien()
+     public function USER()
     {
-        return $this->belongsTo(Nhanvien::class,'Nhanvien_ID');
+        return $this->belongsTo(User::class,'User_ID');
     }
 
      public function Khu()

@@ -19,11 +19,10 @@ class CreateBaidangsTable extends Migration
             $table->string('NoiDung');
             $table->string('HinhAnh');
             $table->string('NgayDang');
-            $table->integer('Nhanvien_ID')->unsigned();
+            $table->unsignedbiginteger('User_ID');
             $table->integer('Danhmuc_ID')->unsigned();
-            $table->foreign('Nhanvien_ID')->references('id')->on('nhanviens');
+            $table->foreign('User_ID')->references('id')->on('users');
             $table->foreign('Danhmuc_ID')->references('id')->on('danhmucloaicays');
-            
             $table->timestamps();
         });
     }
