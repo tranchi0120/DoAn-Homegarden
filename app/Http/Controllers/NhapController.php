@@ -11,13 +11,13 @@ class NhapController extends Controller
 
     public function __construct()
     {
-        
-        $khu = Khu::all();
+
+        $khu = Khu::where('SoLuong' ,0)->get();
         view()->share('khu',$khu);
 
           $user = User::all();
         view()->share('user',$user);
-        
+
     }
 
 
