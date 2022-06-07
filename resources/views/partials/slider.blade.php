@@ -67,11 +67,8 @@
                      </li>
 
 
-                     <li><a><i class="fa fa-clone"></i>Tin Tức<span class="fa fa-chevron-down"></span></a>
-                         <ul class="nav child_menu">
-                             <li><a href="http://127.0.0.1:8000/admin/baidang/create">Đăng Tin</a></li>
-                             <li><a href="http://127.0.0.1:8000/admin/baidang">Chi Tiết Bài Đăng</a></li>
-                         </ul>
+                     <li><a href="http://127.0.0.1:8000/admin/baidang"><i class="fa fa-clone"></i>Tin Tức</a>
+
                      </li>
 
                      <li><a><i class="fa fa-bug"></i>Thông tin liên hệ khách hàng </span></a>

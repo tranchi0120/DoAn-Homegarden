@@ -80,6 +80,8 @@
                 @yield('content')
 
                 @yield('css')
+
+                @yield('scripts')
             </div>
             <!-- /page content -->
 
@@ -94,6 +96,7 @@
         </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- jQuery -->
     <script src="{{ asset('../themes/vendors/jquery/dist/jquery.min.js') }}"></script>
     <!-- Bootstrap -->
@@ -134,30 +137,36 @@
 
     <!-- Custom Theme Scripts -->
     <script src="{{ asset('../themes/build/js/custom.min.js') }}"></script>
+    <script src="{{ asset('../themes/build/js/custom-ct.js') }}"></script>
+
+    <script src="./js/admin.js"></script>
+    <script src="./js/custom-ct.js"></script>
 
 
 
 
 
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     {{-- bang ghi chu --}}
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin">
+        < /scrip>
 
-    <script>
-        tinymce.init({
-            selector: 'textarea#editor',
-            skin: 'bootstrap',
-            plugins: 'lists, link, image, media',
-            toolbar: 'h1 h2 bold italic strikethrough blockquote bullist numlist backcolor | link image media | removeformat help',
-            menubar: false,
-        });
+        <
+        script >
+            tinymce.init({
+                selector: 'textarea#editor',
+                skin: 'bootstrap',
+                plugins: 'lists, link, image, media',
+                toolbar: 'h1 h2 bold italic strikethrough blockquote bullist numlist backcolor | link image media | removeformat help',
+                menubar: false,
+            });
     </script>
-
 
     @yield('scripts')
 
-    <script src="./js/admin.js"></script>
+
+
 
 </body>
 

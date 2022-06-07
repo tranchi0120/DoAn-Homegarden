@@ -119,8 +119,6 @@ Route::middleware('auth')->group(function (){
     Route::get('admin/xuat',[XuatController::class,'index'])->name('admin.xuat');
     Route::get('admin/xuat/create',[XuatController::class,'create'])->name('xuatcay.create');
     Route::post('admin/xuat/store',[XuatController::class,'store'])->name('xuatcay.store');
-    // Route::get('/xuat/edit/{id}',[XuatController::class,'edit'])->name('xuatcay.edit');
-    // Route::post('/xuat/update/{xuat}',[XuatController::class,'update'])->name('xuatcay.update');
     Route::get('admin/xuat/destroy/{id}',[XuatController::class,'destroy'])->name('xuatcay.destroy');
 
 
@@ -130,8 +128,6 @@ Route::middleware('auth')->group(function (){
     Route::get('admin/nhap',[NhapController::class,'index'])->name('admin.nhap');
     Route::get('admin/nhap/create',[NhapController::class,'create'])->name('nhapcay.create');
     Route::post('admin/nhap/store',[NhapController::class,'store'])->name('nhapcay.store');
-    // Route::get('/xuat/edit/{id}',[XuatController::class,'edit'])->name('xuatcay.edit');
-    // Route::post('/xuat/update/{xuat}',[XuatController::class,'update'])->name('xuatcay.update');
     Route::get('admin/nhap/destroy/{id}',[NhapController::class,'destroy'])->name('nhapcay.destroy');
 
 
@@ -176,10 +172,7 @@ Route::middleware('auth')->group(function (){
     Route::post('dashboard',[AuthController::class,'dashboard'])->name('dashboard');
  });
 
-    // Route::post('admin/login',[AdminController::class,'loginPost'])->name('admin.loginPost');
-    // Route::get('admin/logout',[AdminController::class,'logout'])->name('admin.logout');
-    // Route::get('admin/dashboard',[AdminController::class,'dashboard'])->name('admin.dashboard');
-
+    
 
     Route::get('login',[AuthController::class,'showFormLogin'])->name('show-form-login');
     Route::post('login',[AuthController::class,'login'])->name('login');
