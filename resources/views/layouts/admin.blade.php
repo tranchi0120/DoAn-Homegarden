@@ -94,6 +94,13 @@
         </div>
     </div>
 
+    <!-- Modernizer JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<!-- jQuery JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://demo.hasthemes.com/ruiz-preview/ruiz/assets/js/vendor/bootstrap.min.js"></script>
     <!-- jQuery -->
     <script src="{{ asset('../themes/vendors/jquery/dist/jquery.min.js') }}"></script>
     <!-- Bootstrap -->
@@ -153,6 +160,24 @@
             menubar: false,
         });
     </script>
+
+<script>
+    var soluong, gianhap = 0;
+    $('#soluong').on('change', function() {
+        soluong = $(this).val();
+        tongso(soluong, gianhap);
+     });
+     $('#gianhap').on('change', function() {
+        gianhap = $(this).val();
+        tongso(soluong, gianhap);
+     });
+
+     function tongso(sl, gn)
+     {
+        $('#tongtien').val(sl * gn);
+     }
+
+</script>
 
 
     @yield('scripts')

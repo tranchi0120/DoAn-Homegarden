@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
- 
+
  <div class="container">
 
         <div class="card-body">
@@ -31,25 +31,25 @@
                         <div class="form-group">
                             <strong>Ngày Nhập</strong>
                             <input class="form-control" type="date" name="NgayNhap" placeholder="mời nhập">
-                         
+
                         </div>
 
                         <div class="form-group">
                             <strong>Số Lượng</strong>
-                            <input class="form-control" type="number" name="SoLuong" placeholder="mời nhập">
-                           
+                            <input id="soluong" class="form-control" type="number" name="SoLuong" placeholder="mời nhập" value="0" />
+
                         </div>
                          <div class="form-group">
                             <strong>Giá Nhập</strong>
-                            <input class="form-control" type="number" name="GiaNhap" placeholder="mời nhập">
-                           
+                            <input id="gianhap" class="form-control" type="number" name="GiaNhap" placeholder="mời nhập" value="0"/>
+
                         </div>
                          <div class="form-group">
-                            <strong>Tổng Tiền</strong> 
-                            <input class="form-control" type="number" name="TongTien" >
-                           
+                            <strong>Tổng Tiền</strong>
+                            <input id="tongtien" class="form-control" type="number" name="TongTien" />
+
                         </div>
-                        
+
                          <div class="form-group">
                             <strong>Người Nhập</strong>
                             <select class="select2_single form-control" name="User_ID" aria-label="Default select example">
@@ -58,8 +58,8 @@
                              @endforeach
                             </select>
                         </div>
-                        
-                       
+
+
                          <div class="form-group" style="display:flex">
                              <strong>Ghi Chú</strong>
                             <div class="col-ml-9 col-sm-9">
@@ -67,12 +67,13 @@
 
                             </div>
                         </div>
+
                                                 <script>
                             CKEDITOR.replace( 'ghichu' ,{
                                 language: 'en'
                             });
                         </script>
-                        
+
                     </div>
 
                 </div>
@@ -82,4 +83,5 @@
 
         </div>
 @endsection
+
 
