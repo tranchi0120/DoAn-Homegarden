@@ -36,9 +36,7 @@
                             <i class="fas fa-edit"></i>
                         </a>
                         @csrf
-                        {{-- <a href="{{route('pt.destroy',$data->id)}}" class="btn btn-danger action_delete">
-                            <i class="fas fa-trash"></i>
-                        </a> --}}
+
                         </form>
                     </td>
 

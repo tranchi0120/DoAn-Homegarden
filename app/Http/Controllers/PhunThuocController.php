@@ -29,7 +29,10 @@ class PhunThuocController extends Controller
      */
     public function index()
     {
-        $phunthuoc = ModelPhunThuoc::all();
+        $phunthuoc = ModelPhunThuoc::whereHas('Khu', function($q) { 
+            $q->where('SoLuong','<>', 0);
+        })->get();
+       
         // dd($phunthuoc['0']->Khu->TenKhu);
         return view('admin/phunthuoc.index')->with('phunthuoc',$phunthuoc);
     }

@@ -60,6 +60,9 @@ class NhapController extends Controller
         $name->TongTien = $request->TongTien;
         $name->GhiChu = $request->GhiChu;
         $name->save();
+        $khu = Khu::find($request->Khu_ID);
+        $khu->SoLuong = $request->SoLuong;
+        $khu->save();
         return redirect()->route('admin.nhap')->with('nhap', $nhap);
     }
 

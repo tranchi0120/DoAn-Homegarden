@@ -8,7 +8,7 @@
     <div class="container">
 
         <div class="card-body">
-            <form action="{{ route('tin.store') }}" method="post">
+            <form enctype="multipart/form-data" action="{{ route('tin.store') }}" method="post">
                 @csrf
                 @if ($errors->any())
                     <div class="alert alert-danger">

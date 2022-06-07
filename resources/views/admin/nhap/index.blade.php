@@ -1,18 +1,17 @@
-
 @extends('layouts.admin')
 
 @section('title')
-  <title>Nhập Cây trồng</title>
+    <title>Nhập Cây trồng</title>
 @endsection
 
 @section('content')
     <div class="container">
-        
 
-       
+
+
         <table class="table table-striped">
             <tr class="table-dark">
-        
+
                 <th>Khu</th>
                 <th>Tên Cây</th>
                 <th>Người Nhập</th>
@@ -21,26 +20,26 @@
                 <th>Giá Nhập</th>
                 <th>Tổng Tiền</th>
                 <th>Ghi Chú</th>
-                
-               
+
+
                 <th width="280px">Thao Tác</th>
             </tr>
-             @foreach ($nhap as $data)
-                <tr>    
-                   
+            @foreach ($nhap as $data)
+                <tr>
+
                     <td>{{ $data->Khu->TenKhu }}</td>
-                    <td>{{ $data->Khu->CayTrong->TenCay}}</td>
+                    <td>{{ $data->Khu->CayTrong->TenCay }}</td>
                     <td>{{ $data->User->name }}</td>
                     <td>{{ $data->NgayNhap }}</td>
                     <td>{{ $data->SoLuong }}</td>
                     <td>{{ number_format($data->GiaNhap) }} Vnđ</td>
                     <td>{{ number_format($data->TongTien) }} Vnđ</td>
-                    <td>{!! $data->GhiChu!!}</td>
-                   
+                    <td>{!! $data->GhiChu !!}</td>
+
                     <td>
-                      
+
                         @csrf
-                        <a href="{{route('nhapcay.destroy',$data->id)}}" class="btn btn-danger action_delete">
+                        <a href="{{ route('nhapcay.destroy', $data->id) }}" class="btn btn-danger action_delete">
                             <i class="fas fa-trash"></i>
                         </a>
                         </form>
@@ -48,11 +47,10 @@
 
                 </tr>
             @endforeach
-     
+
         </table>
 
-    
-        
-    </div>
 
+
+    </div>
 @endsection

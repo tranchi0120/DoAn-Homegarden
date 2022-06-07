@@ -57,6 +57,7 @@ public function __construct()
          if($request->hasFile('image'));
         {
                 $image = $request->file('image');
+                // dd($image);
                 $imageName = time().'.'. $image->getClientOriginalExtension();
                         $image->move(public_path('images'), $imageName);
                 $name->HinhAnh = $imageName;
@@ -64,7 +65,7 @@ public function __construct()
         $name->NgayDang = $request->NgayDang;
         $name->User_ID = $request->User_ID;
         $name->save();
-        return redirect()->route('admin.tintuc')->with('tintuc', $tintuc);
+        return redirect()->route('admin.baidang')->with('baidang', $baidang);
 
 
         $validate = $request->validate( [
