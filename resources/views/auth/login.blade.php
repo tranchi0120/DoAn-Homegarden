@@ -62,11 +62,7 @@
                 </div>
               </div>
             </form>
-             @if(session('success'))
-    {
-        {session('success')}
-    }
-    @endif
+
           </section>
         </div>
 

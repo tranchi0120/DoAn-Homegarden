@@ -35,23 +35,21 @@
 
                         <div class="form-group">
                             <strong>Số Lượng</strong>
-                            <input class="form-control" id="soluong" type="number" name="SoLuong" placeholder="mời nhập"
-                                value="{{ old('SoLuong') }}">
+                            <input id="soluong" class="form-control" type="number" name="SoLuong" placeholder="mời nhập"
+                                value="0" />
 
                         </div>
                         <div class="form-group">
                             <strong>Giá Nhập</strong>
-                            <input class="form-control" id="gianhap" type="number" name="GiaNhap" placeholder="mời nhập"
-                                value="{{ old('GiaNhap') }}" />
+                            <input id="gianhap" class="form-control" type="number" name="GiaNhap" placeholder="mời nhập"
+                                value="0" />
 
                         </div>
                         <div class="form-group">
                             <strong>Tổng Tiền</strong>
-                            <input class="form-control" id="tongtien" type="number" name="TongTien"
-                                value="{{ old('SoLuong') * old('GiaNhap') }}">
+                            <input id="tongtien" class="form-control" type="number" name="TongTien" />
 
                         </div>
-
 
                         <div class="form-group">
                             <strong>Người Nhập</strong>
@@ -76,6 +74,7 @@
                                 language: 'en'
                             });
                         </script>
+
                     </div>
 
                 </div>
@@ -84,24 +83,4 @@
         </div>
 
     </div>
-@endsection
-
-
-@section('scripts')
-    <script>
-        (function($) {
-            var soluong, gianhap = 0;
-            console.log(soluong);
-            $(document).ready(function() {
-                $("#soluong").keydown(function() {
-                    soluong = $(this).val();
-                })
-                $("#gianhap").keydown(function() {
-                    gianhap = $(this).val();
-                })
-                console.log(soluong, gianhap);
-                $(#tongtien).val(soluong * gianhap);
-            });
-        })
-    </script>
 @endsection
