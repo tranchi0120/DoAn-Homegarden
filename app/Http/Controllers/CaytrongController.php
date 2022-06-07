@@ -77,10 +77,9 @@ class CaytrongController extends Controller
 
     public function update(Request $request, $id)
     {
-         $name = ModelsCaytrong::find($id);
+             $name = ModelsCaytrong::find($id);
              $name->Loaicay_ID = $request->input('Loaicay_ID');
-             $name->TenCay = $request->input('TenCay');
-            //  $name->HinhAnh = $request->input('HinhAnh');
+             $name->TenCay = $request->input('TenCay'); 
              $name->GianTien = $request->input('GianTien');
              $name->GiaiDoanPhunThuoc = $request->input('GiaiDoanPhunThuoc');
              $name->GhiChu = $request->input('GhiChu');
@@ -106,7 +105,7 @@ class CaytrongController extends Controller
                     "message" => "Cant delete this record"
                 ], 500);
             }
-    //   return redirect()->route('admin.caytrong');
+   
     }
 
 

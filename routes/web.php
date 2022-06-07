@@ -13,6 +13,7 @@ use App\Http\Controllers\TinhTrangKhuController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\NhapController;
+use App\Http\Controllers\BaiDangController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
 
@@ -135,7 +136,13 @@ Route::middleware('auth')->group(function (){
 
 
 
-
+    // bai dang
+    Route::get('admin/baidang',[BaiDangController::class,'index'])->name('admin.baidang');
+    Route::get('admin/baidang/create',[BaiDangController::class,'create'])->name('tin.create');
+    Route::post('admin/baidang/store',[BaiDangController::class,'store'])->name('tin.store');
+    Route::get('admin/baidang/edit/{id}',[BaiDangController::class,'edit'])->name('tin.edit');
+    Route::post('admin/baidang/update/{baidang}',[BaiDangController::class,'update'])->name('tin.update');
+    Route::get('admin/baidang/destroy/{id}',[BaiDangController::class,'destroy'])->name('tin.destroy');
 
 
 

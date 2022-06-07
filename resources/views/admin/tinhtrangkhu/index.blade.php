@@ -1,8 +1,7 @@
-
 @extends('layouts.admin')
 
 @section('title')
-  <title>Tình Trạng Cây Trồng</title>
+    <title>Tình Trạng Cây Trồng</title>
 @endsection
 
 @section('content')
@@ -19,29 +18,29 @@
             </div>
         </div>
 
-       
+
         <table class="table table-striped">
             <tr class="table-dark">
                 <th>ID</th>
                 <th>Tên Khu</th>
                 <th>Số Lượng</th>
                 <th>Số Lượng Chết</th>
-                <th>Người Chăm Sóc</th> 
-                  <th>Chi Tiet</th>
+                <th>Người Chăm Sóc</th>
+                <th>Chi Tiet</th>
                 <th width="280px">Hành động</th>
 
-               
-              
+
+
             </tr>
-             @foreach ($khu as $data)
+            @foreach ($khu as $data)
                 <tr>
-                     
-                    <td>{{$data->id}}</td>
-                    <td>{{$data->TenKhu}}</td>
-                    <td>{{$data->SoLuong}}</td>
-                    <td>{{$data->SoLuongChet}}</td>
-                    <td>{{$data->USER->name}}</td>
-                    <td><a href="{{route('admin.tinhtrangkhu.chitiet' , ['id' => $data->id])}}">Chi Tiet</a></td>  
+
+                    <td>{{ $data->id }}</td>
+                    <td>{{ $data->TenKhu }}</td>
+                    <td>{{ $data->SoLuong }}</td>
+                    <td>{{ $data->SoLuongChet }}</td>
+                    <td>{{ $data->USER->name }}</td>
+                    <td><a href="{{ route('admin.tinhtrangkhu.chitiet', ['id' => $data->id]) }}">Chi Tiet</a></td>
 
 
                     {{-- <td>{{$data->Khu->CayTrong->TenCay}}</td>
@@ -50,9 +49,9 @@
 
 
 
-                   
+
                     <td>
-                        <a class="btn btn-primary" href="{{route('tinhtrang.edit',$data->id)}}">
+                        <a class="btn btn-primary" href="{{ route('tinhtrang.edit', $data->id) }}">
                             <i class="fas fa-edit"></i>
                         </a>
                         @csrf
@@ -64,11 +63,10 @@
 
                 </tr>
             @endforeach
-     
+
         </table>
 
-    
-        
-    </div>
 
+
+    </div>
 @endsection

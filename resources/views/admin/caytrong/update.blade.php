@@ -1,14 +1,13 @@
 @extends('layouts.admin')
 
 @section('title')
-  <title>Cập Nhật Cây Trồng</title>
+    <title>Cập Nhật Cây Trồng</title>
 @endsection
 
 @section('content')
- 
- <div class="container">
+    <div class="container">
         <div class="card-body">
-            <form action="{{route('ct.update',$name->id)}}" method="post">
+            <form action="{{ route('ct.update', $name->id) }}" method="post">
                 @csrf
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -20,58 +19,60 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <strong>Loại Cây</strong>
-                            
-                            <select class="select2_single form-control" name="Loaicay_ID" aria-label="Default select example">
-                        
-                           @foreach($danhmucloaicay as $data)
-                            <option value="{{$data->id}}">{{$data->Tenloaicay}}</option>
-                            @endforeach
+
+                            <select class="select2_single form-control" name="Loaicay_ID"
+                                aria-label="Default select example">
+
+                                @foreach ($danhmucloaicay as $data)
+                                    <option value="{{ $data->id }}">{{ $data->Tenloaicay }}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group">
                             <strong>Tên Cây</strong>
-                            <input class="form-control" type="text" name="TenCay" value="{{$name->TenCay}}">
-                           
+                            <input class="form-control" type="text" name="TenCay" value="{{ $name->TenCay }}">
+
                         </div>
                         <div class="form-group">
                             <strong>Giá Tiền</strong>
-                            <input class="form-control" type="text" name="GianTien" value="{{number_format($name->GianTien) }}">     
+                            <input class="form-control" type="text" name="GianTien"
+                                value="{{ number_format($name->GianTien) }}">
                         </div>
-                      
 
-                        <div class="form-group " style="height: 500px" >
+
+                        <div class="form-group " style="height: 500px">
                             <div class="title">
-                                    <strong>Giai Đoạn Phun Thuốc</strong>
-                            </div>
-                             
-                            <div class="col-ml-9 col-sm-9">
-                                <textarea  id="noidung" name="GiaiDoanPhunThuoc" cols="30" rows="3" class="form-control "  placeholder="mieu ta">{{$name->GiaiDoanPhunThuoc}}</textarea>
+                                <strong>Giai Đoạn Phun Thuốc</strong>
                             </div>
 
-                             <script>
-                                CKEDITOR.replace( 'GiaiDoanPhunThuoc' ,{
-                                 language: 'en'
-                                                 });
-                        </script>
+                            <div class="col-ml-9 col-sm-9">
+                                <textarea id="noidung" name="GiaiDoanPhunThuoc" cols="30" rows="3" class="form-control " placeholder="mieu ta">{{ $name->GiaiDoanPhunThuoc }}</textarea>
+                            </div>
+
+                            <script>
+                                CKEDITOR.replace('GiaiDoanPhunThuoc', {
+                                    language: 'en'
+                                });
+                            </script>
                         </div>
-                       
+
 
 
 
                         <div class="form-group ">
-                        <div>
+                            <div>
                                 <strong>Ghi Chú</strong>
-                        </div>
-                             
+                            </div>
+
                             <div class="col-ml-9 col-sm-9">
-                                <textarea  id="noidung" name="GhiChu" cols="30" rows="3" class="form-control "  placeholder="mieu ta">{{$name->GhiChu}}</textarea>
+                                <textarea id="noidung" name="GhiChu" cols="30" rows="3" class="form-control " placeholder="mieu ta">{{ $name->GhiChu }}</textarea>
 
                             </div>
                         </div>
                         <script>
-                     CKEDITOR.replace( 'GhiChu' ,{
-                             language: 'en'
-                     });
+                            CKEDITOR.replace('GhiChu', {
+                                language: 'en'
+                            });
                         </script>
                     </div>
 
@@ -82,8 +83,3 @@
 
     </div>
 @endsection
-
-
-
-   
-

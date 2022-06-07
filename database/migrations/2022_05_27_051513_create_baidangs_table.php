@@ -20,9 +20,9 @@ class CreateBaidangsTable extends Migration
             $table->string('HinhAnh');
             $table->string('NgayDang');
             $table->unsignedbiginteger('User_ID');
-            $table->integer('Danhmuc_ID')->unsigned();
+            // $table->integer('Danhmuc_ID')->unsigned();
             $table->foreign('User_ID')->references('id')->on('users');
-            $table->foreign('Danhmuc_ID')->references('id')->on('danhmucloaicays');
+            // $table->foreign('Danhmuc_ID')->references('id')->on('danhmucloaicays');
             $table->timestamps();
         });
     }

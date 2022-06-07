@@ -11,7 +11,7 @@ class Caytrong extends Model
 {
     use HasFactory;
 
-    // protected $validator;
+   
     protected $table = 'caytrongs';
      protected $fillable = [
          'Loaicay_ID',
