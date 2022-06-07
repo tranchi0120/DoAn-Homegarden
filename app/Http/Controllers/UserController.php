@@ -27,6 +27,8 @@ class UserController extends Controller
          $user = ModelsUser::all();
         // dd($taikhoan['0']->LoaiQuyen->TenQuyen);
         return view('admin/user.index')->with('user',$user);
+
+        $user = User::simplePaginate(2);
     }
 
     /**

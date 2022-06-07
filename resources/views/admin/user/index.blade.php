@@ -6,6 +6,7 @@
 @endsection
 
 @section('content')
+ 
     <div class="container">
         <div class="row" style="margin-bottom: 20px;">
             <div class="col-lg-12 margin-tb">
@@ -25,9 +26,7 @@
                 <th>ID</th>
                 <th>Họ Và Tên</th>
                 <th>Email</th>
-                {{-- <th>Mật Khẩu</th> --}}
-                {{-- <th>Gioi Tinh</th> --}}
-                {{-- <th>Ngày Sinh</th> --}}
+                
                 <th>SĐT</th>
                 <th>Quyền</th>
                
@@ -38,11 +37,10 @@
                     <td>{{ $data->id }}</td>
                     <td>{{ $data->name }}</td>
                     <td>{{ $data->email }}</td> 
-                    {{-- <td>{{ $data->password }}</td> --}}
-                    {{-- <td>{{ $data->GioiTinh }}</td> --}}
-                    {{-- <td>{{ $data->NgaySinh }}</td> --}}
                     <td>{{ $data->sdt}}</td>
                     <td>{{ $data->LoaiQuyen->TenQuyen}}</td>
+
+                   
                    
                     <td>
                         <a class="btn btn-primary" href="{{route('u.edit',$data->id)}}">
@@ -54,15 +52,19 @@
                         </button>
                         </form>
                     </td>
-
+                    
                 </tr>
             @endforeach
      
         </table>
+          {{-- {{ $user->links(); }} --}}
+                   
 
     
         
     </div>
+
+  
 
 @endsection
 
