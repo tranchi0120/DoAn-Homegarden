@@ -17,6 +17,8 @@ class Xuat extends Model
           'GhiChu',
           'Khu_ID',
           'User_ID',
+          'Sdt',
+          'TenKhachHang',
          
     ];
 

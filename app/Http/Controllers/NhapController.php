@@ -29,7 +29,7 @@ class NhapController extends Controller
     public function index()
     {
          $nhap = ModelsNhap::all();
-        return view('admin/nhap.index')->with('nhap',$nhap);
+         return view('admin/nhap.index')->with('nhap',$nhap);
     }
 
     /**

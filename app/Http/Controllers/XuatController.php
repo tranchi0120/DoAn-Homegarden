@@ -15,7 +15,7 @@ class XuatController extends Controller
     public function __construct()
     {
         
-        $khu = Khu::all();
+         $khu = Khu::where('SoLuong','>',0)->get();
         view()->share('khu',$khu);
 
           $user = User::all();
@@ -52,16 +52,27 @@ class XuatController extends Controller
      */
     public function store(Request $request)
     {
+       
         $xuat = ModelsXuat::all();
         $name = new ModelsXuat();
         $name->Khu_ID = $request->Khu_ID;
         $name->User_ID = $request->User_ID;
         $name->NgayXuat = $request->NgayXuat;
-        $name->SoLuong = $request->SoLuong;
         $name->GiaXuat = $request->GiaXuat;
         $name->TongTien = $request->TongTien;
         $name->GhiChu = $request->GhiChu;
+        $name->Sdt = $request->Sdt;
+        $name->TenKhachHang = $request->TenKhachHang;
+        $name->SoLuong = $request->SoLuong;
         $name->save();
+        $khu = Khu::find($request->Khu_ID);
+        $tongsoluong = $khu->SoLuong - $request->SoLuong;
+        $khu -> SoLuong = $tongsoluong;
+        $khu->save();
+
+             
+            
+       
         return redirect()->route('admin.xuat')->with('xuat', $xuat);
     }
 
@@ -75,8 +86,8 @@ class XuatController extends Controller
      */
     public function destroy($id)
     {
-        $quyen = ModelsXuat::find($id);
-           $quyen->delete();
+        $xuat = ModelsXuat::find($id);
+        $xuat->delete();
         return redirect()->route('admin.xuat');
     }
 }

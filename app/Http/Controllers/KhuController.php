@@ -32,7 +32,6 @@ class KhuController extends Controller
     public function index()
     {
         $khu = ModelsKhu::all();
-        // dd($khu['0']->CayTrong->DanhMucLoaiCay->Tenloaicay);
         return view('admin/khu.index')->with('khu',$khu);
 
         

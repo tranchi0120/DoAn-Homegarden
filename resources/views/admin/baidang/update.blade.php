@@ -7,7 +7,7 @@
 @section('content')
     <div class="container">
         <div class="card-body">
-            <form action="{{ route('tin.update', $name->id) }}" method="post">
+            <form enctype="multipart/form-data" action="{{ route('tin.update', $name->id) }}" method="post">
                 @csrf
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -45,7 +45,7 @@
                         <div class="form-group  ">
                             <Strong class="col-sm-3 text-end control-label col-form-label">Hình Ảnh </Strong>
                             <div class="custom-file">
-                                <input name="HinhAnh" type="file" accept="image/*" value="{{ $name->HinhAnh }}" />
+                                <input type="file" name="image" />
                             </div>
                         </div>
 

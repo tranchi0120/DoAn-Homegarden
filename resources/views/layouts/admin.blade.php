@@ -186,6 +186,24 @@
     </script>
 
 
+
+    <script>
+        var soluong, giaxuat = 0;
+        $('#soluong').on('change', function() {
+            soluong = $(this).val();
+            tongso(soluong, giaxuat);
+        });
+        $('#giaxuat').on('change', function() {
+            giaxuat = $(this).val();
+            tongso(soluong, giaxuat);
+        });
+
+        function tongso(sl, gx) {
+            $('#tongtien').val(sl * gx);
+        }
+    </script>
+
+
     @yield('scripts')
 
 

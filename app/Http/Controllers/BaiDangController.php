@@ -112,7 +112,14 @@ public function __construct()
              $name = ModelsBaidang::find($id);
              $name->TieuDe = $request->input('TieuDe');
              $name->NoiDung = $request->input('NoiDung'); 
-             $name->HinhAnh = $request->input('HinhAnh');
+            if($request->hasFile('image'));
+                {
+                        $image = $request->file('image');
+                        // dd($image);
+                        $imageName = time().'.'. $image->getClientOriginalExtension();
+                                $image->move(public_path('images'), $imageName);
+                        $name->HinhAnh = $imageName;
+                }
              $name->NgayDang = $request->input('NgayDang');
              $name->User_ID = $request->input('User_ID');
              $name->update();
