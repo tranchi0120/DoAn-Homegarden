@@ -43,7 +43,7 @@
                         </div>
                         <div class="form-group">
                             <strong>Giá Tiền</strong>
-                            <input class="form-control" type="number" name="GianTien" placeholder="mời nhập">
+                            <input class=" form-control" type="number" name="GiaTien" placeholder="mời nhập">
 
                         </div>
                         <div class="form-group" style="display: flex">
@@ -88,3 +88,11 @@
 
     </div>
 @endsection
+{{-- @section('js')
+    <script src="{{ asset('../themes/build/js/simple.money.format.js') }}"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.tiencay').simpleMoneyFormat();
+        })
+    </script>
+@endsection --}}

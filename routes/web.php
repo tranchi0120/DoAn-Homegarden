@@ -14,6 +14,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\NhapController;
 use App\Http\Controllers\BaiDangController;
+use App\Http\Controllers\ClientController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
 
@@ -182,3 +183,12 @@ Route::middleware('auth')->group(function (){
     Route::post("forgot-password", [UserController::class,'submitForgotPasswordForm'])->name("forgotpass.post");
     Route::get("reset-password/{token}",[UserController::class,'showResetPasswordForm'])->name("resetpass.get");
     Route::post("reset-password", [UserController::class,'submitResetPasswordForm'])->name("resetpass.post");
+
+
+
+    // client 
+    Route::get('trangchu',[ClientController::class,'ShowClient'])->name('Client.main');
+    Route::get('trangchu',[ClientController::class,'ShowTinTuc'])->name('Client.tintuc');
+    Route::get('trangchu',[ClientController::class,'ShowKhu'])->name('Client.khu');
+
+   

@@ -81,7 +81,6 @@
 
                 @yield('css')
 
-                @yield('scripts')
             </div>
             <!-- /page content -->
 
@@ -90,12 +89,13 @@
                 <div class="pull-right">
                     Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
                 </div>
+
                 <div class="clearfix"></div>
             </footer>
             <!-- /footer content -->
         </div>
     </div>
-
+    @yield('scripts')
     <!-- Modernizer JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <!-- jQuery JS -->
@@ -144,6 +144,8 @@
     <!-- Custom Theme Scripts -->
     <script src="{{ asset('../themes/build/js/custom.min.js') }}"></script>
     <script src="{{ asset('../themes/build/js/custom-ct.js') }}"></script>
+
+
 
     <script src="./js/admin.js"></script>
     <script src="./js/custom-ct.js"></script>
@@ -205,7 +207,7 @@
 
 
     @yield('scripts')
-
+    @yield('js')
 
 
 

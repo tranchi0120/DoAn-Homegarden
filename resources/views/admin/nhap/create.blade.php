@@ -39,6 +39,8 @@
                                 value="0" />
 
                         </div>
+
+
                         <div class="form-group">
                             <strong>Giá Nhập</strong>
                             <input id="gianhap" class="form-control" type="number" name="GiaNhap" placeholder="mời nhập"

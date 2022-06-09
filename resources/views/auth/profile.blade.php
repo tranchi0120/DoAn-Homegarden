@@ -1,4 +1,4 @@
-<form action="{{route('profile')}}" method="post">
+<form action="{{ route('profile') }}" method="post">
 
     @csrf
     @method('post')
@@ -8,4 +8,4 @@
 
 </form>
 
-<a href="{{route('logout')}}"> dang xuat</a>
+<a href="{{ route('logout') }}"> dang xuat</a>
