@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ChangeGhichuBaidangsTable extends Migration
+class ChangeTinhTrangKhusTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class ChangeGhichuBaidangsTable extends Migration
      */
     public function up()
     {
-        Schema::table('baidangs', function (Blueprint $table) {
-             $table->text('NoiDung')->change();
-            //  $table->date('NgayDang')->format('d/m/Y')->change();
-            
+        Schema::table('tinh_trang_khus', function (Blueprint $table) {
+            $table->text('GhiChu')->change();
         });
     }
 
@@ -27,9 +25,8 @@ class ChangeGhichuBaidangsTable extends Migration
      */
     public function down()
     {
-        Schema::table('baidangs', function (Blueprint $table) {
-            //  $table->string('NoiDung',65536)->change();
-             
+        Schema::table('tinh_trang_khus', function (Blueprint $table) {
+            //
         });
     }
 }

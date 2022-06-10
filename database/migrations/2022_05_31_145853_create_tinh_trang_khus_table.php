@@ -15,7 +15,6 @@ class CreateTinhTrangKhusTable extends Migration
     {
         Schema::create('tinh_trang_khus', function (Blueprint $table) {
            	$table->increments('id');
-            // $table->string('SoLuong');
             $table->string('HinhAnh');
             $table->string('GhiChu');
             $table->integer('Khu_ID')->unsigned();

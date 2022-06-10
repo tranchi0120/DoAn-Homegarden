@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLienhesTable extends Migration
+class ChangeKhusTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,8 @@ class CreateLienhesTable extends Migration
      */
     public function up()
     {
-        Schema::create('lienhes', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('HoTen');
-            $table->string('SDT');
-            $table->string('Email');
-            $table->string('NoiDung');
-            $table->timestamps();
+        Schema::table('khus', function (Blueprint $table) {
+            $table->text('GhiChu')->change();
         });
     }
 
@@ -30,6 +25,8 @@ class CreateLienhesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lienhes');
+        Schema::table('khus', function (Blueprint $table) {
+            //
+        });
     }
 }
