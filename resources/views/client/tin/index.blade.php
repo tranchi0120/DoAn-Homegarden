@@ -1,12 +1,6 @@
-@extends('Client.main')
-
-@section('title')
-    <title>Tin Tuc</title>
-@endsection
-
-@section('content-tintuc')
+@section('content-news')
     <section id="news" class="latest-news-section">
-        <div class="container">
+        <div enctype="multipart/form-data" class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title  ">
@@ -15,20 +9,19 @@
                 </div>
             </div>
             <div class="row">
-
                 <div class="latest-news">
                     @foreach ($baidang as $data)
                         <div class="col-md-12">
                             <div class="latest-post">
-                                {{-- <img src="images/about-01.jpg" class="img-responsive" alt=""> --}}
+
                                 <img class="images img-responsive" src="{{ asset('/images') }}/{{ $data->HinhAnh }}"
-                                    class="images img-responsive" alt="">
+                                    alt="">
                                 <h4><a href="#">{{ $data->TieuDe }}</a></h4>
                                 <div class="post-details">
-                                    <span class="date">{{ $data->NgayDang }} </span>
+                                    <span class="date"> {{ $data->NgayDang }} </span>
                                 </div>
-                                <p> {!! $data->NoiDung !!} </p>
-                                <a href="#!" class="btn btn-primary">Đọc Thêm</a>
+                                <div class="text"> {!! $data->NoiDung !!} </div>
+                                <a href="{{ route('ct.chitiet', $data->id) }}" class="btn btn-primary">Đọc Thêm</a>
                             </div>
                         </div>
                     @endforeach
@@ -37,4 +30,23 @@
             </div>
         </div>
     </section>
+
+@section('css')
+    <style>
+        .text {
+            padding: 8px 0;
+            width: 350px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.5rem;
+            -webkit-line-clamp: 3;
+            height: 75px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+        }
+
+        .btn {
+            margin-top: 8px;
+        }
+    </style>
 @endsection

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLienHesTable extends Migration
+class CreateLienhesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,12 +14,10 @@ class CreateLienHesTable extends Migration
     public function up()
     {
         Schema::create('lienhes', function (Blueprint $table) {
-             $table->increments('id');
+            $table->increments('id');
             $table->string('HoTen');
             $table->string('SDT');
             $table->string('Email');
-            $table->string('DiaChi');
-            $table->string('TieuDe');
             $table->string('NoiDung');
             $table->timestamps();
         });

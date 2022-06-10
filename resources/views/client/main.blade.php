@@ -80,169 +80,35 @@
 
     @include('Client.slider')
 
-    <!-- Start Latest News Section -->
 
-    <section id="news" class="latest-news-section">
-        @yield('content-tintuc')
-    </section>
-
-
+    {{-- @yield('content-news')
+    @yield('content-area')
+    @yield('content-tree')
+    @yield('content') --}}
 
 
-    <section class="area">
-        @yield('content-khu')
-    </section>
 
+    @include('Client/tin.index')
+    @include('Client/khu.index')
+    @include('Client/caytrong.index')
 
 
 
 
+    @yield('css')
+    @yield('cs')
 
 
 
 
-    <section id="tree" class="latest-news-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title  ">
-                        <h3 class="news">Cây Nông Nghiệp</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="latest-news">
-                    <div class="col-md-10 ">
-                        <div class="latest-post tree-main ">
-                            <img src="./trangchinh/images/about-01.jpg" class="img-responsive area-img" alt="">
-                            <h4><a class="tree-title" href="#">Tên Cây</a></h4>
-                            <div class="post-details">
-                            </div>
-                            <p class="tree-extra">Loại Cây </p>
-                            <a href="./layouts/agricultural.html" class="btn btn-primary tree-btn">ĐỌc Thêm</a>
-
-                        </div>
-
-                    </div>
-                    <div class="col-md-10">
-                        <div class="latest-post tree-main ">
-                            <img src="./trangchinh/images/about-01.jpg" class="img-responsive area-img" alt="">
-                            <h4><a class="tree-title" href="#">Tên Cây</a></h4>
-                            <div class="post-details">
-                            </div>
-                            <p class="tree-extra">Loại Cây </p>
-                            <a href="./layouts/agricultural.html" class="btn btn-primary tree-btn">ĐỌc Thêm</a>
-
-                        </div>
-
-                    </div>
-                    <div class="col-md-10">
-                        <div class="latest-post tree-main ">
-                            <img src="./trangchinh/images/about-01.jpg" class="img-responsive area-img" alt="">
-                            <h4><a class="tree-title" href="#">Tên Cây</a></h4>
-                            <div class="post-details">
-                            </div>
-                            <p class="tree-extra">Loại Cây </p>
-                            <a href="./layouts/agricultural.html" class="btn btn-primary tree-btn">ĐỌc Thêm</a>
-
-                        </div>
-
-                    </div>
-                    <div class="col-md-10">
-                        <div class="latest-post tree-main ">
-                            <img src="./trangchinh/images/about-01.jpg" class="img-responsive area-img" alt="">
-                            <h4><a class="tree-title" href="#">Tên Cây</a></h4>
-                            <div class="post-details">
-                            </div>
-                            <p class="tree-extra">Loại Cây </p>
-                            <a href="./layouts/agricultural.html" class="btn btn-primary tree-btn">ĐỌc Thêm</a>
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-            </div>
-    </section>
 
 
 
 
-    <section id="tree " class="latest-news-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title ">
-                        <h3 class="news">Cây Ăn Trái</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="latest-news">
-                    <div class="col-md-10 ">
-                        <div class="latest-post tree-main ">
-                            <img src="./trangchinh/images/about-01.jpg" class="img-responsive area-img" alt="">
-                            <h4><a class="tree-title" href="#">Tên Cây</a></h4>
-                            <div class="post-details">
-                            </div>
-                            <p class="tree-extra">Loại Cây </p>
-                            <a href="./layouts/fruit.html" class="btn btn-primary tree-btn">ĐỌc Thêm</a>
 
-                        </div>
 
-                    </div>
-                    <div class="col-md-10 ">
-                        <div class="latest-post tree-main ">
-                            <img src="./trangchinh/images/about-01.jpg" class="img-responsive area-img" alt="">
-                            <h4><a class="tree-title" href="#">Tên Cây</a></h4>
-                            <div class="post-details">
-                            </div>
-                            <p class="tree-extra">Loại Cây </p>
-                            <a href="./layouts/fruit.html" class="btn btn-primary tree-btn">ĐỌc Thêm</a>
 
-                        </div>
 
-                    </div>
-                    <div class="col-md-10 ">
-                        <div class="latest-post tree-main ">
-                            <img src="./trangchinh/images/about-01.jpg" class="img-responsive area-img" alt="">
-                            <h4><a class="tree-title" href="#">Tên Cây</a></h4>
-                            <div class="post-details">
-                            </div>
-                            <p class="tree-extra">Loại Cây </p>
-                            <a href="./layouts/fruit.html" class="btn btn-primary tree-btn">ĐỌc Thêm</a>
-
-                        </div>
-
-                    </div>
-                    <div class="col-md-10 ">
-                        <div class="latest-post tree-main ">
-                            <img src="./trangchinh/images/about-01.jpg" class="img-responsive area-img" alt="">
-                            <h4><a class="tree-title" href="#">Tên Cây</a></h4>
-                            <div class="post-details">
-                            </div>
-                            <p class="tree-extra">Loại Cây </p>
-                            <a href="./layouts/fruit.html" class="btn btn-primary tree-btn">ĐỌc Thêm</a>
-
-                        </div>
-
-                    </div>
-                    <div class="col-md-10 ">
-                        <div class="latest-post tree-main ">
-                            <img src="images/about-01.jpg" class="img-responsive tree-image" alt="">
-                            <h4><a class="tree-title" href="#">Tên Cây</a></h4>
-                            <div class="post-details">
-                            </div>
-                            <p class="tree-extra">Loại Cây </p>
-                            <a href="./layouts/fruit.html" class="btn btn-primary tree-btn">ĐỌc Thêm</a>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-    </section>
 
 
 

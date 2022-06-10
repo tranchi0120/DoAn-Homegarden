@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="index.html">HomeGraden</a>
+                <a class="navbar-brand page-scroll" href="http://127.0.0.1:8000/trangchu">HomeGraden</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->

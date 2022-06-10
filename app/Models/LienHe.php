@@ -5,7 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class LienHe extends Model
+class Lienhe extends Model
 {
     use HasFactory;
+     protected $table = 'lienhes';
+    protected $fillable = [
+          'HoTen',
+          'Email',
+          'SDT',
+          'NoiDung',
+        
+    ];
 }

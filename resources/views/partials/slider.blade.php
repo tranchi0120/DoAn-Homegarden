@@ -71,7 +71,8 @@
 
                      </li>
 
-                     <li><a><i class="fa fa-bug"></i>Thông tin liên hệ khách hàng </span></a>
+                     <li><a href="http://127.0.0.1:8000/admin/lienhe"><i class="fa fa-bug"></i>Thông tin liên hệ
+                             khách hàng </span></a>
                      </li>
                      <li><a href="http://127.0.0.1:8000/logout"><i class="fa fa-bug"></i>Đăng Xuất </span></a>
 

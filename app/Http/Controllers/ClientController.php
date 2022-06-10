@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Baidang;
 use App\Models\Caytrong;
 use App\Models\Khu;
+use App\Models\Lienhe;
+
 
 
 class ClientController extends Controller
@@ -29,13 +31,16 @@ class ClientController extends Controller
     }
 
 
-     public function ShowTinTuc(){
-        return view('Client.tintuc');
+    public function ChiTietBaiDang($id){
+         $data = Baidang::find($id);
+        return view('Client/tin.chitiet',compact('data'));
     }
 
-    public function ShowKhu(){
-        return view('Client.khu');
+     public function ChiTietCay($id){
+         $data = Caytrong::find($id);
+        return view('Client/caytrong.chitiet',compact('data'));
     }
+
 
 
 }

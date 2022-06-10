@@ -38,7 +38,6 @@
 
                     <td>{{ $data->TenKhu }}</td>
                     <td>{{ $data->CayTrong->DanhMucLoaiCay->Tenloaicay }}</td>
-
                     <td>{{ $data->CayTrong->TenCay }}</td>
 
                     <td><img src="{{ asset('/images') }}/{{ $data->CayTrong->HinhAnh }}" class="images"

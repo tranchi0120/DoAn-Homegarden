@@ -15,6 +15,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\NhapController;
 use App\Http\Controllers\BaiDangController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\LienHeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
 
@@ -188,7 +189,20 @@ Route::middleware('auth')->group(function (){
 
     // client 
     Route::get('trangchu',[ClientController::class,'ShowClient'])->name('Client.main');
-    Route::get('trangchu',[ClientController::class,'ShowTinTuc'])->name('Client.tintuc');
-    Route::get('trangchu',[ClientController::class,'ShowKhu'])->name('Client.khu');
+    Route::get('Client/tin.chitiet/{id}',[ClientController::class,'ChiTietBaiDang'])->name('ct.chitiet');
+    Route::get('Client/caytrong.chitiet/{id}',[ClientController::class,'ChiTietCay'])->name('cay.chitiet');
+    
+
+
+
+    // lienhe
+        Route::get('admin/lienhe',[LienHeController::class,'index'])->name('admin.lienhe');
+        Route::post('trangchu',[LienHeController::class,'store'])->name('lh.store');
+       
+   
+
+
+
+    
 
    

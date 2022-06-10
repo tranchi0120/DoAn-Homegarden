@@ -11,7 +11,7 @@ class Baidang extends Model
 
     protected $table = 'baidangs';
      protected $fillable = [
-             'TieuDe',
+          'TieuDe',
           'NoiDung',
           'HinhAnh',
           'NgayDang',
