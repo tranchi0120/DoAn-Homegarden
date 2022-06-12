@@ -79,13 +79,13 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $appends = [
-        'profile_photo_url'
-    ];
-    public static $path = '/upload/user/';
+    // protected $appends = [
+    //     'profile_photo_url'
+    // ];
+    // public static $path = '/upload/user/';
 
-    public function getAvatarAttribute($value)
-    {
-        return isset($value) ? config('app.url').self::$path.$value : config('app.url').self::$path.'avatar_default.jpg';
-    }
+    // public function getAvatarAttribute($value)
+    // {
+    //     return isset($value) ? config('app.url').self::$path.$value : config('app.url').self::$path.'avatar_default.jpg';
+    // }
 }

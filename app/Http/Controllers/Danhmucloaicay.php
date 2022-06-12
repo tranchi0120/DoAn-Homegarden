@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Danhmucloaicay as ModelsDanhmucloaicay;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Aler;
 
 class Danhmucloaicay extends Controller
 {

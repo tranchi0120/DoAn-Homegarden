@@ -15,7 +15,7 @@ class AddColumnXuatsTable extends Migration
     {
         Schema::table('xuats', function (Blueprint $table) {
             $table->integer('Sdt'); 
-             $table->string('TenKhachHang'); 
+            $table->string('TenKhachHang'); 
         });
     }
 

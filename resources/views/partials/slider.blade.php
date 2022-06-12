@@ -1,7 +1,8 @@
  <div class="col-md-3 left_col">
      <div class="left_col scroll-view">
          <div class="navbar nav_title" style="border: 0;">
-             <a href="index.html" class="site_title"><i class="fa-solid fa-tree"></i> <span>Home Graden</span></a>
+             <a href="http://127.0.0.1:8000" class="site_title"><i class="fa-solid fa-tree"></i> <span>Home
+                     Graden</span></a>
          </div>
 
          <div class="clearfix"></div>
@@ -14,7 +15,7 @@
              <div class="menu_section">
                  {{-- <h3>General</h3> --}}
                  <ul class="nav side-menu">
-                     <li><a href="http://127.0.0.1:8000/dashboard"><i class="fa fa-home"></i> Trang Chủ </a>
+                     <li><a href="http://127.0.0.1:8000/dashboard"><i class="fa fa-home"></i> Thống Kê </a>
 
                      </li>
                      <li><a href="http://127.0.0.1:8000/admin/user"><i class="fa fa-edit"></i>Tài Khoản </a>
@@ -35,7 +36,8 @@
 
                          </ul>
                      </li>
-                     <li><a href="http://127.0.0.1:8000/admin/tinhtrangkhu"><i class="fa fa-desktop"></i>Tình Trạng Cây
+                     <li><a href="http://127.0.0.1:8000/admin/tinhtrangkhu"><i class="fa fa-area-chart"></i>Tình Trạng
+                             Cây
                              Trồng</a>
                          <ul class="nav child_menu">
 
@@ -49,7 +51,7 @@
                          </ul>
                      </li>
 
-                     <li><a><i class="fa fa-clone"></i>Giao Dịch <span class="fa fa-chevron-down"></span></a>
+                     <li><a><i class="fa fa-sitemap"></i>Giao Dịch <span class="fa fa-chevron-down"></span></a>
                          <ul class="nav child_menu">
                              <li><a href="http://127.0.0.1:8000/admin/nhap/create">Nhập Cây</a></li>
                              <li><a href="http://127.0.0.1:8000/admin/xuat/create">Xuất Cây</a></li>
@@ -59,7 +61,7 @@
 
 
 
-                     <li><a><i class="fa fa-clone"></i>Nhật Ký Giao Dịch<span class="fa fa-chevron-down"></span></a>
+                     <li><a><i class="fa fa-sitemap"></i>Nhật Ký Giao Dịch<span class="fa fa-chevron-down"></span></a>
                          <ul class="nav child_menu">
                              <li><a href="http://127.0.0.1:8000/admin/nhap">Nhật Ký Nhập</a></li>
                              <li><a href="http://127.0.0.1:8000/admin/xuat">Nhật Ký Xuất</a></li>
@@ -74,9 +76,7 @@
                      <li><a href="http://127.0.0.1:8000/admin/lienhe"><i class="fa fa-bug"></i>Thông tin liên hệ
                              khách hàng </span></a>
                      </li>
-                     <li><a href="http://127.0.0.1:8000/logout"><i class="fa fa-bug"></i>Đăng Xuất </span></a>
 
-                     </li>
                  </ul>
              </div>
 

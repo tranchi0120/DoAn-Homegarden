@@ -7,6 +7,7 @@ use App\Models\Khu as ModelsKhu;
 use App\Models\User;
 use App\Models\Danhmucloaicay;
 use App\Models\Phunthuoc;
+use RealRashid\SweetAlert\Facades\Aler;
 
 use Illuminate\Http\Request;
 
@@ -104,8 +105,12 @@ class KhuController extends Controller
     {
              $name = ModelsKhu::find($id);
              $name->TenKhu = $request->input('TenKhu');
-             $name->SoLuong = $request->input('SoLuong');
-             $name->SoLuongChet = $request->input('SoLuongChet');
+            //  $SoLuongChet = $request->input('SoLuongChet');
+            // $tongsoluong = $name->SoLuong - $SoLuongChet;
+            // $name->SoLuong = $tongsoluong;
+            // $name->SoLuongChet = $SoLuongChet;
+            //  $name->SoLuong = $request->input('SoLuong');
+            //  $name->SoLuongChet = $request->input('SoLuongChet');
              $name->NgayTrongCay = $request->input('NgayTrongCay');
              $name->NgayThuHoach = $request->input('NgayThuHoach');
              $name->User_ID = $request->input('User_ID');

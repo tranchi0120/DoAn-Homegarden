@@ -165,9 +165,15 @@
     <style>
         .post-relate {
             width: 300px;
-            background: #e0cccc;
+            background: #edf0e8;
             padding: 20px;
             height: max-content;
+        }
+
+        .post {
+            margin: 80px;
+            background: red;
+            background: #e5e9e9;
         }
 
         .img {
@@ -202,7 +208,7 @@
         /* image */
 
         .image {
-            object-fit: cover;
+            object-fit: none;
             height: 350px;
             width: 400px;
         }

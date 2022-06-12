@@ -182,7 +182,7 @@
 
         .fruit-relate {
             width: 300px;
-            background: #e0cccc;
+            background: #edf0e8;
             padding: 20px;
             height: max-content;
         }

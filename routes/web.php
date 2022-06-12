@@ -15,7 +15,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\NhapController;
 use App\Http\Controllers\BaiDangController;
 use App\Http\Controllers\ClientController;
-use App\Http\Controllers\LienHeController;
+use App\Http\Controllers\LienheController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
 
@@ -188,21 +188,22 @@ Route::middleware('auth')->group(function (){
 
 
     // client 
-    Route::get('trangchu',[ClientController::class,'ShowClient'])->name('Client.main');
+    Route::get('/',[ClientController::class,'ShowClient'])->name('Client.main');
     Route::get('Client/tin.chitiet/{id}',[ClientController::class,'ChiTietBaiDang'])->name('ct.chitiet');
     Route::get('Client/caytrong.chitiet/{id}',[ClientController::class,'ChiTietCay'])->name('cay.chitiet');
+    Route::get('Client/caytrong.cay',[ClientController::class,'showcay'])->name('Client.caytrong');
+    Route::get('Client/tin.baidang',[ClientController::class,'showbaidang'])->name('Client.tin');
     
-
+    
 
 
     // lienhe
-        Route::get('admin/lienhe',[LienHeController::class,'index'])->name('admin.lienhe');
-        Route::post('trangchu',[LienHeController::class,'store'])->name('lh.store');
+         Route::get('admin/lienhe',[LienheController::class,'index'])->name('admin.lienhe');
+         Route::get('lienhe',[ClientController::class,'ShowLienHe'])->name('Client.lienhe');
+         Route::post('admin/lienhe/add',[LienheController::class,'add'])->name('lh.add');
+      
        
-   
-
+  
 
 
     
-
-   

@@ -5,6 +5,7 @@ use App\Models\Nhap as ModelsNhap;
 use Illuminate\Http\Request;
 use App\Models\Khu;
 use App\Models\User;
+use RealRashid\SweetAlert\Facades\Aler;
 
 class NhapController extends Controller
 {
@@ -63,7 +64,7 @@ class NhapController extends Controller
         $khu = Khu::find($request->Khu_ID);
         $khu->SoLuong = $request->SoLuong;
         $khu->save();
-        return redirect()->route('admin.nhap')->with('nhap', $nhap);
+        return redirect()->route('admin.nhap')->with('nhap', 'thêm thành công');
     }
 
     /**

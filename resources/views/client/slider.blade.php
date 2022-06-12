@@ -13,20 +13,20 @@
           <!-- Carousel inner -->
           <div class="carousel-inner">
               <div class="item active">
-                  <img class="img-responsive" src="./trangchinh/images/about-02.jpg" alt="slider">
+                  <img class="img-responsive" src="./trangchinh/images/h1.jpg" alt="slider">
 
               </div>
               <!--/ Carousel item end -->
 
               <div class="item">
-                  <img class="img-responsive" src="./trangchinh/images/about-01.jpg" alt="slider">
+                  <img class="img-responsive" src="./trangchinh/images/a2.jpg" alt="slider">
 
 
               </div>
               <!--/ Carousel item end -->
 
               <div class="item">
-                  <img class="img-responsive" src="./trangchinh/images/about-03.jpg" alt="slider">
+                  <img class="img-responsive" src="./trangchinh/images/a3.jpg" alt="slider">
 
               </div>
               <!--/ Carousel item end -->

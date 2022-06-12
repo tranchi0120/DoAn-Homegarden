@@ -33,10 +33,6 @@
                             <input class="form-control" type="text" name="LieuLuong" placeholder="mời nhập">
 
                         </div>
-
-
-
-
                         <div class="form-group" style="display:flex">
                             <strong>Ghi Chú</strong>
                             <div class="col-ml-9 col-sm-9">
@@ -53,6 +49,7 @@
                         <div class="form-group">
                             <strong>Người Phun Thuốc</strong>
                             <select class="select2_single form-control" name="User_ID" aria-label="Default select example">
+                                <option> --chọn người phun-- </option>
                                 @foreach ($user as $data)
                                     <option value="{{ $data->id }}"> {{ $data->name }} </option>
                                 @endforeach
@@ -62,6 +59,7 @@
                         <div class="form-group">
                             <strong>Khu Vực Phun Thuốc</strong>
                             <select class="select2_single form-control" name="Khu_ID" aria-label="Default select example">
+                                <option> --chọn khu-- </option>
                                 @foreach ($khu as $data)
                                     <option value="{{ $data->id }}"> {{ $data->TenKhu }} </option>
                                 @endforeach

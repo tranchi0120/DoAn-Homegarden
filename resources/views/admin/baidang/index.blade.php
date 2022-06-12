@@ -26,7 +26,7 @@
                 <th>Ngày Đăng</th>
                 <th>Tiêu Đề</th>
                 <th>Hình Ảnh</th>
-                <th>Nội Dung</th>
+                {{-- <th style="width:500px">Nội Dung</th> --}}
 
                 <th width="280px">Thao Tác</th>
             </tr>
@@ -38,7 +38,7 @@
                     <td>{{ $data->TieuDe }}</td>
                     <td><img src="{{ asset('/images') }}/{{ $data->HinhAnh }}" class="images"
                             alt="Girl in a jacket" width="50px" height="50px"></td>
-                    <td>{!! $data->NoiDung !!}</td>
+                    {{-- <td>{!! $data->NoiDung !!}</td> --}}
 
 
                     <td>

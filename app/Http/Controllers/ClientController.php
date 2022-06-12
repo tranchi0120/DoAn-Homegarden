@@ -7,6 +7,7 @@ use App\Models\Baidang;
 use App\Models\Caytrong;
 use App\Models\Khu;
 use App\Models\Lienhe;
+use RealRashid\SweetAlert\Facades\Aler;
 
 
 
@@ -19,17 +20,25 @@ class ClientController extends Controller
         
         $baidang = Baidang::all();
         view()->share('baidang',$baidang);
-          $caytrong = Caytrong::all();
+        $caytrong = Caytrong::all();
         view()->share('caytrong',$caytrong);
-
         $khu = Khu::all();
         view()->share('khu',$khu);
+        $lienhe = Lienhe::all();
+        view()->share('lienhe',$lienhe);
+
     }
 
     public function ShowClient(){
         return view('Client.main');
     }
 
+
+     public function ShowLienHe(){
+        return view('Client.lienhe');
+    }
+
+    
 
     public function ChiTietBaiDang($id){
          $data = Baidang::find($id);
@@ -41,6 +50,17 @@ class ClientController extends Controller
         return view('Client/caytrong.chitiet',compact('data'));
     }
 
+
+    public function showcay(){
+        return view('Client/caytrong.cay');
+    }
+
+      public function showbaidang(){
+        return view('Client/tin.baidang');
+    }
+
+
+    
 
 
 }

@@ -48,5 +48,9 @@
         .btn {
             margin-top: 8px;
         }
+
+        .images {
+            object-fit: none;
+        }
     </style>
 @endsection

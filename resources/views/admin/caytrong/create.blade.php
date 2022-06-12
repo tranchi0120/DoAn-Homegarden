@@ -10,11 +10,9 @@
         <div class="card-body">
             <form action="{{ route('ct.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-
-                        vui long kieam tra du lieu
-
+                @if (session()->has('message'))
+                    <div class="alert alert-success">
+                        {{ session()->get('message') }}
                     </div>
                 @endif
 
@@ -24,7 +22,7 @@
                             <strong>Loại Cây</strong>
                             <select class="select2_single form-control" name="Loaicay_ID"
                                 aria-label="Default select example">
-                                <option>Loại Cây</option>
+                                <option> --chọn loại cây-- </option>
                                 @foreach ($danhmucloaicay as $data)
                                     <option value="{{ $data->id }}"> {{ $data->Tenloaicay }} </option>
                                 @endforeach

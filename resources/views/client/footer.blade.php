@@ -1,15 +1,6 @@
 <section id="contact" class="contact">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title text-center">
-                    <h3>Liên Hệ Với Chúng Tôi</h3>
 
-                </div>
-            </div>
-        </div>
-
-        @include('Client.lienhe')
 
         <div class="row">
             <div class="col-md-4">
@@ -18,8 +9,8 @@
                     <ul>
                         <li><strong>E-mail :</strong> tranchi20012000@gmail.com</li>
                         <li><strong>Phone :</strong> 0339599523</li>
-                        <li><strong>Mobile :</strong> +8801-45565378</li>
                         <li><strong>Web :</strong> Homegraden.com</li>
+                        <li><strong>Địa Chỉ :</strong> km19, QL.26, huyện Krông Pắc, Tỉnh Đăk Lăk</li>
                     </ul>
                 </div>
             </div>
@@ -34,6 +25,8 @@
                     </ul>
                 </div>
             </div>
+
+
         </div>
     </div>
     <footer class="style-1">

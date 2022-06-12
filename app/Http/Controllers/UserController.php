@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use RealRashid\SweetAlert\Facades\Aler;
 use Illuminate\Http\Request;
 use App\Models\Quyen;
 use App\Models\User as ModelsUser;
@@ -24,12 +24,15 @@ class UserController extends Controller
 
     public function index()
     {
-         $user = ModelsUser::all();
-        // dd($taikhoan['0']->LoaiQuyen->TenQuyen);
-        return view('admin/user.index')->with('user',$user);
+       
+        $user = ModelsUser::all();
+        return view('admin/user.index' );
+       
 
-        $user = User::simplePaginate(2);
+
+        
     }
+    
 
     /**
      * Show the form for creating a new resource.

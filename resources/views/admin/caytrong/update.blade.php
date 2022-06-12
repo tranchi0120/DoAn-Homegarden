@@ -35,8 +35,8 @@
                         </div>
                         <div class="form-group">
                             <strong>Giá Tiền</strong>
-                            <input class="form-control" type="text" name="GianTien"
-                                value="{{ number_format($name->GianTien) }}">
+                            <input class="form-control" type="text" name="GiaTien"
+                                value="{{ number_format($name->GiaTien) }}">
                         </div>
 
 

@@ -24,14 +24,13 @@
     <link href="/css/admin.css" rel="stylesheet">
 </head>
 
-<body class="">
+<body class="forgotpassword">
     <main class="login-form">
         <div class="cotainer">
             <div class="row justify-content-center">
                 <div class="card">
-                    <div class="card-header">Reset Password</div>
+                    <div class="card-header">Quên Mật Khẩu</div>
                     <div class="card-body">
-
                         @if (Session::has('message'))
                             <div class="alert alert-success" role="alert">
                                 {{ Session::get('message') }}
@@ -41,11 +40,11 @@
                         <form action="{{ route('forgotpass.post') }}" method="POST">
                             @csrf
                             <div class="form-group row">
-                                <label for="email_address" class="col-md-4 ">E-Mail Address</label>
+                                <label for="email_address" class="col-md-4 ">Địa chỉ Email</label>
                                 <div class="col-md-6 ipmail">
                                     <div class="input relative">
-                                        <input placeholder="Email" id="e-address" name="email" type="text"
-                                            maxlength="32" />
+                                        <input class="email" placeholder="Email" id="e-address" name="email"
+                                            type="text" maxlength="32" />
                                     </div>
                                     @if ($errors->has('email'))
                                         <span class="text-danger">{{ $errors->first('email') }}</span>
@@ -54,7 +53,7 @@
                             </div>
                             <div class="sendmail">
                                 <button type="submit" class="btn btn-primary">
-                                    Send Mail Password Reset
+                                    Gửi Lại
                                 </button>
                             </div>
                         </form>
@@ -66,6 +65,30 @@
     </main>
     <script src="/js/admin.js"></script>
 
+    <style>
+        .btn {
+            border-radius: 9px;
+            font-size: 14px;
+            width: 90px;
+            padding: 7px;
+        }
+
+        .email {
+            font-size: 13px;
+            width: 230px;
+            border: none;
+            background: #e1e6eb;
+            padding: 6px;
+        }
+
+        .card {
+            margin-top: 80px;
+            width: 450px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
 </body>
 
 </html>

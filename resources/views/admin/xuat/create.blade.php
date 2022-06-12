@@ -51,6 +51,7 @@
                         <div class="form-group">
                             <strong>Người Xuất</strong>
                             <select class="select2_single form-control" name="User_ID" aria-label="Default select example">
+                                <option> --chọn người xuất-- </option>
                                 @foreach ($user as $data)
                                     <option value="{{ $data->id }}"> {{ $data->name }} </option>
                                 @endforeach

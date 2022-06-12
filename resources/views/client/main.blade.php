@@ -80,14 +80,6 @@
 
     @include('Client.slider')
 
-
-    {{-- @yield('content-news')
-    @yield('content-area')
-    @yield('content-tree')
-    @yield('content') --}}
-
-
-
     @include('Client/tin.index')
     @include('Client/khu.index')
     @include('Client/caytrong.index')
@@ -97,19 +89,6 @@
 
     @yield('css')
     @yield('cs')
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     @include('Client.footer')

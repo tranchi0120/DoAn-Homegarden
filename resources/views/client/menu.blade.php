@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="http://127.0.0.1:8000/trangchu">HomeGraden</a>
+                <a class="navbar-brand page-scroll" href="http://127.0.0.1:8000">HomeGraden</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -19,20 +19,22 @@
                         <a href="./index.html"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#Home">Trang Chủ</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#tree">Sản Phẩm</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#news">Tin Tức</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Liên Hệ</a>
+                        <a class="page-scroll" href="http://127.0.0.1:8000">Trang Chủ</a>
                     </li>
 
                     <li>
-                        <button class="btn-login">Login</button>
+                        <a class="page-scroll" href="http://127.0.0.1:8000/Client/tin.baidang">Tin Tức</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="http://127.0.0.1:8000/Client/caytrong.cay">Sản Phẩm</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="http://127.0.0.1:8000/lienhe">Liên Hệ</a>
+                    </li>
+
+                    <li>
+                        <a href="http://127.0.0.1:8000/login" class="btn-login"> Login</a>
+
                     </li>
 
                 </ul>
@@ -43,3 +45,6 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
+    <style>
+
+    </style>

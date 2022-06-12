@@ -5,7 +5,7 @@ use App\Models\Xuat as ModelsXuat;
 use Illuminate\Http\Request;
 use App\Models\Khu;
 use App\Models\User;
-
+use RealRashid\SweetAlert\Facades\Aler;
 
 class XuatController extends Controller
 {
@@ -67,6 +67,7 @@ class XuatController extends Controller
         $name->save();
         $khu = Khu::find($request->Khu_ID);
         $tongsoluong = $khu->SoLuong - $request->SoLuong;
+        $khu->SoLuongChet == 0;
         $khu -> SoLuong = $tongsoluong;
         $khu->save();
 

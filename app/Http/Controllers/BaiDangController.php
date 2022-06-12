@@ -5,7 +5,7 @@ use App\Models\Baidang as ModelsBaidang;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-
+use RealRashid\SweetAlert\Facades\Aler;
 class BaiDangController extends Controller
 {
 
@@ -28,7 +28,6 @@ public function __construct()
     public function index()
     {
         $baidang = ModelsBaidang::all();
-        // dd($phunthuoc['0']->Khu->TenKhu);
         return view('admin/baidang.index')->with('baidang',$baidang);
     }
 

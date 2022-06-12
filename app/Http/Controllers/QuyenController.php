@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Quyen as ModelsQuyen;
 
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Aler;
 
 class QuyenController extends Controller
 {

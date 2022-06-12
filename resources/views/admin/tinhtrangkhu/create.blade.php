@@ -1,15 +1,14 @@
 @extends('layouts.admin')
 
 @section('title')
-  <title>Tinh Trạng Khu</title>
+    <title>Tinh Trạng Khu</title>
 @endsection
 
 @section('content')
- 
- <div class="container">
+    <div class="container">
 
         <div class="card-body">
-            <form action="{{route('tinhtrang.store')}}" method="post">
+            <form action="{{ route('tinhtrang.store') }}" method="post">
                 @csrf
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -22,16 +21,12 @@
                         <div class="form-group">
                             <strong>Tên Khu</strong>
                             <select class="select2_single form-control" name="Khu_ID" aria-label="Default select example">
-                           <option >Tên Khu</option>
-                           @foreach($khu as $data)
-                            <option value="{{$data->id}}"> {{ $data->TenKhu }} </option>
-                             @endforeach
+                                <option> --chọn khu-- </option>
+                                @foreach ($khu as $data)
+                                    <option value="{{ $data->id }}"> {{ $data->TenKhu }} </option>
+                                @endforeach
                             </select>
                         </div>
-                         
-                         
-                        
-                        
                     </div>
 
                 </div>
@@ -39,6 +34,5 @@
             </form>
         </div>
 
-        </div>
+    </div>
 @endsection
-

@@ -10,9 +10,9 @@
         <div class="card-body">
             <form action="{{ route('nhapcay.store') }}" method="post">
                 @csrf
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        Kiểm tra lại dữ liệu
+                @if (Session::has('message'))
+                    <div class="alert alert-success" role="alert">
+                        {{ Session::get('message') }}
                     </div>
                 @endif
 
@@ -56,6 +56,7 @@
                         <div class="form-group">
                             <strong>Người Nhập</strong>
                             <select class="select2_single form-control" name="User_ID" aria-label="Default select example">
+                                <option>người nhập</option>
                                 @foreach ($user as $data)
                                     <option value="{{ $data->id }}"> {{ $data->name }} </option>
                                 @endforeach

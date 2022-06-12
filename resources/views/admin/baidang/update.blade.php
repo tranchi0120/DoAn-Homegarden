@@ -45,7 +45,7 @@
                         <div class="form-group  ">
                             <Strong class="col-sm-3 text-end control-label col-form-label">Hình Ảnh </Strong>
                             <div class="custom-file">
-                                <input type="file" name="image" />
+                                <input type="file" name="image" value="{{ $name->image }}" />
                             </div>
                         </div>
 
@@ -57,6 +57,7 @@
                         <div class="form-group">
                             <strong>Người Đăng</strong>
                             <select class="select2_single form-control" name="User_ID" aria-label="Default select example">
+
                                 @foreach ($user as $data)
                                     <option value="{{ $data->id }}" selected={{ $data->id === $name->User_ID }}>
                                         {{ $data->name }} </option>

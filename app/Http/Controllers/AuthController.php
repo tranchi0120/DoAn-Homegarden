@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use RealRashid\SweetAlert\Facades\Aler;
 class AuthController extends Controller
 {
     public function showFormLogin (){
@@ -19,7 +19,12 @@ class AuthController extends Controller
     }
    
 
-    
+   public function showFormprofile(){
+        if(Auth::check()){
+            return view ('auth.profile');
+        }
+        return \redirect()->route('show-profile');
+    }
 
      public function Showdashboard(){
         if(Auth::check()){

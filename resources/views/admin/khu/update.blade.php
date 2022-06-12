@@ -23,7 +23,7 @@
                             <input class="form-control" type="text" name="TenKhu" value="{{ $name->TenKhu }}">
 
                         </div>
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <strong>Số Lượng </strong>
                             <input class="form-control" type="number" name="SoLuong" value="{{ $name->SoLuong }}">
 
@@ -34,7 +34,7 @@
                             <input class="form-control" type="number" name="SoLuongChet"
                                 value="{{ $name->SoLuongChet }}">
 
-                        </div>
+                        </div> --}}
                         <div class="form-group">
                             <strong>Ngày Trồng </strong>
                             <input class="form-control" type="date" name="NgayTrongCay"
@@ -72,8 +72,8 @@
                         </div>
 
 
-                        <div class="form-group now    ">
-                            <strong>Ghi Chus</strong>
+                        <div class="form-group" style="display:flex">
+                            <strong>Ghi Chú</strong>
                             <div class="col-ml-9 col-sm-9">
                                 <textarea id="noidung" name="GhiChu" cols="30" rows="3" class="form-control ">{{ $name->GhiChu }}</textarea>
 

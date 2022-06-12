@@ -5,6 +5,7 @@ use App\Models\Phunthuoc as ModelPhunThuoc;
 use Illuminate\Http\Request;
 use App\Models\Khu;
 use App\Models\User;
+use RealRashid\SweetAlert\Facades\Aler;
 
 
 
