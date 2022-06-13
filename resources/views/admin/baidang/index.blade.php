@@ -55,6 +55,9 @@
             @endforeach
 
         </table>
+        <div>
+            {{ $baidang->links() }}
+        </div>
 
 
 

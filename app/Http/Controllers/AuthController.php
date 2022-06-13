@@ -42,6 +42,10 @@ class AuthController extends Controller
         return \redirect()->route('show-form-login');
     }
 
+
+
+    
+
     public function out(){
         Auth::logout();
        return \redirect()->route('show-form-login');

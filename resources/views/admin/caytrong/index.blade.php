@@ -58,6 +58,9 @@
             @endforeach
 
         </table>
+        <div>
+            {{ $caytrong->links() }}
+        </div>
     </div>
 @endsection
 

@@ -25,11 +25,9 @@ class UserController extends Controller
     public function index()
     {
        
-        $user = ModelsUser::all();
-        return view('admin/user.index' );
-       
-
-
+        $user = ModelsUser::paginate(5);
+        return view('admin/user.index',compact('user') );
+    
         
     }
     

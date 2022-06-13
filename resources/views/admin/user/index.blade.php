@@ -50,6 +50,9 @@
                 </tr>
             @endforeach
         </table>
+        <div>
+            {{ $user->links() }}
+        </div>
 
     </div>
 @endsection

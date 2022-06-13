@@ -27,8 +27,8 @@ public function __construct()
      */
     public function index()
     {
-        $baidang = ModelsBaidang::all();
-        return view('admin/baidang.index')->with('baidang',$baidang);
+        $baidang = ModelsBaidang::paginate(5);
+        return view('admin/baidang.index',compact('baidang'));
     }
 
     /**

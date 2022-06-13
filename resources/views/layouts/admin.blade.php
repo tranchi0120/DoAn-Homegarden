@@ -64,6 +64,10 @@
         integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"
+        integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
 
 
@@ -148,7 +152,7 @@
     <script src="{{ asset('../themes/vendors/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
 
     <!-- Custom Theme Scripts -->
-    <script src="{{ asset('../themes/build/js/custom.min.js') }}"></script>
+    <script src="{{ asset('../themes/build/js/custom.js') }}"></script>
     <script src="{{ asset('../themes/build/js/custom-ct.js') }}"></script>
 
 
@@ -211,42 +215,12 @@
         }
     </script>
 
-    <script>
-        if ($('#mybarChart').length) {
 
-            var ctx = document.getElementById("mybarChart");
-            var mybarChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ["1", "2", "3", "4", "5", "6", "7"],
-                    datasets: [{
-                        label: 'nhập',
-                        backgroundColor: "#26B99A",
-                        data: [51, 30, 40, 28, 92, 50, 45]
-                    }, {
-                        label: 'xuất',
-                        backgroundColor: "#03586A",
-                        data: [41, 56, 25, 48, 72, 34, 12]
-                    }]
-                },
-
-                options: {
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }]
-                    }
-                }
-            });
-
-        }
-    </script>
 
 
     @yield('scripts')
     @yield('js')
+    @yield('jscharts')
 
 
 

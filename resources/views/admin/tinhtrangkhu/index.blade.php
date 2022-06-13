@@ -43,9 +43,6 @@
                     <td><a href="{{ route('admin.tinhtrangkhu.chitiet', ['id' => $data->id]) }}">Chi Tiet</a></td>
 
 
-                    {{-- <td>{{$data->Khu->CayTrong->TenCay}}</td>
-                      <td><img src="../boostrap/assets/img/{{$data->HinhAnh }}" class="images" alt="Girl in a jacket" width="50px" height="50px"></td>
-                    <td>{!!$data->GhiChu !!}</td> --}}
 
 
 
@@ -55,10 +52,7 @@
                             <i class="fas fa-edit"></i>
                         </a>
                         @csrf
-                        {{-- <a href="{{route('tinhtrang.destroy',$data->id)}}" class="btn btn-danger action_delete">
-                            <i class="fas fa-trash"></i>
-                        </a>
-                        </form> --}}
+
                     </td>
 
                 </tr>

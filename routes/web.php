@@ -78,6 +78,7 @@ Route::middleware([
     //admin 
     Route::group(['prefix' => 'admin','middleware' => ['auth','checkrole']], function(){
 
+        Route::get('/thongke', [ThongkeController::class, 'index']);
         
         Route::get('/user',[UserController::class,'index'])->name('admin.user');
         Route::get('/user/create',[UserController::class,'create'])->name('u.create');
@@ -86,11 +87,10 @@ Route::middleware([
         Route::post('/user/update/{user}',[UserController::class,'update'])->name('u.update');
         Route::get('/user/destroy/{id}',[UserController::class,'destroy'])->name('u.destroy');
 
-
-         Route::get('admin/nhap',[NhapController::class,'index'])->name('admin.nhap');
-         Route::get('admin/nhap/create',[NhapController::class,'create'])->name('nhapcay.create');
-         Route::post('admin/nhap/store',[NhapController::class,'store'])->name('nhapcay.store');
-         Route::get('admin/nhap/destroy/{id}',[NhapController::class,'destroy'])->name('nhapcay.destroy');
+         Route::get('/nhap',[NhapController::class,'index'])->name('admin.nhap');
+         Route::get('/nhap/create',[NhapController::class,'create'])->name('nhapcay.create');
+         Route::post('/nhap/store',[NhapController::class,'store'])->name('nhapcay.store');
+         Route::get('/nhap/destroy/{id}',[NhapController::class,'destroy'])->name('nhapcay.destroy');
     });
 
     // caytrong
@@ -103,10 +103,10 @@ Route::middleware([
     Route::get('admin/caytrong/chitiet/{id}',[CaytrongController::class,'chitietcaytrong'])->name('admin.caytrong.chitiet');
 
     // Xuất
-        Route::get('/xuat',[XuatController::class,'index'])->name('admin.xuat');
-        Route::get('/xuat/create',[XuatController::class,'create'])->name('xuatcay.create');
-        Route::post('/xuat/store',[XuatController::class,'store'])->name('xuatcay.store');
-        Route::get('/xuat/destroy/{id}',[XuatController::class,'destroy'])->name('xuatcay.destroy');
+        Route::get('admin/xuat',[XuatController::class,'index'])->name('admin.xuat');
+        Route::get('admin/xuat/create',[XuatController::class,'create'])->name('xuatcay.create');
+        Route::post('admin/xuat/store',[XuatController::class,'store'])->name('xuatcay.store');
+        Route::get('admin/xuat/destroy/{id}',[XuatController::class,'destroy'])->name('xuatcay.destroy');
 
 
 

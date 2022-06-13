@@ -14,8 +14,8 @@ class LienheController extends Controller
      */
     public function index()
     {
-            $lienhe = ModelsLienhe::all();
-            return view('admin/lienhe.index')->with('lienhe',$lienhe);
+            $lienhe = ModelsLienhe::paginate(10);
+            return view('admin/lienhe.index',compact('lienhe'));
     }
 
    

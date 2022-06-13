@@ -37,7 +37,9 @@
 
         </table>
 
-
+        <div>
+            {{ $lienhe->links() }}
+        </div>
 
     </div>
 @endsection
