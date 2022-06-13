@@ -88,6 +88,7 @@
                 @yield('content')
 
                 @yield('css')
+                @yield('jschart')
 
             </div>
             <!-- /page content -->
@@ -207,6 +208,39 @@
 
         function tongso(sl, gx) {
             $('#tongtien').val(sl * gx);
+        }
+    </script>
+
+    <script>
+        if ($('#mybarChart').length) {
+
+            var ctx = document.getElementById("mybarChart");
+            var mybarChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ["1", "2", "3", "4", "5", "6", "7"],
+                    datasets: [{
+                        label: 'nhập',
+                        backgroundColor: "#26B99A",
+                        data: [51, 30, 40, 28, 92, 50, 45]
+                    }, {
+                        label: 'xuất',
+                        backgroundColor: "#03586A",
+                        data: [41, 56, 25, 48, 72, 34, 12]
+                    }]
+                },
+
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+
         }
     </script>
 

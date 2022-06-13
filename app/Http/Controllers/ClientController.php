@@ -60,6 +60,10 @@ class ClientController extends Controller
     }
 
 
+    public function ShowErr(){
+        return view('err.error');
+    }
+
     
 
 

@@ -84,9 +84,9 @@
     <section id="contacts">
         <h3 class="title">Liên Lạc</h3>
         <div class="lienhe">
-            @if (session()->has('sussion'))
+            @if (session()->has('success'))
                 <div class="alert alert-sussion">
-                    {{ session()->get('sussion') }}
+                    {{ session()->get('success') }}
                 </div>
             @endif
             <form action="{{ route('lh.add') }}" method="POST">
@@ -226,6 +226,9 @@
     <!-- Custom Theme JavaScript -->
     <script src="{{ asset('./trangchinh/js/script.js') }}"></script>
 
+    <script>
+        //chart js
+    </script>
 </body>
 
 </html>

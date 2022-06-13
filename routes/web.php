@@ -16,6 +16,7 @@ use App\Http\Controllers\NhapController;
 use App\Http\Controllers\BaiDangController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\LienheController;
+use App\Http\Controllers\ThongkeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
 
@@ -63,7 +64,8 @@ Route::middleware([
 });
 
 
-Route::middleware('auth')->group(function (){
+
+ Route::middleware('auth')->group(function (){
         // danhmucloaicay
     Route::get('admin/danhmucloaicay',[Danhmucloaicay::class,'index'])->name('admin.danhmucloaicay');
     Route::get('admin/danhmucloaicay/create',[Danhmucloaicay::class,'create'])->name('danhmuc.create');
@@ -73,7 +75,23 @@ Route::middleware('auth')->group(function (){
     Route::get('admin/danhmucloaicay/destroy/{id}',[Danhmucloaicay::class,'destroy'])->name('danhmuc.destroy');
 
 
+    //admin 
+    Route::group(['prefix' => 'admin','middleware' => ['auth','checkrole']], function(){
 
+        
+        Route::get('/user',[UserController::class,'index'])->name('admin.user');
+        Route::get('/user/create',[UserController::class,'create'])->name('u.create');
+        Route::post('/user/store',[UserController::class,'store'])->name('u.store');
+        Route::get('/user/edit/{id}',[UserController::class,'edit'])->name('u.edit');
+        Route::post('/user/update/{user}',[UserController::class,'update'])->name('u.update');
+        Route::get('/user/destroy/{id}',[UserController::class,'destroy'])->name('u.destroy');
+
+
+         Route::get('admin/nhap',[NhapController::class,'index'])->name('admin.nhap');
+         Route::get('admin/nhap/create',[NhapController::class,'create'])->name('nhapcay.create');
+         Route::post('admin/nhap/store',[NhapController::class,'store'])->name('nhapcay.store');
+         Route::get('admin/nhap/destroy/{id}',[NhapController::class,'destroy'])->name('nhapcay.destroy');
+    });
 
     // caytrong
     Route::get('admin/caytrong',[CaytrongController::class,'index'])->name('admin.caytrong');
@@ -84,6 +102,11 @@ Route::middleware('auth')->group(function (){
     Route::get('admin/caytrong/destroy/{id}',[CaytrongController::class,'destroy'])->name('ct.destroy');
     Route::get('admin/caytrong/chitiet/{id}',[CaytrongController::class,'chitietcaytrong'])->name('admin.caytrong.chitiet');
 
+    // Xuất
+        Route::get('/xuat',[XuatController::class,'index'])->name('admin.xuat');
+        Route::get('/xuat/create',[XuatController::class,'create'])->name('xuatcay.create');
+        Route::post('/xuat/store',[XuatController::class,'store'])->name('xuatcay.store');
+        Route::get('/xuat/destroy/{id}',[XuatController::class,'destroy'])->name('xuatcay.destroy');
 
 
 
@@ -117,20 +140,13 @@ Route::middleware('auth')->group(function (){
     Route::get('admin/phunthuoc/destroy/{id}',[PhunThuocController::class,'destroy'])->name('pt.destroy');
 
 
-    // Xuất
-    Route::get('admin/xuat',[XuatController::class,'index'])->name('admin.xuat');
-    Route::get('admin/xuat/create',[XuatController::class,'create'])->name('xuatcay.create');
-    Route::post('admin/xuat/store',[XuatController::class,'store'])->name('xuatcay.store');
-    Route::get('admin/xuat/destroy/{id}',[XuatController::class,'destroy'])->name('xuatcay.destroy');
+    
 
 
 
 
     // nhập
-    Route::get('admin/nhap',[NhapController::class,'index'])->name('admin.nhap');
-    Route::get('admin/nhap/create',[NhapController::class,'create'])->name('nhapcay.create');
-    Route::post('admin/nhap/store',[NhapController::class,'store'])->name('nhapcay.store');
-    Route::get('admin/nhap/destroy/{id}',[NhapController::class,'destroy'])->name('nhapcay.destroy');
+  
 
 
 
@@ -162,23 +178,23 @@ Route::middleware('auth')->group(function (){
 
 
     // User
-    Route::get('admin/user',[UserController::class,'index'])->name('admin.user');
-    Route::get('admin/user/create',[UserController::class,'create'])->name('u.create');
-    Route::post('admin/user/store',[UserController::class,'store'])->name('u.store');
-    Route::get('admin/user/edit/{id}',[UserController::class,'edit'])->name('u.edit');
-    Route::post('admin/user/update/{user}',[UserController::class,'update'])->name('u.update');
-    Route::get('admin/user/destroy/{id}',[UserController::class,'destroy'])->name('u.destroy');
+ 
     Route::get('profile',[AuthController::class,'showFormprofile'])->name('show-profile');
     Route::post('profile',[AuthController::class,'profile'])->name('profile');
     Route::get('dashboard',[AuthController::class,'Showdashboard'])->name('show-dashboard');
     Route::post('dashboard',[AuthController::class,'dashboard'])->name('dashboard');
+
+
+     Route::get('admin/lienhe',[LienheController::class,'index'])->name('admin.lienhe');
+     Route::post('admin/lienhe/add',[LienheController::class,'add'])->name('lh.add');
+    
  });
 
     
 
     Route::get('login',[AuthController::class,'showFormLogin'])->name('show-form-login');
     Route::post('login',[AuthController::class,'login'])->name('login');
-    Route::get('logout',[AuthController::class,'logout'])->name('logout');
+    Route::get('out',[AuthController::class,'out'])->name('out');
 
     Route::get("forgot-password", [UserController::class,'showForgotPasswordForm'])->name("forgotpass.get");
     Route::post("forgot-password", [UserController::class,'submitForgotPasswordForm'])->name("forgotpass.post");
@@ -198,9 +214,8 @@ Route::middleware('auth')->group(function (){
 
 
     // lienhe
-         Route::get('admin/lienhe',[LienheController::class,'index'])->name('admin.lienhe');
+        
          Route::get('lienhe',[ClientController::class,'ShowLienHe'])->name('Client.lienhe');
-         Route::post('admin/lienhe/add',[LienheController::class,'add'])->name('lh.add');
       
        
   

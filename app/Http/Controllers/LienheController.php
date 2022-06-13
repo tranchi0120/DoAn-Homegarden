@@ -14,7 +14,6 @@ class LienheController extends Controller
      */
     public function index()
     {
-
             $lienhe = ModelsLienhe::all();
             return view('admin/lienhe.index')->with('lienhe',$lienhe);
     }
@@ -29,15 +28,12 @@ class LienheController extends Controller
         $name->Sdt = $request->Sdt;
         $name->NoiDung = $request->NoiDung;
         $name->save();
-        return redirect()->route('admin.lienhe');
+        return redirect()->back()->with('success','Gửi thành công !');
 
-        sesstion()->flash('success','gửi thành công');
+        
     }
 
-    public function create()
-    {
-            return view('admin/lienhe.create');
-    }
+   
 
    
 }

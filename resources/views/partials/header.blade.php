@@ -13,7 +13,7 @@
                      </a>
                      <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                          <a class="dropdown-item" href="http://127.0.0.1:8000/profile"> Profile</a>
-                         <a class="dropdown-item" href="http://127.0.0.1:8000/logout"><i
+                         <a class="dropdown-item" href="http://127.0.0.1:8000/out"><i
                                  class="fa fa-sign-out pull-right"></i> Log
                              Out</a>
                      </div>

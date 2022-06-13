@@ -5,6 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Aler;
+use App\Models\Khu;
+use App\Models\Caytrong;
+use App\Models\Nhap;
+use App\Models\Xuat;
+
 class AuthController extends Controller
 {
     public function showFormLogin (){
@@ -26,15 +31,21 @@ class AuthController extends Controller
         return \redirect()->route('show-profile');
     }
 
-     public function Showdashboard(){
+     public function Showdashboard(Nhap $id){
         if(Auth::check()){
-            return view ('auth.dashboard');
+            $khu = Khu::count();
+            $caytrong = Caytrong::count();
+            $tongtien = Nhap::sum('TongTien');
+            $tongtienxuat = Xuat::sum('TongTien');
+            return view ('auth.dashboard',\compact('khu','caytrong','tongtien','tongtienxuat'));
         }
         return \redirect()->route('show-form-login');
     }
 
-    public function logout(){
+    public function out(){
         Auth::logout();
        return \redirect()->route('show-form-login');
     }
+
+    
 }

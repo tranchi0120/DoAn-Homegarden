@@ -22,7 +22,7 @@
                 <th>Ghi Chú</th>
 
 
-                <th width="280px">Thao Tác</th>
+                {{-- <th width="280px">Thao Tác</th> --}}
             </tr>
             @foreach ($nhap as $data)
                 <tr>
@@ -35,15 +35,8 @@
                     <td>{{ number_format($data->GiaNhap) }} Vnđ</td>
                     <td>{{ number_format($data->TongTien) }} Vnđ</td>
                     <td>{!! $data->GhiChu !!}</td>
+                    @csrf
 
-                    <td>
-
-                        @csrf
-                        <a href="{{ route('nhapcay.destroy', $data->id) }}" class="btn btn-danger action_delete">
-                            <i class="fas fa-trash"></i>
-                        </a>
-                        </form>
-                    </td>
 
                 </tr>
             @endforeach

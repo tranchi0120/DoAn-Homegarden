@@ -24,7 +24,7 @@
                 <th>Tên Khách Hàng</th>
 
 
-                <th width="280px">Thao Tác</th>
+
             </tr>
             @foreach ($xuat as $data)
                 <tr>
@@ -40,15 +40,7 @@
                     <td>{{ $data->Sdt }}</td>
                     <td>{{ $data->TenKhachHang }}</td>
 
-
-                    <td>
-
-                        @csrf
-                        <a href="{{ route('xuatcay.destroy', $data->id) }}" class="btn btn-danger action_delete">
-                            <i class="fas fa-trash"></i>
-                        </a>
-                        </form>
-                    </td>
+                    @csrf
 
                 </tr>
             @endforeach
