@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Xuat as ModelsXuat;
 use Illuminate\Http\Request;
 use App\Models\Khu;
@@ -14,13 +15,12 @@ class XuatController extends Controller
 
     public function __construct()
     {
-        
-         $khu = Khu::where('SoLuong','>',0)->get();
-        view()->share('khu',$khu);
 
-          $user = User::all();
-        view()->share('user',$user);
-        
+        $khu = Khu::where('SoLuong', '>', 0)->get();
+        view()->share('khu', $khu);
+
+        $user = User::all();
+        view()->share('user', $user);
     }
 
     /**
@@ -31,7 +31,7 @@ class XuatController extends Controller
     public function index()
     {
         $xuat = ModelsXuat::all();
-        return view('admin/xuat.index')->with('xuat',$xuat);
+        return view('admin/xuat.index')->with('xuat', $xuat);
     }
 
     /**
@@ -52,7 +52,7 @@ class XuatController extends Controller
      */
     public function store(Request $request)
     {
-       
+
         $xuat = ModelsXuat::all();
         $name = new ModelsXuat();
         $name->Khu_ID = $request->Khu_ID;
@@ -68,17 +68,17 @@ class XuatController extends Controller
         $khu = Khu::find($request->Khu_ID);
         $tongsoluong = $khu->SoLuong - $request->SoLuong;
         $khu->SoLuongChet == 0;
-        $khu -> SoLuong = $tongsoluong;
+        $khu->SoLuong = $tongsoluong;
         $khu->save();
 
-             
-            
-       
+
+
+
         return redirect()->route('admin.xuat')->with('xuat', $xuat);
     }
 
-    
-   
+
+
     /**
      * Remove the specified resource from storage.
      *

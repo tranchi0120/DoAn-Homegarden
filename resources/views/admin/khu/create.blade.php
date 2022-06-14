@@ -27,7 +27,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <strong>Số Lượng</strong>
                             <input class="form-control" type="number" name="SoLuong" placeholder="mời nhập">
 
@@ -36,8 +36,8 @@
                             <strong>Số Lượng chet</strong>
                             <input class="form-control" type="number" name="SoLuongChet" placeholder="mời nhập">
 
-                        </div>
-                        <div class="form-group">
+                        </div> --}}
+                        {{-- <div class="form-group">
                             <strong>Ngày Trồng</strong>
                             <input class="form-control" type="date" name="NgayTrongCay" placeholder="mời nhập">
                         </div>
@@ -46,7 +46,7 @@
                         <div class="form-group">
                             <strong>Ngày Thu</strong>
                             <input class="form-control" type="date" name="NgayThuHoach" placeholder="mời nhập">
-                        </div>
+                        </div> --}}
 
                         <div class="form-group">
                             <strong>Người Chăm Cây</strong>

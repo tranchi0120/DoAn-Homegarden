@@ -172,6 +172,10 @@
             background-color: #f2f2f2;
             padding: 20px;
         }
+
+        .alert {
+            background-color: #04AA6D;
+        }
     </style>
 
 

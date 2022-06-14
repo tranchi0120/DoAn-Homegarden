@@ -132,10 +132,13 @@
                         @foreach ($baidang as $data)
                             <div class="col-md-12">
                                 <div class="latest-post">
+                                    <div class="khunghinh">
+                                        <img class="img img-responsive"
+                                            src="{{ asset('/images') }}/{{ $data->HinhAnh }}" alt="">
+                                    </div>
 
-                                    <img class="images img-responsive"
-                                        src="{{ asset('/images') }}/{{ $data->HinhAnh }}" alt="">
-                                    <h4><a href="#">{{ $data->TieuDe }}</a></h4>
+                                    <h4 class="tieude"><a
+                                            href="{{ route('ct.chitiet', $data->id) }}">{{ $data->TieuDe }}</a></h4>
                                     <div class="post-details">
                                         <span class="date"> {{ $data->NgayDang }} </span>
                                     </div>
@@ -168,7 +171,9 @@
                 margin-top: 8px;
             }
 
-            .images {
+            .img {
+                width: 100%;
+                height: 100%;
                 object-fit: none;
             }
 
@@ -180,6 +185,16 @@
 
             .group-row {
                 width: 100%;
+            }
+
+            .khunghinh {
+                width: 350px;
+                height: 250px;
+            }
+
+            .tieude {
+                width: 300px;
+                height: 70px;
             }
         </style>
 

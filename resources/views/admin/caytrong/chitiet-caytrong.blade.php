@@ -23,10 +23,7 @@
         </div>
 
 
-        <div class="row">
-            <h3 class="name">Giá Tiền : </h3>
-            <span class="content">{{ number_format($data->GiaTien) }}Vnđ</s>
-        </div>
+
 
         <div class="row">
             <h3 class="name">Giai Đoạn Phun Thuốc </h3>

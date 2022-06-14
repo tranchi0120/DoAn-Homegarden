@@ -22,6 +22,7 @@
                         <div class="form-group">
                             <strong>Khu</strong>
                             <select class="select2_single form-control" name="Khu_ID" aria-label="Default select example">
+                                <option> --chọn khu-- </option>
                                 @foreach ($khu as $data)
                                     <option value="{{ $data->id }}"> {{ $data->TenKhu }} </option>
                                 @endforeach
@@ -56,7 +57,7 @@
                         <div class="form-group">
                             <strong>Người Nhập</strong>
                             <select class="select2_single form-control" name="User_ID" aria-label="Default select example">
-                                <option>người nhập</option>
+                                <option> --người nhập-- </option>
                                 @foreach ($user as $data)
                                     <option value="{{ $data->id }}"> {{ $data->name }} </option>
                                 @endforeach

@@ -17,7 +17,7 @@
                         <p class="area-group-title"> Loại Cây: {{ $data->CayTrong->DanhMucLoaiCay->Tenloaicay }} </p>
                         <p class="area-group-title"> Tên Cây: {{ $data->CayTrong->TenCay }}</p>
                         <p class="area-group-title"> Số Lượng: {{ $data->SoLuong }} cây </p>
-                        <p class="area-group-title"> Tình Trạng: {{ $data->SoLuong > 0 ? 'Có cây' : 'Trống' }}
+                        <p class="area-group-title"> Tình Trạng: {{ $data->SoLuong > 0 ? 'còn' : 'hết' }}
                         </p>
                     </div>
                 @endforeach

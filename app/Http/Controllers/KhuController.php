@@ -20,10 +20,10 @@ class KhuController extends Controller
         $caytrong = Caytrong::all();
         $danhmucloaicay = Danhmucloaicay::all();
         $khu = ModelsKhu::all();
-        view()->share('khu',$khu);
-        view()->share('user',$user);
-        view()->share('caytrong',$caytrong);
-        view()->share('danhmucloaicay',$danhmucloaicay);
+        view()->share('khu', $khu);
+        view()->share('user', $user);
+        view()->share('caytrong', $caytrong);
+        view()->share('danhmucloaicay', $danhmucloaicay);
     }
     /**
      * Display a listing of the resource.
@@ -33,9 +33,7 @@ class KhuController extends Controller
     public function index()
     {
         $khu = ModelsKhu::all();
-        return view('admin/khu.index')->with('khu',$khu);
-
-        
+        return view('admin/khu.index')->with('khu', $khu);
     }
 
     /**
@@ -46,7 +44,6 @@ class KhuController extends Controller
     public function create()
     {
         return view('admin/khu.create');
-        
     }
 
     /**
@@ -60,10 +57,10 @@ class KhuController extends Controller
         $khu = ModelsKhu::all();
         $name = new ModelsKhu();
         $name->TenKhu = $request->TenKhu;
-        $name->SoLuong = $request->SoLuong;
-        $name->SoLuongChet = $request->SoLuongChet;
-        $name->NgayTrongCay = $request->NgayTrongCay;
-        $name->NgayThuHoach = $request->NgayThuHoach;
+        // $name->SoLuong = $request->SoLuong;
+        // $name->SoLuongChet = $request->SoLuongChet;
+        // $name->NgayTrongCay = $request->NgayTrongCay;
+        // $name->NgayThuHoach = $request->NgayThuHoach;
         $name->User_ID = $request->User_ID;
         $name->Caytrong_ID = $request->Caytrong_ID;
         $name->GhiChu = $request->GhiChu;
@@ -91,7 +88,7 @@ class KhuController extends Controller
     public function edit($id)
     {
         $name = ModelsKhu::find($id);
-        return view('admin/khu.update',compact('name'));
+        return view('admin/khu.update', compact('name'));
     }
 
     /**
@@ -103,21 +100,21 @@ class KhuController extends Controller
      */
     public function update(Request $request, $id)
     {
-             $name = ModelsKhu::find($id);
-             $name->TenKhu = $request->input('TenKhu');
-            //  $SoLuongChet = $request->input('SoLuongChet');
-            // $tongsoluong = $name->SoLuong - $SoLuongChet;
-            // $name->SoLuong = $tongsoluong;
-            // $name->SoLuongChet = $SoLuongChet;
-            //  $name->SoLuong = $request->input('SoLuong');
-            //  $name->SoLuongChet = $request->input('SoLuongChet');
-             $name->NgayTrongCay = $request->input('NgayTrongCay');
-             $name->NgayThuHoach = $request->input('NgayThuHoach');
-             $name->User_ID = $request->input('User_ID');
-             $name->Caytrong_ID = $request->input('Caytrong_ID');
-             $name->GhiChu = $request->input('GhiChu');
-             $name->update();
-             return redirect()->route('admin.khu')->with('thongbao','Chỉnh sửa thành công');
+        $name = ModelsKhu::find($id);
+        $name->TenKhu = $request->input('TenKhu');
+        //  $SoLuongChet = $request->input('SoLuongChet');
+        // $tongsoluong = $name->SoLuong - $SoLuongChet;
+        // $name->SoLuong = $tongsoluong;
+        // $name->SoLuongChet = $SoLuongChet;
+        //  $name->SoLuong = $request->input('SoLuong');
+        //  $name->SoLuongChet = $request->input('SoLuongChet');
+        $name->NgayTrongCay = $request->input('NgayTrongCay');
+        $name->NgayThuHoach = $request->input('NgayThuHoach');
+        $name->User_ID = $request->input('User_ID');
+        $name->Caytrong_ID = $request->input('Caytrong_ID');
+        $name->GhiChu = $request->input('GhiChu');
+        $name->update();
+        return redirect()->route('admin.khu')->with('thongbao', 'Chỉnh sửa thành công');
     }
 
     /**
@@ -128,30 +125,29 @@ class KhuController extends Controller
      */
     public function destroy($id)
     {
-        
-           $khu = ModelsKhu::find($id);
 
-           $checkExistsPhunThuoc = Phunthuoc::where('Khu_ID', $id);
-           if($checkExistsPhunThuoc->exists())
-                $checkExistsPhunThuoc->delete();
-           $khu->delete();
-           if($khu){
-            return response() -> json([
+        $khu = ModelsKhu::find($id);
+
+        $checkExistsPhunThuoc = Phunthuoc::where('Khu_ID', $id);
+        if ($checkExistsPhunThuoc->exists())
+            $checkExistsPhunThuoc->delete();
+        $khu->delete();
+        if ($khu) {
+            return response()->json([
                 "code" => 200,
                 "message" => "Delete success"
-            ],200);
-            }
-            else{
-                return response() -> json([
-                    "code" => 500,
-                    "message" => "Cant delete this record"
-                ], 500);
-            }
+            ], 200);
+        } else {
+            return response()->json([
+                "code" => 500,
+                "message" => "Cant delete this record"
+            ], 500);
         }
+    }
 
-        public function ctkhu($id)
-        {
+    public function ctkhu($id)
+    {
         $data = ModelsKhu::find($id);
         return view('admin.khu.ct-khu', compact('data'));
-    } 
+    }
 }

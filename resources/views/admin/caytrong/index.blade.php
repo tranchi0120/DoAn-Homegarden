@@ -26,7 +26,7 @@
                 <th>Loại Cây</th>
                 <th>Tên Cây</th>
                 <th>Hình Ảnh</th>
-                <th>Giá Tiền</th>
+
                 <th>Chi Tiet</th>
                 <th width="280px">Hành động</th>
             </tr>
@@ -37,7 +37,7 @@
                     <td>{{ $data->TenCay }}</td>
                     <td><img src="{{ asset('/images') }}/{{ $data->HinhAnh }}" class="images"
                             alt="Girl in a jacket" width="50px" height="50px"></td>
-                    <td>{{ number_format($data->GiaTien) }} VNĐ</td>
+
                     <td><a href="{{ route('admin.caytrong.chitiet', ['id' => $data->id]) }}">Chi Tiet</a></td>
 
 

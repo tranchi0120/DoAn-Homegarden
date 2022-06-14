@@ -39,11 +39,7 @@
                                 <input type="file" name="image" />
                             </div>
                         </div>
-                        <div class="form-group">
-                            <strong>Giá Tiền</strong>
-                            <input class=" form-control" type="number" name="GiaTien" placeholder="mời nhập">
 
-                        </div>
                         <div class="form-group" style="display: flex">
                             <strong>Giai Doan Phun Thuoc</strong>
 

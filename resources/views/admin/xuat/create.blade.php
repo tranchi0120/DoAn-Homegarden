@@ -7,6 +7,39 @@
 @section('content')
     <div class="container">
 
+
+
+
+        <table class="table table-striped">
+            <tr class="table-dark">
+
+                <th>Tên Khu</th>
+                <th>Loại Cây</th>
+                <th>Tên Cây </th>
+
+                <th>Trạng Thái</th>
+                <th>Số Lượng</th>
+
+
+            </tr>
+            @foreach ($khu as $data)
+                <tr>
+
+                    <td>{{ $data->TenKhu }}</td>
+                    <td>{{ $data->CayTrong->DanhMucLoaiCay->Tenloaicay }}</td>
+                    <td>{{ $data->CayTrong->TenCay }}</td>
+
+                    <td>
+
+                        {{ $data->SoLuong > 0 ? 'Đã trồng cây' : 'trống' }}
+                    </td>
+
+                    <td>{{ $data->SoLuong }} cây </td>
+
+                </tr>
+            @endforeach
+
+        </table>
         <div class="card-body">
             <form action="{{ route('xuatcay.store') }}" method="post">
                 @csrf
@@ -22,6 +55,7 @@
                         <div class="form-group">
                             <strong>Khu</strong>
                             <select class="select2_single form-control" name="Khu_ID" aria-label="Default select example">
+                                <option> --chọn khu-- </option>
                                 @foreach ($khu as $data)
                                     <option value="{{ $data->id }}"> {{ $data->TenKhu }} </option>
                                 @endforeach

@@ -15,7 +15,10 @@
              <div class="menu_section">
                  {{-- <h3>General</h3> --}}
                  <ul class="nav side-menu">
-                     <li><a href="http://127.0.0.1:8000/dashboard"><i class="fa fa-home"></i> Thống Kê </a>
+                     <li><a href="http://127.0.0.1:8000/dashboard"><i class="fa fa-home"></i> Trang Chủ </a>
+
+                     </li>
+                     <li><a href="http://127.0.0.1:8000/admin/thongke"><i class=" fa fa-bar-chart "></i> Thống Kê </a>
 
                      </li>
                      <li><a href="http://127.0.0.1:8000/admin/user"><i class="fa fa-edit"></i>Tài Khoản </a>
@@ -23,9 +26,9 @@
 
                          </ul>
                      </li>
-                     <li><a href="http://127.0.0.1:8000/admin/danhmucloaicay"><i class="fa fa-bar-chart-o"></i> Loại Cây
+                     {{-- <li><a href="http://127.0.0.1:8000/admin/danhmucloaicay"><i class="fa fa-bar-chart-o"></i> Loại Cây
                              Trồng </a>
-                     </li>
+                     </li> --}}
                      <li><a href="http://127.0.0.1:8000/admin/caytrong"><i class="fa fa-tree"></i>Cây Trồng</a>
                          <ul class="nav child_menu">
 

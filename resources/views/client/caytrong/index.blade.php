@@ -15,7 +15,7 @@
                          <div class="latest-post tree-main ">
                              <img class="images hinh img-responsive"
                                  src="{{ asset('/images') }}/{{ $data->HinhAnh }}" alt="">
-                             <h4><a class="tree-title" href="#">{{ $data->TenCay }}</a></h4>
+                             <h4 class="title">{{ $data->TenCay }}</h4>
                              <div class="post-details">
                              </div>
                              <p class="tree-extra">Loại Cây: {{ $data->DanhMucLoaiCay->Tenloaicay }} </p>
@@ -36,6 +36,10 @@
          .hinh {
              object-fit: none;
              border-radius: 20px 20px 0 0;
+         }
+
+         .title {
+             margin-left: 20px;
          }
      </style>
  @endsection

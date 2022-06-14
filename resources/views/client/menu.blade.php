@@ -27,6 +27,7 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="http://127.0.0.1:8000/Client/caytrong.cay">Sản Phẩm</a>
+
                     </li>
                     <li>
                         <a class="page-scroll" href="http://127.0.0.1:8000/lienhe">Liên Hệ</a>
@@ -36,6 +37,7 @@
                         <a href="http://127.0.0.1:8000/login" class="btn-login"> Login</a>
 
                     </li>
+
 
                 </ul>
 
