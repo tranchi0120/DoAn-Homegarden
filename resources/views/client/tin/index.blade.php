@@ -18,7 +18,7 @@
                                         alt="">
                                 </div>
 
-                                <h4 class="title"><a
+                                <h4 class="tieude"><a
                                         href="{{ route('ct.chitiet', $data->id) }}">{{ $data->TieuDe }}</a></h4>
                                 <div class="post-details">
                                     <span class="date"> {{ $data->NgayDang }} </span>
@@ -63,8 +63,9 @@
             height: 250px;
         }
 
-        .title {
-            width: 300px;
+        .tieude {
+
+            width: 100%;
             height: 70px;
         }
     </style>

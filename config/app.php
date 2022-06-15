@@ -235,6 +235,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
         'Alert' => UxWeb\SweetAlert\SweetAlert::class,
+        'Carbon' => 'Carbon\Carbon',
 
     ],
 

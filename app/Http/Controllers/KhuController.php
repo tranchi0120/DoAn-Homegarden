@@ -57,7 +57,7 @@ class KhuController extends Controller
         $khu = ModelsKhu::all();
         $name = new ModelsKhu();
         $name->TenKhu = $request->TenKhu;
-        // $name->SoLuong = $request->SoLuong;
+        $name->SoLuong = $request->SoLuong;
         // $name->SoLuongChet = $request->SoLuongChet;
         // $name->NgayTrongCay = $request->NgayTrongCay;
         // $name->NgayThuHoach = $request->NgayThuHoach;

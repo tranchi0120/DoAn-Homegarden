@@ -31,13 +31,14 @@ class ThongkeController extends Controller
         $doanhthu = [];
         foreach ($month as $value) {
 
-            array_push($doanhthu, 0);
+
             if (in_array($value, $time)) {
 
                 array_push($doanhthu, $tongdoanhthu[array_search($value, $time)]);
+            } else {
+                array_push($doanhthu, 0);
             }
         }
-        array_shift($doanhthu);
 
 
 
@@ -49,20 +50,24 @@ class ThongkeController extends Controller
             ->whereYear('NgayNhap', date('Y'))
             ->groupby($selecttime)
             ->get();
+
         $tongdoanhthunhap = $nhap->pluck('tongdoanhthunhap');
         $time = $nhap->pluck($selecttime)->toArray();
         $month = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
         $doanhthunhap = [];
+
         foreach ($month as $value) {
 
-            array_push($doanhthunhap, 0);
+
             if (in_array($value, $time)) {
 
                 array_push($doanhthunhap, $tongdoanhthunhap[array_search($value, $time)]);
+            } else {
+                array_push($doanhthunhap, 0);
             }
         }
-        array_shift($doanhthunhap);
 
+        // dd($doanhthunhap);
         return view('admin/thongke.index', compact('month', 'doanhthu', 'doanhthunhap'));
     }
 }

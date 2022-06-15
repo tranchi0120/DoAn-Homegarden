@@ -53,7 +53,8 @@
                             <select class="select2_single form-control" name="User_ID" aria-label="Default select example">
 
                                 @foreach ($user as $data)
-                                    <option value="{{ $data->id }}" selected={{ $data->id === $name->User_ID }}>
+                                    <option value="{{ $data->id }}"
+                                        {{ $data->id === $name->User_ID ? 'selected' : '' }}>
                                         {{ $data->name }} </option>
                                 @endforeach
                             </select>

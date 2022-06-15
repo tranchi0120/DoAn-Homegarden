@@ -1,11 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Nhap as ModelsNhap;
 use Illuminate\Http\Request;
 use App\Models\Khu;
 use App\Models\User;
 use RealRashid\SweetAlert\Facades\Aler;
+use Carbon\Carbon;
 
 class NhapController extends Controller
 {
@@ -13,12 +15,11 @@ class NhapController extends Controller
     public function __construct()
     {
 
-        $khu = Khu::where('SoLuong' ,0)->get();
-        view()->share('khu',$khu);
+        $khu = Khu::where('SoLuong', 0)->get();
+        view()->share('khu', $khu);
 
-          $user = User::all();
-        view()->share('user',$user);
-
+        $user = User::all();
+        view()->share('user', $user);
     }
 
 
@@ -29,8 +30,8 @@ class NhapController extends Controller
      */
     public function index()
     {
-         $nhap = ModelsNhap::all();
-         return view('admin/nhap.index')->with('nhap',$nhap);
+        $nhap = ModelsNhap::all();
+        return view('admin/nhap.index')->with('nhap', $nhap);
     }
 
     /**
@@ -51,6 +52,8 @@ class NhapController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request->NgayNhap);
+        // dd(Carbon::createFromFormat('Y-m-d', $request->NgayNhap));
         $nhap = ModelsNhap::all();
         $name = new ModelsNhap();
         $name->Khu_ID = $request->Khu_ID;
@@ -67,46 +70,8 @@ class NhapController extends Controller
         return redirect()->route('admin.nhap')->with('nhap', 'thêm thành công');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $nhap = ModelsNhap::find($id);

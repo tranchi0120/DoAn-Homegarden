@@ -27,12 +27,12 @@
                             </div>
                         </div>
 
-                        {{-- <div class="form-group">
+                        <div class="form-group">
                             <strong>Số Lượng</strong>
                             <input class="form-control" type="number" name="SoLuong" placeholder="mời nhập">
 
                         </div>
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <strong>Số Lượng chet</strong>
                             <input class="form-control" type="number" name="SoLuongChet" placeholder="mời nhập">
 
@@ -70,7 +70,7 @@
                             </select>
                         </div>
 
-                        <div class="form-group now    ">
+                        <div class="form-group" style="display:flex">
                             <strong>Ghi Chú</strong>
 
                             <div class="col-ml-9 col-sm-9">

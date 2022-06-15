@@ -21,6 +21,7 @@ class ClientController extends Controller
         $baidang = Baidang::all();
         view()->share('baidang', $baidang);
         $caytrong = Caytrong::all();
+        // dd($caytrong);
         view()->share('caytrong', $caytrong);
         $khu = Khu::all();
         view()->share('khu', $khu);

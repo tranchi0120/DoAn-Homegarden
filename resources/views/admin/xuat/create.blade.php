@@ -34,7 +34,7 @@
                         {{ $data->SoLuong > 0 ? 'Đã trồng cây' : 'trống' }}
                     </td>
 
-                    <td>{{ $data->SoLuong }} cây </td>
+                    <td>{{ $data->SoLuong - $data->SoLuongChet }} cây </td>
 
                 </tr>
             @endforeach

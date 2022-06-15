@@ -53,6 +53,25 @@ class XuatController extends Controller
     public function store(Request $request)
     {
 
+        $request->SoLuong = intVal($request->SoLuong);
+        // dd($request->all());
+        $khu = Khu::findorfail($request->Khu_ID);
+        $SoLuongTrongKhu = intval($khu->SoLuong);
+        $SoCayChet = intval($khu->SoLuongChet);
+
+
+        $soluongcon = $SoLuongTrongKhu - $SoCayChet;
+        // dd($soluongcon);
+
+        // dd($validatestring);
+        $request->validate([
+            'Khu_ID' => 'required',
+            'NgayXuat' => 'required',
+            'SoLuong' => array('required'),
+        ]);
+        if ($soluongcon < intval($request->SoLuong) || intval($request->SoLuong) < 0) {
+            return redirect()->back()->withErrors('errors');
+        }
         $xuat = ModelsXuat::all();
         $name = new ModelsXuat();
         $name->Khu_ID = $request->Khu_ID;
@@ -65,11 +84,20 @@ class XuatController extends Controller
         $name->TenKhachHang = $request->TenKhachHang;
         $name->SoLuong = $request->SoLuong;
         $name->save();
-        $khu = Khu::find($request->Khu_ID);
-        $tongsoluong = $khu->SoLuong - $request->SoLuong;
-        $khu->SoLuongChet == 0;
-        $khu->SoLuong = $tongsoluong;
-        $khu->save();
+
+
+        // dd(intval($khu->SoLuong) - intval($request->SoLuong));
+        $conlai = $SoLuongTrongKhu - intval($request->SoLuong);
+
+        $SoLuongConLai = $conlai == intval($khu->SoLuongChet) ? 0 : $conlai;
+        // dd($SoLuongConLai);
+        $soluongchet = $SoLuongConLai == 0 ? "0" : $khu->SoLuongChet;
+        $khu
+            ->update([
+                'SoLuong' => $SoLuongConLai,
+                'SoLuongChet' => $soluongchet,
+            ]);
+
 
 
 

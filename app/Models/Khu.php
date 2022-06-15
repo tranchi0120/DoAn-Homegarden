@@ -11,47 +11,45 @@ class Khu extends Model
 
     protected $table = 'khus';
     protected $fillable = [
-          'TenKhu',
-          'Loaicay_ID',
-          'SoLuong',
-          'NgayTrongCay',
-          'NgayThuHoach',
-          'User_ID',
-          'Caytrong_ID',
+        'TenKhu',
+        'Loaicay_ID',
+        'SoLuong',
+        'NgayTrongCay',
+        'NgayThuHoach',
+        'User_ID',
+        'Caytrong_ID',
+        'SoLuongChet',
     ];
 
     public function CayTrong()
     {
-        return $this->belongsTo(Caytrong::class,'Caytrong_ID');
+        return $this->belongsTo(Caytrong::class, 'Caytrong_ID');
     }
 
     public function USER()
     {
-        return $this->belongsTo(User::class,'User_ID');
+        return $this->belongsTo(User::class, 'User_ID');
     }
 
-     public  function PhunThuoc()
+    public  function PhunThuoc()
     {
-        return $this->hasMany(Phunthuoc::class,'Phunthuoc_ID');
+        return $this->hasMany(Phunthuoc::class, 'Phunthuoc_ID');
     }
 
 
-     public function TinhTrangKhu() 
+    public function TinhTrangKhu()
     {
-        return $this->hasOne(Khu::class,'Tinhtrangkhu_ID');
+        return $this->hasOne(Khu::class, 'Tinhtrangkhu_ID');
     }
 
 
-     public function Xuat()
+    public function Xuat()
     {
-      return $this->hasMany(Xuat::class,'Xuat_ID');
+        return $this->hasMany(Xuat::class, 'Xuat_ID');
     }
 
-     public function Nhap()
+    public function Nhap()
     {
-      return $this->hasMany(Nhap::class,'Nhap_ID');
+        return $this->hasMany(Nhap::class, 'Nhap_ID');
     }
-    
-    
-
 }

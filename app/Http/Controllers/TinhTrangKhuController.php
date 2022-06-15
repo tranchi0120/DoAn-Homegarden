@@ -64,8 +64,8 @@ class TinhTrangKhuController extends Controller
     {
         $data = khu::find($id);
         $soluongchet = $request->input('SoLuongChet');
-        $tongsoluong = $data->SoLuong - $soluongchet;
-        $data->SoLuong = $tongsoluong;
+        // $tongsoluong = $data->SoLuong - $soluongchet;
+        // $data->SoLuong = $tongsoluong;
         $data->SoLuongChet = $soluongchet;
         $data->GhiChu = $request->input('GhiChu');
         $data->save();

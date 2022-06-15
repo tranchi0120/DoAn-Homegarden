@@ -52,54 +52,7 @@
         </div>
 
 
-        {{-- <div class="col-md-4 col-sm-6  ">
-            <div class="x_panel">
-                <div class="x_title">
-                    <h2>Thống Kê Nhập Và Xuất Hàng Tháng </h2>
 
-                    <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                    <canvas id="mybarChart"></canvas>
-                </div>
-            </div>
-        </div> --}}
-
-        {{-- <script>
-            if ($('#mybarChart').length) {
-
-                var ctx = document.getElementById("mybarChart");
-                var mybarChart = new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-
-                        labels: {!! json_encode($month) !!},
-                        datasets: [{
-                                label: 'xuất',
-                                backgroundColor: "#26B99A",
-                                data: {!! json_encode($doanhthu) !!}
-                            }
-                            // , {
-                            //     label: 'xuất',
-                            //     backgroundColor: "#03586A",
-                            //     data: []
-                            // }
-                        ]
-                    },
-
-                    options: {
-                        scales: {
-                            yAxes: [{
-                                ticks: {
-                                    beginAtZero: true
-                                }
-                            }]
-                        }
-                    }
-                });
-
-            }
-        </script> --}}
 
 
 

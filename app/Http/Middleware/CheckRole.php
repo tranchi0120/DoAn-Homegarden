@@ -17,7 +17,7 @@ class CheckRole
     public function handle(Request $request, Closure $next)
     {
         if (Auth()->user()->Quyen_ID != 1) {
-            return \abort(404);
+            return view('err.error');
         }
         return $next($request);
     }

@@ -16,10 +16,10 @@ class CreateNhapsTable extends Migration
         Schema::create('nhaps', function (Blueprint $table) {
             $table->increments('id');
             $table->string('SoLuong');
-            $table->string('NgayNhap');
+            $table->date('NgayNhap');
             $table->string('GiaNhap');
             $table->string('TongTien');
-            $table->string('GhiChu');
+            $table->string('GhiChu')->nullable();
             $table->integer('Caytrong_ID')->unsigned();
             $table->integer('Khu_ID')->unsigned();
             $table->unsignedbiginteger('User_ID');
