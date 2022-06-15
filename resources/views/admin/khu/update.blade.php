@@ -24,17 +24,17 @@
 
                         </div>
                         {{-- <div class="form-group">
-                            <strong>Số Lượng </strong>
-                            <input class="form-control" type="number" name="SoLuong" value="{{ $name->SoLuong }}">
+                            <strong>Loại Cây</strong>
+                            <select class="select2_single form-control" name="LoaiCay_ID" aria-label="Default select example">
 
-                        </div>
-
-                        <div class="form-group">
-                            <strong>Số Lượng chet </strong>
-                            <input class="form-control" type="number" name="SoLuongChet"
-                                value="{{ $name->SoLuongChet }}">
-
+                                @foreach ($danhmuc as $data)
+                                    <option value="{{ $data->id }}"
+                                        {{ $data->id === $name->User_ID ? 'selected' : '' }}>
+                                        {{ $data->name }} </option>
+                                @endforeach
+                            </select>
                         </div> --}}
+
                         <div class="form-group">
                             <strong>Ngày Trồng </strong>
                             <input class="form-control" type="date" name="NgayTrongCay"
@@ -66,7 +66,8 @@
                             <select class="select2_single form-control" name="Caytrong_ID"
                                 aria-label="Default select example">
                                 @foreach ($caytrong as $data)
-                                    <option value="{{ $data->id }}" selected={{ $data->id === $name->Caytrong_ID }}>
+                                    <option value="{{ $data->id }}"
+                                        {{ $data->id === $name->Caytrong_ID ? 'selected' : '' }}>
                                         {{ $data->TenCay }} </option>
                                 @endforeach
                             </select>

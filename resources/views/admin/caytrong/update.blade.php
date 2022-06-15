@@ -17,17 +17,19 @@
 
                 <div class="row">
                     <div class="col-md-6">
+
                         <div class="form-group">
                             <strong>Loại Cây</strong>
-
                             <select class="select2_single form-control" name="Loaicay_ID"
                                 aria-label="Default select example">
-
                                 @foreach ($danhmucloaicay as $data)
-                                    <option value="{{ $data->id }}">{{ $data->Tenloaicay }}</option>
+                                    <option value="{{ $data->id }}"
+                                        {{ $data->id === $name->Loaicay_ID ? 'selected' : '' }}>
+                                        {{ $data->Tenloaicay }} </option>
                                 @endforeach
                             </select>
                         </div>
+
                         <div class="form-group">
                             <strong>Tên Cây</strong>
                             <input class="form-control" type="text" name="TenCay" value="{{ $name->TenCay }}">
