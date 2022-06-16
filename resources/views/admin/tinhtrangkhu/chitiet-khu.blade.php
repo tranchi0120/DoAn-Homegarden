@@ -24,14 +24,14 @@
 
 
         <div class="row">
-            <h3 class="name">Số Lượng Cây Sống : </h3 class="name">
+            <h3 class="name">Số Lượng Cây: </h3 class="name">
             <span class="content">{{ $data->SoLuong }} Cây</s>
         </div>
 
-        <div class="row">
+        {{-- <div class="row">
             <h3 class="name">Số Lượng Cây Chêt : </h3 class="name">
             <span class="content">{{ $data->SoLuongChet }} Cây</s>
-        </div>
+        </div> --}}
 
 
 

@@ -119,8 +119,8 @@
     <section class="dangnhap">
         <div class="login_wrapper">
             <div class="animate form login_form">
-                @if (session('message'))
-                    <div class="alert alert-danger">{{ session('message') }}</div>
+                @if (session('success'))
+                <div class="alert alert-danger thongbao">{{ session('success') }}</div>
                 @endif
                 <section class="login_content">
                     <form id="admin-login" method="post" action="{{ route('login') }} ">
@@ -163,56 +163,60 @@
 
 
     <style>
-        .home {
-            text-decoration: none;
-            display: inline-block;
-            color: white;
-            font-size: 30px;
-        }
+    .thongbao {
+        margin-top: 50px;
+    }
 
-        .home:hover {
-            color: rgb(155, 156, 170);
-            text-decoration: none;
+    .home {
+        text-decoration: none;
+        display: inline-block;
+        color: white;
+        font-size: 30px;
+    }
 
-        }
+    .home:hover {
+        color: rgb(155, 156, 170);
+        text-decoration: none;
 
-        .click {
-            color: #103e6c;
-            background: white;
-            border: none;
-            padding: 9px 33px;
-            border-radius: 20px;
+    }
 
-        }
+    .click {
+        color: #103e6c;
+        background: white;
+        border: none;
+        padding: 9px 33px;
+        border-radius: 20px;
 
-        .click:hover {
-            background: #c5d5e6;
-        }
+    }
 
-        .login_content {
-            margin-top: 80px;
-            border-radius: 20px;
-            background: #103e6c;
-            color: white;
-            padding: 20px;
-        }
+    .click:hover {
+        background: #c5d5e6;
+    }
 
-        .reset_pass {
-            font-style: italic;
-            color: white;
-        }
+    .login_content {
+        margin-top: 20px;
+        border-radius: 20px;
+        background: #103e6c;
+        color: white;
+        padding: 20px;
+    }
 
-        .navbar {
-            background: #34495e;
-        }
+    .reset_pass {
+        font-style: italic;
+        color: white;
+    }
 
-        .menu {
-            margin-bottom: 50px;
-        }
+    .navbar {
+        background: #34495e;
+    }
 
-        .logo {
-            color: #5BB12F;
-        }
+    .menu {
+        margin-bottom: 50px;
+    }
+
+    .logo {
+        color: #5BB12F;
+    }
     </style>
 
 

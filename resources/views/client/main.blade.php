@@ -64,6 +64,18 @@
 
 
     @include('Client.slider')
+    {{-- <form action="" class="form-inline">
+        <div class="input-group" id="listcaytrong">
+            <div class="form-outline">
+                <input type="search" id="keyword" name="key" class="form-control" placeholder="tìm kiếm" />
+
+            </div>
+            <button type="button" class="btn btn-primary">
+                <i class="fa  fa-search"></i>
+            </button>
+
+        </div>
+    </form> --}}
 
     @include('Client/tin.index')
     @include('Client/khu.index')
@@ -79,17 +91,45 @@
     @include('Client.footer')
 
 
+    <style>
+        .input-group {
+            margin-left: 165px;
+            margin-top: 50px;
+            display: flex;
+            gap: 30px;
+        }
+    </style>
 
 
 
 
 
 
+    {{-- <script>
+        $(document).ready(function() {
+            $(document).on('key', '#keyword', function() {
+                var keyword = $(this).val();
+
+                $.ajax({
+                    type: "get",
+                    url: "/search",
+                    data: {
+                        keyword: keyword
+                    }
+                    dataType: "json",
+                    success: function(responsive) {
+                        $('#listcaytrong'.html(responsive));
+                    }
+                });
+            });
+        });
+    </script> --}}
 
 
-
-
-
+    // jquery
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- jQuery Version 2.1.1 -->
     <script src="{{ asset('./trangchinh/js/jquery-2.1.1.min.js') }}"></script>

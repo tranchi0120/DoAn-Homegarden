@@ -70,4 +70,17 @@ class ClientController extends Controller
     {
         return view('err.error');
     }
+
+    // public function Search(Request $request)
+    // {
+    //     $output = '';
+    //     $caytrong = Caytrong::where('name', 'LIKE', '%' . $request->key . '%');
+    //     foreach ($caytrong as $data) {
+    //         $output = '
+    //         .$data->TenCay.
+    //         ';
+    //     }
+    //     dd(response()->json($output));
+    //     return response()->json($output);
+    // 
 }

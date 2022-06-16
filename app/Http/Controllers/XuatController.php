@@ -54,7 +54,6 @@ class XuatController extends Controller
     {
 
         $request->SoLuong = intVal($request->SoLuong);
-        // dd($request->all());
         $khu = Khu::findorfail($request->Khu_ID);
         $SoLuongTrongKhu = intval($khu->SoLuong);
         $SoCayChet = intval($khu->SoLuongChet);
@@ -66,6 +65,7 @@ class XuatController extends Controller
         // dd($validatestring);
         $request->validate([
             'Khu_ID' => 'required',
+            'NgayXuat' => 'required',
             'NgayXuat' => 'required',
             'SoLuong' => array('required'),
         ]);

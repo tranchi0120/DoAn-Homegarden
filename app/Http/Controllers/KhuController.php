@@ -114,7 +114,7 @@ class KhuController extends Controller
         $name->Caytrong_ID = $request->input('Caytrong_ID');
         $name->GhiChu = $request->input('GhiChu');
         $name->update();
-        return redirect()->route('admin.khu')->with('thongbao', 'Chỉnh sửa thành công');
+        return redirect()->route('admin.khu')->with('session', 'Chỉnh sửa thành công');
     }
 
     /**

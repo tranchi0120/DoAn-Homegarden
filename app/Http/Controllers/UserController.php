@@ -59,7 +59,7 @@ class UserController extends Controller
         $name->sdt = $request->sdt;
         $name->Quyen_ID = $request->Quyen_ID;
         $name->save();
-        return redirect()->route('admin.user')->with('thongbao', 'thêm thành công');
+        return redirect()->route('admin.user')->with('success', 'thêm thành công');
     }
 
     /**

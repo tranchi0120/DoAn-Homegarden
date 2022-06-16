@@ -22,9 +22,9 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            return redirect()->route('show-dashboard');
+            return redirect()->route('show-dashboard')->with('success', 'đăng nhập thành công');
         }
-        return redirect()->route('show-form-login')->with('success', 'dang nhap that bai');
+        return redirect()->route('show-form-login')->with('success', 'đăng nhập thất bại');
     }
 
 

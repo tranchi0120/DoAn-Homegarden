@@ -225,3 +225,6 @@ Route::get('Client/tin.baidang', [ClientController::class, 'showbaidang'])->name
 // lienhe
 
 Route::get('lienhe', [ClientController::class, 'ShowLienHe'])->name('Client.lienhe');
+
+
+Route::get('/search', [ClientController::class, 'Search']);

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Phunthuoc as ModelPhunThuoc;
 use Illuminate\Http\Request;
 use App\Models\Khu;
@@ -13,15 +14,17 @@ class PhunThuocController extends Controller
 {
 
 
-     public function __construct()
+    public function __construct()
     {
-        
-        $khu = Khu::all();
-        view()->share('khu',$khu);
 
-          $user = User::all();
-        view()->share('user',$user);
-        
+        // $khu = Khu::all();
+        // view()->share('khu',$khu);
+
+        $khu = Khu::where('SoLuong', '>', 0)->get();
+        view()->share('khu', $khu);
+
+        $user = User::all();
+        view()->share('user', $user);
     }
     /**
      * Display a listing of the resource.
@@ -30,10 +33,10 @@ class PhunThuocController extends Controller
      */
     public function index()
     {
-        $phunthuoc = ModelPhunThuoc::whereHas('Khu', function($q) { 
-            $q->where('SoLuong','<>', 0);
+        $phunthuoc = ModelPhunThuoc::whereHas('Khu', function ($q) {
+            $q->where('SoLuong', '<>', 0);
         })->get();
-        return view('admin/phunthuoc.index')->with('phunthuoc',$phunthuoc);
+        return view('admin/phunthuoc.index')->with('phunthuoc', $phunthuoc);
     }
 
     /**
@@ -55,8 +58,8 @@ class PhunThuocController extends Controller
     public function store(Request $request)
     {
 
-        
-        
+
+
         $phunthuoc = ModelPhunThuoc::all();
         $name = new ModelPhunThuoc();
         $name->NgayPhunThuoc = $request->NgayPhunThuoc;
@@ -89,7 +92,7 @@ class PhunThuocController extends Controller
     public function edit($id)
     {
         $name = ModelPhunThuoc::find($id);
-        return view('admin/phunthuoc.update',compact('name'));
+        return view('admin/phunthuoc.update', compact('name'));
     }
 
     /**
@@ -101,15 +104,15 @@ class PhunThuocController extends Controller
      */
     public function update(Request $request, $id)
     {
-             $name = ModelPhunThuoc::find($id);
-             $name->NgayPhunThuoc = $request->input('NgayPhunThuoc');
-             $name->TenThuoc = $request->input('TenThuoc');
-             $name->LieuLuong = $request->input('LieuLuong');
-             $name->GhiChu = $request->input('GhiChu');
-             $name->User_ID = $request->input('User_ID');
-             $name->Khu_ID = $request->input('Khu_ID');
-             $name->update();
-             return redirect()->route('admin.phunthuoc')->with('thongbao','Chỉnh sửa thành công');
+        $name = ModelPhunThuoc::find($id);
+        $name->NgayPhunThuoc = $request->input('NgayPhunThuoc');
+        $name->TenThuoc = $request->input('TenThuoc');
+        $name->LieuLuong = $request->input('LieuLuong');
+        $name->GhiChu = $request->input('GhiChu');
+        $name->User_ID = $request->input('User_ID');
+        $name->Khu_ID = $request->input('Khu_ID');
+        $name->update();
+        return redirect()->route('admin.phunthuoc')->with('thongbao', 'Chỉnh sửa thành công');
     }
 
     /**
@@ -122,6 +125,6 @@ class PhunThuocController extends Controller
     {
         $phunthuoc = ModelPhunThuoc::find($id);
         $phunthuoc->delete();
-      return redirect()->route('admin.phunthuoc');
+        return redirect()->route('admin.phunthuoc');
     }
 }

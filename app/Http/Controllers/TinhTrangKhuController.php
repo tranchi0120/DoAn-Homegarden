@@ -33,27 +33,6 @@ class TinhTrangKhuController extends Controller
     }
 
 
-    // public function create()
-    // {
-    //     return view('admin/tinhtrangkhu.create');
-    // }
-
-
-    // public function store(Request $request)
-    // {
-    //     $data = khu::find($id);
-    //     $name->Khu_ID = $request->Khu_ID;
-    //     $name->save();
-    //     return redirect()->route('admin.tinhtrangkhu')->with('thongbao', 'them thanh cong');
-    // }
-
-
-    public function show($id)
-    {
-        //
-    }
-
-
     public function edit($id)
     {
         $name = Khu::find($id);

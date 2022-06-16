@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
 
 class CheckRole
 {
@@ -17,7 +18,7 @@ class CheckRole
     public function handle(Request $request, Closure $next)
     {
         if (Auth()->user()->Quyen_ID != 1) {
-            return view('err.error');
+           return redirect()->intended('error');
         }
         return $next($request);
     }

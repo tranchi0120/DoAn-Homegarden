@@ -54,17 +54,6 @@
                             <input class="form-control" type="date" name="NgayDang" value="{{ $name->NgayDang }}">
                         </div>
 
-                        {{-- <div class="form-group">
-                            <strong>Người Đăng</strong>
-                            <select class="select2_single form-control" name="User_ID" aria-label="Default select example">
-
-                                @foreach ($user as $data)
-                                    <option value="{{ $data->id }}" selected={{ $data->id === $name->User_ID }}>
-                                        {{ $data->name }} </option>
-                                @endforeach
-                            </select>
-                        </div> --}}
-
                         <div class="form-group">
                             <strong>Người Đăng</strong>
                             <select class="select2_single form-control" name="User_ID" aria-label="Default select example">
