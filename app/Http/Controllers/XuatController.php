@@ -60,9 +60,7 @@ class XuatController extends Controller
 
 
         $soluongcon = $SoLuongTrongKhu - $SoCayChet;
-        // dd($soluongcon);
 
-        // dd($validatestring);
         $request->validate([
             'Khu_ID' => 'required',
             'NgayXuat' => 'required',
@@ -87,9 +85,9 @@ class XuatController extends Controller
 
 
         // dd(intval($khu->SoLuong) - intval($request->SoLuong));
-        $conlai = $SoLuongTrongKhu - intval($request->SoLuong);
+        $conlai = $SoLuongTrongKhu - (int) ($request->SoLuong);
 
-        $SoLuongConLai = $conlai == intval($khu->SoLuongChet) ? 0 : $conlai;
+        $SoLuongConLai = $conlai == (int) ($khu->SoLuongChet) ? 0 : $conlai;
         // dd($SoLuongConLai);
         $soluongchet = $SoLuongConLai == 0 ? "0" : $khu->SoLuongChet;
         $khu

@@ -64,22 +64,10 @@
 
 
     @include('Client.slider')
-    {{-- <form action="" class="form-inline">
-        <div class="input-group" id="listcaytrong">
-            <div class="form-outline">
-                <input type="search" id="keyword" name="key" class="form-control" placeholder="tìm kiếm" />
-
-            </div>
-            <button type="button" class="btn btn-primary">
-                <i class="fa  fa-search"></i>
-            </button>
-
-        </div>
-    </form> --}}
 
     @include('Client/tin.index')
     @include('Client/khu.index')
-    @include('Client/caytrong.index')
+    @include('Client/caytrong.index', ['cayNongNghiep' => @$cayNongNghiep , 'cayAnTrai' => @$cayAnTrai])
 
 
 
@@ -92,12 +80,12 @@
 
 
     <style>
-        .input-group {
-            margin-left: 165px;
-            margin-top: 50px;
-            display: flex;
-            gap: 30px;
-        }
+    .input-group {
+        margin-left: 165px;
+        margin-top: 50px;
+        display: flex;
+        gap: 30px;
+    }
     </style>
 
 
@@ -105,25 +93,7 @@
 
 
 
-    {{-- <script>
-        $(document).ready(function() {
-            $(document).on('key', '#keyword', function() {
-                var keyword = $(this).val();
 
-                $.ajax({
-                    type: "get",
-                    url: "/search",
-                    data: {
-                        keyword: keyword
-                    }
-                    dataType: "json",
-                    success: function(responsive) {
-                        $('#listcaytrong'.html(responsive));
-                    }
-                });
-            });
-        });
-    </script> --}}
 
 
     // jquery

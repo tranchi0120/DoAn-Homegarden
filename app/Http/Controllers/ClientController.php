@@ -21,6 +21,7 @@ class ClientController extends Controller
         $baidang = Baidang::all();
         view()->share('baidang', $baidang);
         $caytrong = Caytrong::all();
+
         // dd($caytrong);
         view()->share('caytrong', $caytrong);
         $khu = Khu::all();
@@ -31,7 +32,9 @@ class ClientController extends Controller
 
     public function ShowClient()
     {
-        return view('Client.main');
+        $cayNongNghiep = Caytrong::where('Loaicay_ID', 1)->get();
+        $cayAnTrai = Caytrong::where('Loaicay_ID', 2)->get();
+        return view('Client.main', compact('cayNongNghiep', 'cayAnTrai'));
     }
 
 

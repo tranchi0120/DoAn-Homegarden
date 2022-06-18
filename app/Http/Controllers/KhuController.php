@@ -100,6 +100,10 @@ class KhuController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'NgayTrongCay' => 'required',
+            'NgayThuHoach' => 'after:NgayTrongCay',
+        ]);
         $name = ModelsKhu::find($id);
         $name->TenKhu = $request->input('TenKhu');
         //  $SoLuongChet = $request->input('SoLuongChet');
