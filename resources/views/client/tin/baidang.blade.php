@@ -39,8 +39,7 @@
 
     <!-- Colors CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('./trangchinh/css/color/green.css') }}" title="green">
-    <link rel="stylesheet" type="text/css" href="{{ asset('./trangchinh/css/color/light-red.css') }}"
-        title="light-red">
+    <link rel="stylesheet" type="text/css" href="{{ asset('./trangchinh/css/color/light-red.css') }}" title="light-red">
     <link rel="stylesheet" type="text/css" href="{{ asset('./trangchinh/css/color/blue.css') }}" title="blue">
     <link rel="stylesheet" type="text/css" href="{{ asset('./trangchinh/css/color/light-blue.css') }}"
         title="light-blue">
@@ -82,22 +81,21 @@
             <!-- Carousel inner -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img class="img-responsive" src="/trangchinh/images/h1.jpg" alt="slider">
+                    <img class="img-responsive" src="../trangchinh/images/b1.jpg" alt="slider">
 
                 </div>
                 <!--/ Carousel item end -->
 
                 <div class="item">
-                    <img class="img-responsive" src="/trangchinh/images/a2.jpg" alt="slider">
-
-
+                    <img class="img-responsive" src="../trangchinh/images/b2.jpg" alt="slider">
                 </div>
                 <!--/ Carousel item end -->
-
                 <div class="item">
-                    <img class="img-responsive" src="/trangchinh/images/a3.jpg" alt="slider">
+                    <img class="img-responsive" src="../trangchinh/images/b4.jpg" alt="slider">
 
                 </div>
+
+
                 <!--/ Carousel item end -->
             </div>
             <!-- Carousel inner end-->
@@ -118,89 +116,89 @@
 
 
     @section('content-news')
-        <section id="news" class="latest-news-section">
-            <div enctype="multipart/form-data" class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-title  ">
-                            <h3 class="news">Tin Tức</h3>
-                        </div>
+    <section id="news" class="latest-news-section">
+        <div enctype="multipart/form-data" class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title  ">
+                        <h3 class="news">Tin Tức</h3>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="group">
-                        @foreach ($baidang as $data)
-                            <div class="col-md-12">
-                                <div class="latest-post">
-                                    <div class="khunghinh">
-                                        <img class="img img-responsive"
-                                            src="{{ asset('/images') }}/{{ $data->HinhAnh }}" alt="">
-                                    </div>
-
-                                    <h4 class="tieude"><a
-                                            href="{{ route('ct.chitiet', $data->id) }}">{{ $data->TieuDe }}</a></h4>
-                                    <div class="post-details">
-                                        <span class="date"> {{ $data->NgayDang }} </span>
-                                    </div>
-                                    <div class="text"> {!! $data->NoiDung !!} </div>
-                                    <a href="{{ route('ct.chitiet', $data->id) }}" class="btn btn-primary">Đọc Thêm</a>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-
                 </div>
             </div>
-        </section>
+            <div class="row">
+                <div class="group">
+                    @foreach ($baidang as $data)
+                    <div class="col-md-12">
+                        <div class="latest-post">
+                            <div class="khunghinh">
+                                <img class="img img-responsive" src="{{ asset('/images') }}/{{ $data->HinhAnh }}"
+                                    alt="">
+                            </div>
+
+                            <h4 class="tieude"><a href="{{ route('ct.chitiet', $data->id) }}">{{ $data->TieuDe }}</a>
+                            </h4>
+                            <div class="post-details">
+                                <span class="date"> {{ $data->NgayDang }} </span>
+                            </div>
+                            <div class="text"> {!! $data->NoiDung !!} </div>
+                            <a href="{{ route('ct.chitiet', $data->id) }}" class="btn btn-primary">Đọc Thêm</a>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+
+            </div>
+        </div>
+    </section>
 
 
-        <style>
-            .text {
-                padding: 8px 0;
-                width: 350px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                line-height: 1.5rem;
-                -webkit-line-clamp: 3;
-                height: 75px;
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-            }
+    <style>
+    .text {
+        padding: 8px 0;
+        width: 350px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 1.5rem;
+        -webkit-line-clamp: 3;
+        height: 75px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+    }
 
-            .btn {
-                margin-top: 8px;
-            }
+    .btn {
+        margin-top: 8px;
+    }
 
-            .img {
-                width: 100%;
-                height: 100%;
-                object-fit: none;
-            }
+    .img {
+        width: 100%;
+        height: 100%;
+        object-fit: none;
+    }
 
-            .group {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 20px;
-            }
+    .group {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
 
-            .group-row {
-                width: 100%;
-            }
+    .group-row {
+        width: 100%;
+    }
 
-            .khunghinh {
-                width: 350px;
-                height: 250px;
-            }
+    .khunghinh {
+        width: 350px;
+        height: 250px;
+    }
 
-            .tieude {
-                width: 300px;
-                height: 70px;
-            }
-        </style>
+    .tieude {
+        width: 300px;
+        height: 70px;
+    }
+    </style>
 
 
 
-        {{-- <style>
+    {{-- <style>
             .hinh {
                 object-fit: none;
                 border-radius: 20px 20px 0 0;
@@ -229,7 +227,7 @@
 
 
 
-        @include('Client.footer')
+    @include('Client.footer')
 
 
 
@@ -244,29 +242,29 @@
 
 
 
-        <!-- jQuery Version 2.1.1 -->
-        <script src="{{ asset('./trangchinh/js/jquery-2.1.1.min.js') }}"></script>
+    <!-- jQuery Version 2.1.1 -->
+    <script src="{{ asset('./trangchinh/js/jquery-2.1.1.min.js') }}"></script>
 
-        <!-- Bootstrap Core JavaScript -->
-        <script src="{{ asset('./trangchinh/asset/js/bootstrap.min.js') }}"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ asset('./trangchinh/asset/js/bootstrap.min.js') }}"></script>
 
-        <!-- Plugin JavaScript -->
-        <script src="{{ asset('./trangchinh/js/jquery.easing.1.3.js') }}"></script>
-        <script src="{{ asset('./trangchinh/js/classie.js') }}"></script>
-        <script src="{{ asset('./trangchinh/js/count-to.js') }}"></script>
-        <script src="{{ asset('./trangchinh/js/jquery.appear.js') }}"></script>
-        <script src="{{ asset('./trangchinh/js/cbpAnimatedHeader.js') }}"></script>
-        <script src="{{ asset('./trangchinh/js/owl.carousel.min.js') }}"></script>
-        <script src="{{ asset('./trangchinh/js/jquery.fitvids.js') }}"></script>
-        <script src="{{ asset('./trangchinh/js/styleswitcher.js') }}"></script>
+    <!-- Plugin JavaScript -->
+    <script src="{{ asset('./trangchinh/js/jquery.easing.1.3.js') }}"></script>
+    <script src="{{ asset('./trangchinh/js/classie.js') }}"></script>
+    <script src="{{ asset('./trangchinh/js/count-to.js') }}"></script>
+    <script src="{{ asset('./trangchinh/js/jquery.appear.js') }}"></script>
+    <script src="{{ asset('./trangchinh/js/cbpAnimatedHeader.js') }}"></script>
+    <script src="{{ asset('./trangchinh/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('./trangchinh/js/jquery.fitvids.js') }}"></script>
+    <script src="{{ asset('./trangchinh/js/styleswitcher.js') }}"></script>
 
-        <!-- Contact Form JavaScript -->
-        <script src="{{ asset('./trangchinh/js/jqBootstrapValidation.js') }}"></script>
-        <script src="{{ asset('./trangchinh/js/contact_me.js') }}"></script>
+    <!-- Contact Form JavaScript -->
+    <script src="{{ asset('./trangchinh/js/jqBootstrapValidation.js') }}"></script>
+    <script src="{{ asset('./trangchinh/js/contact_me.js') }}"></script>
 
-        <!-- Custom Theme JavaScript -->
-        <script src="{{ asset('./trangchinh/js/script.js') }}"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="{{ asset('./trangchinh/js/script.js') }}"></script>
 
-    </body>
+</body>
 
-    </html>
+</html>

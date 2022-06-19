@@ -54,13 +54,20 @@ class KhuController extends Controller
      */
     public function store(Request $request)
     {
+
+         $request->validate([
+            'TenKhu' => 'required',
+            'SoLuong' => 'required',
+            'Caytrong_ID' => 'required',
+            'GhiChu' => 'required',
+            'User_ID' => 'required',  
+           
+        ]);
+
         $khu = ModelsKhu::all();
         $name = new ModelsKhu();
         $name->TenKhu = $request->TenKhu;
         $name->SoLuong = $request->SoLuong;
-        // $name->SoLuongChet = $request->SoLuongChet;
-        // $name->NgayTrongCay = $request->NgayTrongCay;
-        // $name->NgayThuHoach = $request->NgayThuHoach;
         $name->User_ID = $request->User_ID;
         $name->Caytrong_ID = $request->Caytrong_ID;
         $name->GhiChu = $request->GhiChu;
@@ -106,12 +113,6 @@ class KhuController extends Controller
         ]);
         $name = ModelsKhu::find($id);
         $name->TenKhu = $request->input('TenKhu');
-        //  $SoLuongChet = $request->input('SoLuongChet');
-        // $tongsoluong = $name->SoLuong - $SoLuongChet;
-        // $name->SoLuong = $tongsoluong;
-        // $name->SoLuongChet = $SoLuongChet;
-        //  $name->SoLuong = $request->input('SoLuong');
-        //  $name->SoLuongChet = $request->input('SoLuongChet');
         $name->NgayTrongCay = $request->input('NgayTrongCay');
         $name->NgayThuHoach = $request->input('NgayThuHoach');
         $name->User_ID = $request->input('User_ID');

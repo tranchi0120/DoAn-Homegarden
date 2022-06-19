@@ -57,7 +57,14 @@ class PhunThuocController extends Controller
      */
     public function store(Request $request)
     {
-
+         $request->validate([
+            'NgayPhunThuoc' => 'required',
+            'TenThuoc' => 'required',
+            'LieuLuong' => 'required',
+            'GhiChu' => 'required',
+            'User_ID' => 'required',  
+            'Khu_ID' => 'required',  
+        ]);
 
 
         $phunthuoc = ModelPhunThuoc::all();

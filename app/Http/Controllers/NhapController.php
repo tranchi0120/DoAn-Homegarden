@@ -52,8 +52,16 @@ class NhapController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->NgayNhap);
-        // dd(Carbon::createFromFormat('Y-m-d', $request->NgayNhap));
+
+        $request->validate([
+            'NgayNhap' => 'required',
+            'SoLuong' => 'required',
+            'GiaNhap' => 'required',
+            'GhiChu' => 'required',
+            'User_ID' => 'required',  
+            'Khu_ID' => 'required',  
+        ]);
+        
         $nhap = ModelsNhap::all();
         $name = new ModelsNhap();
         $name->Khu_ID = $request->Khu_ID;

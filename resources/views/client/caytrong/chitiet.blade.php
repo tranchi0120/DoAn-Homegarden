@@ -39,8 +39,7 @@
 
     <!-- Colors CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('./trangchinh/css/color/green.css') }}" title="green">
-    <link rel="stylesheet" type="text/css" href="{{ asset('./trangchinh/css/color/light-red.css') }}"
-        title="light-red">
+    <link rel="stylesheet" type="text/css" href="{{ asset('./trangchinh/css/color/light-red.css') }}" title="light-red">
     <link rel="stylesheet" type="text/css" href="{{ asset('./trangchinh/css/color/blue.css') }}" title="blue">
     <link rel="stylesheet" type="text/css" href="{{ asset('./trangchinh/css/color/light-blue.css') }}"
         title="light-blue">
@@ -82,20 +81,20 @@
             <!-- Carousel inner -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img class="img-responsive" src="/trangchinh/images/h1.jpg" alt="slider">
+                    <img class="img-responsive" src="/trangchinh/images/b1.jpg" alt="slider">
 
                 </div>
                 <!--/ Carousel item end -->
 
                 <div class="item">
-                    <img class="img-responsive" src="/trangchinh/images/a2.jpg" alt="slider">
+                    <img class="img-responsive" src="/trangchinh/images/b2.jpg" alt="slider">
 
 
                 </div>
                 <!--/ Carousel item end -->
 
                 <div class="item">
-                    <img class="img-responsive" src="/trangchinh/images/a3.jpg" alt="slider">
+                    <img class="img-responsive" src="/trangchinh/images/b4.jpg" alt="slider">
 
                 </div>
                 <!--/ Carousel item end -->
@@ -121,8 +120,8 @@
                 <div class="fruit-main">
                     <div class="fruit-content">
                         <div class="fruit-top">
-                            <img class="images image img-responsive"
-                                src="{{ asset('/images') }}/{{ $data->HinhAnh }}" alt="">
+                            <img class="images image img-responsive" src="{{ asset('/images') }}/{{ $data->HinhAnh }}"
+                                alt="">
                             <div class="fruit-top-right">
                                 <span class="fruit-top-title">
                                     {{ $data->TenCay }}
@@ -139,13 +138,13 @@
                     <div class="fruit-relate">
                         <span class="fruit-relate-title">Các Cây Liên Quan </span>
                         @foreach ($caytrong as $data)
-                            <form class="fruit-row">
-                                <img class="   images img img-responsive"
-                                    src="{{ asset('/images') }}/{{ $data->HinhAnh }}" alt="">
-                                <a href="{{ route('cay.chitiet', $data->id) }}" class="fruit-row-title">
-                                    {{ $data->TenCay }}
-                                </a>
-                            </form>
+                        <form class="fruit-row">
+                            <img class="   images img img-responsive" src="{{ asset('/images') }}/{{ $data->HinhAnh }}"
+                                alt="">
+                            <a href="{{ route('cay.chitiet', $data->id) }}" class="fruit-row-title">
+                                {{ $data->TenCay }}
+                            </a>
+                        </form>
                         @endforeach
 
 
@@ -161,86 +160,86 @@
 
 
     <style>
-        .fruit-name {
-            margin-top: 60px;
-            font-size: 3.5rem;
-            color: #5bb12f;
-            font-weight: 800;
-        }
+    .fruit-name {
+        margin-top: 60px;
+        font-size: 3.5rem;
+        color: #5bb12f;
+        font-weight: 800;
+    }
 
-        .fruit-top-title {
-            color: black;
-            font-weight: 400;
-            font-size: 3.5rem;
-        }
+    .fruit-top-title {
+        color: black;
+        font-weight: 400;
+        font-size: 3.5rem;
+    }
 
-        .fruit-top-date {
-            font-size: 2.5rem;
-            margin: 20px 0;
-        }
-
-
-        .fruit-relate {
-            width: 300px;
-            background: #edf0e8;
-            padding: 20px;
-            height: max-content;
-        }
-
-        .img {
-            object-fit: none;
-            width: 100px;
-            height: 100px;
-        }
-
-        .fruit-row-title:hover {
-            cursor: pointer;
-            color: #5BB12F;
-        }
-
-        .fruit-row {
-            padding: 10px 0;
-            border-bottom: 1px solid;
-            margin-bottom: 10px;
-            display: flex;
-
-        }
-
-        .fruit-row-title {
-            font-weight: lighter;
-            font-size: 1.5rem;
-            color: black;
-            padding: 10px;
-            display: block;
-            justify-content: center;
-            text-align: center;
-        }
+    .fruit-top-date {
+        font-size: 2.5rem;
+        margin: 20px 0;
+    }
 
 
-        /* image */
+    .fruit-relate {
+        width: 300px;
+        background: #edf0e8;
+        padding: 20px;
+        height: max-content;
+    }
 
-        .image {
-            object-fit: none;
-            height: 350px;
-            width: 400px;
-        }
+    .img {
+        object-fit: none;
+        width: 100px;
+        height: 100px;
+    }
 
-        .fruit-top-title {
-            color: black;
-            font-weight: bold;
-            font-size: 3.5rem;
-        }
+    .fruit-row-title:hover {
+        cursor: pointer;
+        color: #5BB12F;
+    }
 
-        .fruit-relate-title {
-            display: block;
-            font-size: 2rem;
-            color: black;
-        }
+    .fruit-row {
+        padding: 10px 0;
+        border-bottom: 1px solid;
+        margin-bottom: 10px;
+        display: flex;
 
-        .fruit-main {
-            margin-top: 30px;
-            gap: 80px
-        }
+    }
+
+    .fruit-row-title {
+        font-weight: lighter;
+        font-size: 1.5rem;
+        color: black;
+        padding: 10px;
+        display: block;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    /* image */
+
+    .image {
+        object-fit: none;
+        height: 350px;
+        width: 400px;
+    }
+
+    .fruit-top-title {
+        color: black;
+        font-weight: bold;
+        font-size: 3.5rem;
+    }
+
+    .fruit-relate-title {
+        display: block;
+        font-size: 2rem;
+        color: black;
+    }
+
+    .fruit-main {
+        margin-top: 30px;
+        gap: 80px
+    }
     </style>
 
 

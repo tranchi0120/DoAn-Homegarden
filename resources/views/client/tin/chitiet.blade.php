@@ -39,8 +39,7 @@
 
     <!-- Colors CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('./trangchinh/css/color/green.css') }}" title="green">
-    <link rel="stylesheet" type="text/css" href="{{ asset('./trangchinh/css/color/light-red.css') }}"
-        title="light-red">
+    <link rel="stylesheet" type="text/css" href="{{ asset('./trangchinh/css/color/light-red.css') }}" title="light-red">
     <link rel="stylesheet" type="text/css" href="{{ asset('./trangchinh/css/color/blue.css') }}" title="blue">
     <link rel="stylesheet" type="text/css" href="{{ asset('./trangchinh/css/color/light-blue.css') }}"
         title="light-blue">
@@ -82,20 +81,20 @@
             <!-- Carousel inner -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img class="img-responsive" src="/trangchinh/images/h1.jpg" alt="slider">
+                    <img class="img-responsive" src="/trangchinh/images/b1.jpg" alt="slider">
 
                 </div>
                 <!--/ Carousel item end -->
 
                 <div class="item">
-                    <img class="img-responsive" src="/trangchinh/images/a2.jpg" alt="slider">
+                    <img class="img-responsive" src="/trangchinh/images/b2.jpg" alt="slider">
 
 
                 </div>
                 <!--/ Carousel item end -->
 
                 <div class="item">
-                    <img class="img-responsive" src="/trangchinh/images/a3.jpg" alt="slider">
+                    <img class="img-responsive" src="/trangchinh/images/b4.jpg" alt="slider">
 
                 </div>
                 <!--/ Carousel item end -->
@@ -121,8 +120,8 @@
                 <div class="post-main" method="post">
                     <div class="post-content">
                         <div class="post-top">
-                            <img class="images image img-responsive"
-                                src="{{ asset('/images') }}/{{ $data->HinhAnh }}" alt="">
+                            <img class="images image img-responsive" src="{{ asset('/images') }}/{{ $data->HinhAnh }}"
+                                alt="">
                             <div class="post-top-right">
                                 <span class="post-top-title">
                                     {{ $data->TieuDe }}
@@ -141,13 +140,13 @@
                     <div class="post-relate">
                         <span class="post-relate-title">Các Bài Viết Liên Quan </span>
                         @foreach ($baidang as $data)
-                            <form class="post-row">
-                                <img class="   images img img-responsive"
-                                    src="{{ asset('/images') }}/{{ $data->HinhAnh }}" alt="">
-                                <a href="{{ route('ct.chitiet', $data->id) }}" class="post-row-title">
-                                    {{ $data->TieuDe }}
-                                </a>
-                            </form>
+                        <form class="post-row">
+                            <img class="   images img img-responsive" src="{{ asset('/images') }}/{{ $data->HinhAnh }}"
+                                alt="">
+                            <a href="{{ route('ct.chitiet', $data->id) }}" class="post-row-title">
+                                {{ $data->TieuDe }}
+                            </a>
+                        </form>
                         @endforeach
 
                     </div>
@@ -163,72 +162,72 @@
 
 
     <style>
-        .post-relate {
-            width: 300px;
-            background: #edf0e8;
-            padding: 20px;
-            height: max-content;
-        }
+    .post-relate {
+        width: 300px;
+        background: #edf0e8;
+        padding: 20px;
+        height: max-content;
+    }
 
-        .post {
-            margin: 80px;
-            background: red;
-            background: #e5e9e9;
-        }
+    .post {
+        margin: 80px;
+        background: red;
+        background: #e5e9e9;
+    }
 
-        .img {
-            width: 100px;
-            height: 100px;
-        }
+    .img {
+        width: 100px;
+        height: 100px;
+    }
 
-        .post-row-title:hover {
-            cursor: pointer;
-            color: #5BB12F;
-        }
+    .post-row-title:hover {
+        cursor: pointer;
+        color: #5BB12F;
+    }
 
-        .post-row {
-            padding: 10px 0;
-            border-bottom: 1px solid;
-            margin-bottom: 10px;
-            display: flex;
+    .post-row {
+        padding: 10px 0;
+        border-bottom: 1px solid;
+        margin-bottom: 10px;
+        display: flex;
 
-        }
+    }
 
-        .post-row-title {
-            font-weight: lighter;
-            font-size: 1.5rem;
-            color: black;
-            padding: 10px;
-            display: block;
-            justify-content: center;
-            text-align: center;
-        }
+    .post-row-title {
+        font-weight: lighter;
+        font-size: 1.5rem;
+        color: black;
+        padding: 10px;
+        display: block;
+        justify-content: center;
+        text-align: center;
+    }
 
 
-        /* image */
+    /* image */
 
-        .image {
-            object-fit: none;
-            height: 350px;
-            width: 400px;
-        }
+    .image {
+        object-fit: none;
+        height: 350px;
+        width: 400px;
+    }
 
-        .post-top-title {
-            color: black;
-            font-weight: bold;
-            font-size: 3.5rem;
-        }
+    .post-top-title {
+        color: black;
+        font-weight: bold;
+        font-size: 3.5rem;
+    }
 
-        .post-relate-title {
-            display: block;
-            font-size: 2rem;
-            color: black;
-        }
+    .post-relate-title {
+        display: block;
+        font-size: 2rem;
+        color: black;
+    }
 
-        .post-main {
-            margin-top: 30px;
-            gap: 80px
-        }
+    .post-main {
+        margin-top: 30px;
+        gap: 80px
+    }
     </style>
 
 

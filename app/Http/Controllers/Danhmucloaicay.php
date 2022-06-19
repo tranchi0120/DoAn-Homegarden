@@ -25,6 +25,13 @@ class Danhmucloaicay extends Controller
 
          
          public function store(Request $request){
+
+              $request->validate([
+            'tenloaicay' => 'required',
+            
+           
+        ]);
+
              $tenloaicay = new ModelsDanhmucloaicay();
              $tenloaicay->Tenloaicay = $request->Tenloaicay;
              $tenloaicay->save();

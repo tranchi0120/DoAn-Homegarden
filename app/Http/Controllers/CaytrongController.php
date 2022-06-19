@@ -37,6 +37,9 @@ class CaytrongController extends Controller
 
     public function store(Request $request)
     {
+
+         
+
         $caytrong = ModelsCaytrong::all();
         $name = new ModelsCaytrong();
         $name->Loaicay_ID = $request->Loaicay_ID;

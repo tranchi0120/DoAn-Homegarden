@@ -39,8 +39,7 @@
 
     <!-- Colors CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('./trangchinh/css/color/green.css') }}" title="green">
-    <link rel="stylesheet" type="text/css" href="{{ asset('./trangchinh/css/color/light-red.css') }}"
-        title="light-red">
+    <link rel="stylesheet" type="text/css" href="{{ asset('./trangchinh/css/color/light-red.css') }}" title="light-red">
     <link rel="stylesheet" type="text/css" href="{{ asset('./trangchinh/css/color/blue.css') }}" title="blue">
     <link rel="stylesheet" type="text/css" href="{{ asset('./trangchinh/css/color/light-blue.css') }}"
         title="light-blue">
@@ -82,22 +81,21 @@
             <!-- Carousel inner -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img class="img-responsive" src="/trangchinh/images/h1.jpg" alt="slider">
+                    <img class="img-responsive" src="../trangchinh/images/b1.jpg" alt="slider">
 
                 </div>
                 <!--/ Carousel item end -->
 
                 <div class="item">
-                    <img class="img-responsive" src="/trangchinh/images/a2.jpg" alt="slider">
-
-
+                    <img class="img-responsive" src="../trangchinh/images/b2.jpg" alt="slider">
                 </div>
                 <!--/ Carousel item end -->
-
                 <div class="item">
-                    <img class="img-responsive" src="/trangchinh/images/a3.jpg" alt="slider">
+                    <img class="img-responsive" src="../trangchinh/images/b4.jpg" alt="slider">
 
                 </div>
+
+
                 <!--/ Carousel item end -->
             </div>
             <!-- Carousel inner end-->
@@ -130,18 +128,18 @@
             <div class="row">
                 <div class="group">
                     @foreach ($caytrong as $data)
-                        <div class="col-md-10 group-row ">
-                            <div class="latest-post tree-main ">
-                                <img class="images hinh img-responsive"
-                                    src="{{ asset('/images') }}/{{ $data->HinhAnh }}" alt="">
-                                <h4 class="title">{{ $data->TenCay }}</h4>
-                                <div class="post-details">
-                                </div>
-                                <p class="tree-extra">Loại Cây: {{ $data->DanhMucLoaiCay->Tenloaicay }} </p>
-                                <a href="{{ route('cay.chitiet', $data->id) }}" class="btn btn-primary tree-btn">ĐỌc
-                                    Thêm</a>
+                    <div class="col-md-10 group-row ">
+                        <div class="latest-post tree-main ">
+                            <img class="images hinh img-responsive" src="{{ asset('/images') }}/{{ $data->HinhAnh }}"
+                                alt="">
+                            <h4 class="title">{{ $data->TenCay }}</h4>
+                            <div class="post-details">
                             </div>
+                            <p class="tree-extra">Loại Cây: {{ $data->DanhMucLoaiCay->Tenloaicay }} </p>
+                            <a href="{{ route('cay.chitiet', $data->id) }}" class="btn btn-primary tree-btn">ĐỌc
+                                Thêm</a>
                         </div>
+                    </div>
                     @endforeach
                 </div>
             </div>
@@ -149,24 +147,24 @@
 
 
     <style>
-        .hinh {
-            object-fit: none;
-            border-radius: 20px 20px 0 0;
-        }
+    .hinh {
+        object-fit: none;
+        border-radius: 20px 20px 0 0;
+    }
 
-        .group {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
+    .group {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
 
-        .group-row {
-            width: 100%;
-        }
+    .group-row {
+        width: 100%;
+    }
 
-        .title {
-            margin-left: 20px;
-        }
+    .title {
+        margin-left: 20px;
+    }
     </style>
 
 

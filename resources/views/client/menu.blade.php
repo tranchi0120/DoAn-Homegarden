@@ -9,7 +9,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="http://127.0.0.1:8000">HomeGraden</a>
+                <a style="color:white;" class="logo navbar-brand page-scroll"
+                    href="http://127.0.0.1:8000">HomeGraden</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -34,7 +35,7 @@
                     </li>
 
                     <li>
-                        <a href="http://127.0.0.1:8000/login" class="btn-login"> Login</a>
+                        <a href="http://127.0.0.1:8000/login" class="btn-login"> Đăng Nhập</a>
 
                     </li>
 

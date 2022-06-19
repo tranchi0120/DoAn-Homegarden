@@ -3,7 +3,7 @@
          <div class="row">
              <div class="col-md-12">
                  <div class="section-title  ">
-                     <h3 class="news">Cây Trồng Nông Nghiệp</h3>
+                     <h3 class="news">Cây Nông Nghiệp</h3>
                  </div>
              </div>
          </div>
@@ -33,7 +33,7 @@
              <div class="row">
                  <div class="col-md-12">
                      <div class="section-title  ">
-                         <h3 class="news">Cây Trồng Ăn Trái</h3>
+                         <h3 class="news">Cây Ăn Trái</h3>
                      </div>
                  </div>
              </div>

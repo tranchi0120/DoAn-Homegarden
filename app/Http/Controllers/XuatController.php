@@ -65,6 +65,10 @@ class XuatController extends Controller
             'Khu_ID' => 'required',
             'NgayXuat' => 'required',
             'NgayXuat' => 'required',
+            'GiaXuat' => 'required',
+            'GhiChu' => 'required',
+            'Sdt' => 'required',
+            'TenKhachHang' => 'required',
             'SoLuong' => array('required'),
         ]);
         if ($soluongcon < intval($request->SoLuong) || intval($request->SoLuong) < 0) {
