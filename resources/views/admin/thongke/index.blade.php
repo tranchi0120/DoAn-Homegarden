@@ -38,22 +38,16 @@ if ($('#mybarChart').length) {
         type: 'bar',
         data: {
 
-            labels: {
-                !!json_encode($month) !!
-            },
+            labels: {!!json_encode($month) !!},
             datasets: [{
                 label: 'Nhập',
                 backgroundColor: "#26B99A",
-                data: {
-                    !!json_encode($doanhthunhap) !!
-                }
+                data: {!!json_encode($doanhthunhap) !!}
 
             }, {
                 label: 'Xuất',
                 backgroundColor: "#03586A",
-                data: {
-                    !!json_encode($doanhthu) !!
-                }
+                data: {!!json_encode($doanhthu) !!}
             }]
         },
 
