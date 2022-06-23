@@ -126,12 +126,12 @@ class UserController extends Controller
         if ($user) {
             return response()->json([
                 "code" => 200,
-                "message" => "Delete success"
+                "message" => "xóa thành công"
             ], 200);
         } else {
             return response()->json([
                 "code" => 500,
-                "message" => "Cant delete this record"
+                "message" => "không thể xóa hồ sơ này"
             ], 500);
         }
     }

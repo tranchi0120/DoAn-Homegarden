@@ -20,7 +20,7 @@ class CaytrongController extends Controller
 
     public function index()
     {
-        $caytrong = ModelsCaytrong::paginate(8);
+        $caytrong = ModelsCaytrong::paginate(6);
         return view('admin/caytrong.index', compact('caytrong'))->with('caytrong', $caytrong);
     }
 
