@@ -32,14 +32,16 @@ class ClientController extends Controller
 
     public function ShowClient()
     {
+        $baidang = Baidang::orderBy('created_at','DESC')->get();
         $cayNongNghiep = Caytrong::where('Loaicay_ID', 1)->get();
         $cayAnTrai = Caytrong::where('Loaicay_ID', 2)->get();
-        return view('Client.main', compact('cayNongNghiep', 'cayAnTrai'));
+        return view('Client.main', compact('cayNongNghiep', 'cayAnTrai','baidang'));
     }
 
 
     public function ShowLienHe()
     {
+        
         return view('Client.lienhe');
     }
 
@@ -60,12 +62,14 @@ class ClientController extends Controller
 
     public function showcay()
     {
+        
         return view('Client/caytrong.cay');
     }
 
     public function showbaidang()
     {
-        return view('Client/tin.baidang');
+        $baidang = Baidang::orderBy('created_at','DESC')->get();
+        return view('Client/tin.baidang',compact('baidang'));
     }
 
 

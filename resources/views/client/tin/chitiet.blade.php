@@ -207,7 +207,7 @@
     /* image */
 
     .image {
-        object-fit: none;
+        object-fit: cover;
         height: 350px;
         width: 400px;
     }

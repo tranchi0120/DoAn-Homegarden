@@ -62,17 +62,19 @@ class XuatController extends Controller
         $soluongcon = $SoLuongTrongKhu - $SoCayChet;
 
         $request->validate([
-            'Khu_ID' => 'required',
+            'Khu_ID' => 'required',  
             'NgayXuat' => 'required',
-            'NgayXuat' => 'required',
+            'User_ID' => 'required',
             'GiaXuat' => 'required',
             'GhiChu' => 'required',
             'Sdt' => 'required',
+            'TongTien' => 'required',
             'TenKhachHang' => 'required',
             'SoLuong' => array('required'),
         ]);
         if ($soluongcon < intval($request->SoLuong) || intval($request->SoLuong) < 0) {
             return redirect()->back()->withErrors('errors');
+            // return redirect()->back()->with('error','nhập lại số lượng cây trồng');
         }
         $xuat = ModelsXuat::all();
         $name = new ModelsXuat();
@@ -104,7 +106,7 @@ class XuatController extends Controller
 
 
 
-        return redirect()->route('admin.xuat')->with('xuat', $xuat);
+        return redirect()->route('admin.xuat')->with('success', 'Xuất thành công');
     }
 
 

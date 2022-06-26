@@ -22,6 +22,15 @@ class LienheController extends Controller
     public function add(Request $request)
     {
       
+        $request->validate([
+            'HoTen' => 'required',
+            'Email' => 'required',
+            'Sdt' => 'required',
+            'NoiDung' => 'required',
+            
+           
+        ]);
+
         $name = new ModelsLienhe();
         $name->HoTen = $request->HoTen;
         $name->Email = $request->Email;

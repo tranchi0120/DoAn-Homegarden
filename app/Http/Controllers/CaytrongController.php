@@ -53,7 +53,7 @@ class CaytrongController extends Controller
             $name->HinhAnh = $imageName;
         }
         $name->save();
-        return redirect()->route('admin.caytrong')->with('message', 'IT WORKS!');
+        return redirect()->route('admin.caytrong')->with('message', 'Thêm thành công');
         $validate = $request->validate([
             'Loaicay_ID' => 'required',
             'TenCay' => 'required',
@@ -81,7 +81,7 @@ class CaytrongController extends Controller
         $name->GiaiDoanPhunThuoc = $request->input('GiaiDoanPhunThuoc');
         $name->GhiChu = $request->input('GhiChu');
         $name->update();
-        return redirect()->route('admin.caytrong')->with('thongbao', 'Chỉnh sửa thành công');
+        return redirect()->route('admin.caytrong')->with('success', 'Chỉnh sửa thành công');
     }
 
 

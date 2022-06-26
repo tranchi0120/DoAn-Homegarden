@@ -49,6 +49,7 @@ public function __construct()
      */
     public function store(Request $request)
     {
+
         $baidang = ModelsBaidang::all();
         $name = new ModelsBaidang();
         $name->TieuDe = $request->TieuDe;
@@ -64,13 +65,13 @@ public function __construct()
         $name->NgayDang = $request->NgayDang;
         $name->User_ID = $request->User_ID;
         $name->save();
-        return redirect()->route('admin.baidang')->with('baidang', $baidang);
+        return redirect()->route('admin.baidang')->with('message', $baidang);
 
 
         $validate = $request->validate( [
             'TieuDe' => 'required',
              'NoiDung' => 'required',
-             'HinhAnh' => 'required',
+             'image' => 'required',
              'NgayDang' => 'required',
              'User_ID' => 'required'
         ] );
@@ -111,14 +112,14 @@ public function __construct()
              $name = ModelsBaidang::find($id);
              $name->TieuDe = $request->input('TieuDe');
              $name->NoiDung = $request->input('NoiDung'); 
-            if($request->hasFile('image'));
-                {
-                        $image = $request->file('image');
-                        // dd($image);
-                        $imageName = time().'.'. $image->getClientOriginalExtension();
-                                $image->move(public_path('images'), $imageName);
-                        $name->HinhAnh = $imageName;
-                }
+            // if($request->hasFile('image'));
+            //     {
+            //             $image = $request->file('image');
+            //             // dd($image);
+            //             $imageName = time().'.'. $image->getClientOriginalExtension();
+            //                     $image->move(public_path('images'), $imageName);
+            //             $name->HinhAnh = $imageName;
+            //     }
              $name->NgayDang = $request->input('NgayDang');
              $name->User_ID = $request->input('User_ID');
              $name->update();

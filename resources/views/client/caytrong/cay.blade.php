@@ -148,6 +148,7 @@
 
     <style>
     .hinh {
+        height: 250px;
         object-fit: none;
         border-radius: 20px 20px 0 0;
     }

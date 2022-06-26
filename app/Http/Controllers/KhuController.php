@@ -32,7 +32,9 @@ class KhuController extends Controller
      */
     public function index()
     {
-        $khu = ModelsKhu::all();
+        $khu = ModelsKhu::paginate(6);
+        // $caytrong = ModelsCaytrong::paginate(6);
+
         return view('admin/khu.index')->with('khu', $khu);
     }
 
@@ -72,7 +74,7 @@ class KhuController extends Controller
         $name->Caytrong_ID = $request->Caytrong_ID;
         $name->GhiChu = $request->GhiChu;
         $name->save();
-        return redirect()->route('admin.khu')->with('khu', $khu);
+        return redirect()->route('admin.khu')->with('message', 'Thêm thành công');
     }
 
     /**

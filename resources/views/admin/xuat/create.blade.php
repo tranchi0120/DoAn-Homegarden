@@ -19,23 +19,16 @@
 
             <th>Trạng Thái</th>
             <th>Số Lượng</th>
-
-
         </tr>
         @foreach ($khu as $data)
         <tr>
-
             <td>{{ $data->TenKhu }}</td>
             <td>{{ $data->CayTrong->DanhMucLoaiCay->Tenloaicay }}</td>
             <td>{{ $data->CayTrong->TenCay }}</td>
-
             <td>
-
                 {{ $data->SoLuong > 0 ? 'Đã trồng cây' : 'trống' }}
             </td>
-
             <td>{{ $data->SoLuong - $data->SoLuongChet }} cây </td>
-
         </tr>
         @endforeach
 
@@ -49,9 +42,10 @@
             </div>
             @endif
 
+        
+
             <div class="row">
                 <div class="col-md-6">
-
                     <div class="form-group">
                         <strong>Khu</strong>
                         <select class="select2_single form-control" name="Khu_ID" aria-label="Default select example">
@@ -68,12 +62,12 @@
 
                     <div class="form-group">
                         <strong>Số Lượng</strong>
-                        <input id="soluong" class="form-control" type="number" name="SoLuong" placeholder="mời nhập">
+                        <input id="soluong" class="form-control" type="number" name="SoLuong" placeholder="mời nhập"  value="0">
 
                     </div>
                     <div class="form-group">
                         <strong>Giá Xuất</strong>
-                        <input id="giaxuat" class="form-control" type="number" name="GiaXuat" placeholder="mời nhập">
+                        <input id="giaxuat" class="form-control" type="number" name="GiaXuat" placeholder="mời nhập"  value="0">
 
                     </div>
                     <div class="form-group">

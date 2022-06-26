@@ -18,6 +18,12 @@
         </div>
     </div>
 
+     @if (session()->has('message'))
+            <div class="alert alert-success">
+                {{ session()->get('message') }}
+            </div>
+            @endif
+
 
     <table class="table table-striped">
         <tr class="table-dark">
@@ -68,7 +74,9 @@
         @endforeach
 
     </table>
-
+ <div>
+        {{ $khu->links() }}
+    </div>
 
 
 </div>

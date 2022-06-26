@@ -11,7 +11,7 @@
         <form action="{{ route('pt.store') }}" method="post">
             @csrf
             @if ($errors->any())
-            <div class="alert alert-danger">
+            <div style="margin-top:25px;" class="alert alert-danger">
                 Kiểm tra lại dữ liệu
             </div>
             @endif

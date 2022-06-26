@@ -75,7 +75,7 @@ class NhapController extends Controller
         $khu = Khu::find($request->Khu_ID);
         $khu->SoLuong = $request->SoLuong;
         $khu->save();
-        return redirect()->route('admin.nhap')->with('nhap', 'thêm thành công');
+        return redirect()->route('admin.nhap')->with('success', 'Nhập thành công');
     }
 
 

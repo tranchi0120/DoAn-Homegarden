@@ -59,11 +59,13 @@
 
                  </div>
              </div>
+    </div>
  </section>
 
  @section('cs')
  <style>
 .hinh {
+    height: 293px;
     object-fit: none;
     border-radius: 20px 20px 0 0;
 }

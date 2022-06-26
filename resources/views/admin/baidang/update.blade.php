@@ -42,12 +42,12 @@
                             </script>
                         </div>
 
-                        <div class="form-group  ">
+                        <!-- <div class="form-group  ">
                             <Strong class="col-sm-3 text-end control-label col-form-label">Hình Ảnh </Strong>
                             <div class="custom-file">
                                 <input type="file" name="image" value="{{ $name->image }}" />
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="form-group">
                             <strong>Ngày Đăng</strong>
